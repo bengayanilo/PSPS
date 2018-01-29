@@ -91,18 +91,43 @@ button {
 	background-color: rgba(0,0,0,0.4);
 	box-shadow: -5px 5px 30px black;
 	margin: auto;
-	margin-top: 100px;
+	margin-top: 30px;
 	width: 450px;
     padding: 16px;
 	color: white;
 }
+
 
 #patient_register_secondary {
 	display:none;
 	background-color: rgba(0,0,0,0.4);
 	box-shadow: -5px 5px 30px black;
 	margin: auto;
-	margin-top: 100px;
+	margin-top: 30px;
+	width: 450px;
+    padding: 16px;
+	color: white;
+}
+
+#intern_register_primary{
+
+	display:none;
+	background-color: rgba(0,0,0,0.4);
+	box-shadow: -5px 5px 30px black;
+	margin: auto;
+	margin-top: 30px;
+	width: 450px;
+    padding: 16px;
+	color: white;
+}
+
+#intern_register_secondary{
+
+	display:none;
+	background-color: rgba(0,0,0,0.4);
+	box-shadow: -5px 5px 30px black;
+	margin: auto;
+	margin-top: 30px;
 	width: 450px;
     padding: 16px;
 	color: white;
@@ -110,11 +135,10 @@ button {
 
 #accountType {
 
-    /*display:none;*/
 	background-color: rgba(0,0,0,0.4);
 	box-shadow: -5px 5px 30px black;
 	margin: auto;
-	margin-top: 100px;
+	margin-top: 30px;
 	width: 450px;
     padding: 16px;
 	color: white;
