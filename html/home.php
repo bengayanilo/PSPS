@@ -13,7 +13,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="../js/slideshow.js"></script>
 <script src="../js/home.js"></script>
-<div id="container">
+<!--<div id="container">-->
 <!--Topbar-->
 	<div id="top-bar">
 	<?php include("../html/topbar.php"); ?>
@@ -76,6 +76,6 @@ scrolling="yes" frameborder="0" style="margin-bottom: 25px; margin-left: 25px; b
 </div>-->
 
 </div>
-</div>
+<!--</div>-->
 </body>
 </html>

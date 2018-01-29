@@ -3,6 +3,7 @@ html {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	transition: .5s ease;
+	font-family: "Lucida Sans Unicode";
 }
 
 body {
@@ -10,7 +11,7 @@ body {
 }
 
 .below-top-bar {
-	overflow: auto;
+	overflow-y: scroll;
 	position: absolute;
 	top: 8.5%;
 	bottom: 0;
@@ -193,5 +194,5 @@ body {
 }
 
 #SServices {
-	clear: left;
+	/*clear: left;*/
 }

@@ -10,6 +10,7 @@
 	<link rel="icon" href="../images/logo.png">
 	</head>
 	<body>
+	<script src="../js/home.js"></script>
 	<div id="top-bar">												<!--top bar-->
 		<div class="fixed-width">
 			
@@ -33,7 +34,7 @@
 						<a href="home.php" rel="">Home</a>
 					</li>
 					<li id="news">
-						<a href = "#SNews" rel="">News</a>
+						<a href = "#SNews" id = "ANews">News</a>
 					</li>
 					<li id="services">
 						<a href = "#SServices" rel="">Services</a>

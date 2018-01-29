@@ -48,6 +48,9 @@
 <h3>Online Psychological Assessment (Video Chat)</h3>
 </div>
 <div class = "overlayDiv">
+<div class = "glow">
+<p>a</a>
+</div>
 <div class = "imageFill">
 <img class = "imgbtn" src = "..//images/002-support-4.png">
 </div>
@@ -62,6 +65,9 @@
 <h3>Support Chat</h3>
 </div>
 <div class = "overlayDiv">
+<div class = "glow">
+<p>a</a>
+</div>
 <div class = "imageFill">
 <img class = "imgbtn" src = "..//images/005-chat.png">
 </div>
@@ -80,6 +86,9 @@
 <h3>Generate Reports</h3>
 </div>
 <div class = "overlayDiv">
+<div class = "glow">
+<p>a</a>
+</div>
 <div class = "imageFill">
 <img class = "imgbtn" src = "..//images/900x900placeholder.png">
 </div>
@@ -94,6 +103,9 @@
 <h3>Service Name</h3>
 </div>
 <div class = "overlayDiv">
+<div class = "glow">
+<p>a</a>
+</div>
 <div class = "imageFill">
 <img class = "imgbtn" src = "..//images/900x900placeholder.png">
 </div>
@@ -108,6 +120,9 @@
 <h3>Service Name</h3>
 </div>
 <div class = "overlayDiv">
+<div class = "glow">
+<p>a</a>
+</div>
 <div class = "imageFill">
 <img class = "imgbtn" src = "..//images/900x900placeholder.png">
 </div>
