@@ -1,0 +1,56 @@
+#SProfile{
+	
+	width: 100% auto;
+	overflow: hidden;
+	background-color: rgba(255,127,80, 0.5);
+	margin: 10% 1% 10% 1%;
+}
+
+.patientProfile {
+	
+	display: inline;	
+}
+
+#patientDetails{
+	
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 1%;
+	
+}
+
+#patientContact{
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 1%;
+	border-top: 50px;
+	border-top-color: black;
+}
+	
+
+.patientInfoHeader {
+	
+	border-top: 3px solid black;
+	float: left;
+	width: 350px;
+	text-align: center;
+	//*background-color: rgba(255, 255, 255, 0.5);*/
+}
+
+.patientInfo{
+	
+	border-top: 3px solid black;
+	font-family: Arial, Helmet, Freesans, sans-serif;
+	font-size: 14px;
+	height: auto;
+	overflow: hidden;
+	padding-left: 50px;
+	padding-top: 40px;
+}
+
+p {
+	display: block;
+}
+
+.divColor {
+	
+	background: linear-gradient(rgb(180,180,180), rgba(255,255,255,0));
+}

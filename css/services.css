@@ -1,0 +1,133 @@
+#SServices {
+	width: 100% auto;
+	height: 800px;
+	/*background-color: rgba(247,120,65,0.7);*/
+	background-color: rgba(0,0,0,0.3);
+	/*border: solid 0.5px;*/
+	margin: 10% 1% 10% 1%;
+	position: relative;
+	/*border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;*/
+	text-align: center;
+	-webkit-box-shadow: 0 8px 20px -6px black;
+}
+
+#servicesHeader {
+	top: 0;
+	position: absolute;
+	margin: 0;
+	width: 100%;
+	height: 100px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+#serivcesHeader h1 {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	box-shadow: -5px 5px 30px black;
+	letter-spacing: 1.5px;
+	font-family: Arial;
+}
+
+#serviceWrapper {
+	position: absolute;
+	margin: 13% 0 5% 0;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+
+.imgbtn {
+	background-color: rgba(81, 179, 254, 1);
+	width: 155px;
+	height: 155px;
+	padding: 10px;
+	border-radius: 50%;
+	border: dashed 2.5px rgba(100,100,100,0.8);
+	/*display: block;*/
+	/*margin: 0 7.5% 0 7.5%;*/
+}
+
+.serviceRow {
+	height: 300px;
+	width: 100%;
+	margin: 5% 0 5% 0 auto;
+}
+
+.serviceBtn {
+	background-color: rgba(234, 234, 234, 0.2);
+	margin: 0 4.5% 0 4.5%;
+	display: inline-block;
+	width: 255px;
+	height: 255px;
+	/*border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;*/
+}
+
+.serviceBtn h3 {
+	width: 100% auto;
+	margin: 0 0 0.5% 0 auto;
+	text-align: center;
+}
+
+.serviceName {
+	font-size: 13px;
+	height: 43px;
+	width: 200px;
+	margin: auto;
+	color: rgba(234, 234, 234, 0.95);
+	font-weight: lighter;
+}
+
+.overlayDiv .serviceDesc {
+	padding: 0 7px 0 7px;
+	font-size: 0.8em;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	overflow: scroll;
+	width: 190px;
+	height: 0;
+	transition: .74s ease;
+	color: rgb(234, 234, 234);
+	margin: auto;
+}
+
+.overlayDiv:hover .serviceDesc {
+	height: 100%;
+}
+
+.serviceBtn:hover {
+	box-shadow: 0px 0px 40px rgba(10, 10, 10, 0.5);
+}
+
+.overlayDiv {
+	margin: auto;
+	position: relative;
+}
+
+.glow {
+	padding: 0 5px 0px 5px;
+	width: 100px;
+	height: 60px;
+	top: 0;
+	right: 0;
+	bottom: 10;
+	left: 0; 
+	position: absolute;
+	margin: auto;
+	background: linear-gradient(rgba(255,255,255,0.8),rgba(0,0,0,0));
+	border-radius: 50%;
+}
+
+.glow p {
+	color: rgba(0,0,0,0);
+}
