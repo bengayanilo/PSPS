@@ -22,7 +22,8 @@
 	<!--</div>-->
 <form action="#" method="post" enctype="multipart/form-data">							<!--register form start-->
 	<?php include "../php/errors.php"; ?>
-<div id="reg-container">
+	
+	<div id="reg-container">
 		<!--Primary Account Information-->
 		
 		<label><b>Email</b></label>
