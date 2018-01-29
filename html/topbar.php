@@ -37,10 +37,10 @@
 						<a href = "#SNews" id = "ANews">News</a>
 					</li>
 					<li id="services">
-						<a href = "#SServices" rel="">Services</a>
+						<a href = "#SServices">Services</a>
 					</li>
 					<li id="professionals">
-						<a href = "#SProfessionals" rel="">Professionals</a>
+						<a href = "#SProfessionals">Professionals</a>
 					</li>
 					<li>
 					<?php
