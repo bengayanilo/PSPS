@@ -42,7 +42,8 @@ if (isset($_POST['register'])) {
 	if($result){
   	$_SESSION['username'] = $username;
 	$_SESSION['accType'] = $account;
-  	$_SESSION['success'] = "You are now logged in";
+    $_SESSION['success'] = "You are now logged in";
+    header('location: home.php');
 	
 	
 }
@@ -81,7 +82,7 @@ if (isset($_POST['login'])) {
   	  $_SESSION['success'] = "You are now logged in";
 	  array_push($errors, "Successfully logged in");
 	  
-  	  header('location: home - Copy.php');
+  	  header('location: home.php');
   	}else {
   		array_push($errors, $username.$password);
   	}
