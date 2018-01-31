@@ -51,11 +51,11 @@ button {
     cursor: pointer;
 }
 
-.signupbtn {
+.submitbtn {
 	background-color: #4CAF50;
 	padding: 14px 20px;
     float: left;
-    width: 50%;
+    width: 100%;
 	margin: 8px 0;
     border: none;
     cursor: pointer;
@@ -81,60 +81,25 @@ button {
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-    .cancelbtn, .signupbtn {
+    .submitbtn {
         width: 100%;
     }
 }
 
-#patient_register_primary {
-	display:none;
-	background-color: rgba(0,0,0,0.4);
-	box-shadow: -5px 5px 30px black;
-	margin: auto;
-	margin-top: 30px;
-	width: 450px;
-    padding: 16px;
-	color: white;
-}
-
-
-#patient_register_secondary {
-	display:none;
-	background-color: rgba(0,0,0,0.4);
-	box-shadow: -5px 5px 30px black;
-	margin: auto;
-	margin-top: 30px;
-	width: 450px;
-    padding: 16px;
-	color: white;
-}
-
-#intern_register_primary{
-
-	display:none;
-	background-color: rgba(0,0,0,0.4);
-	box-shadow: -5px 5px 30px black;
-	margin: auto;
-	margin-top: 30px;
-	width: 450px;
-    padding: 16px;
-	color: white;
-}
-
-#intern_register_secondary{
-
-	display:none;
-	background-color: rgba(0,0,0,0.4);
-	box-shadow: -5px 5px 30px black;
-	margin: auto;
-	margin-top: 30px;
-	width: 450px;
-    padding: 16px;
-	color: white;
-}
-
 #accountType {
 
+	background-color: rgba(0,0,0,0.4);
+	box-shadow: -5px 5px 30px black;
+	margin: auto;
+	margin-top: 30px;
+	width: 450px;
+    padding: 16px;
+	color: white;
+}
+
+.form {
+
+	display:none;
 	background-color: rgba(0,0,0,0.4);
 	box-shadow: -5px 5px 30px black;
 	margin: auto;

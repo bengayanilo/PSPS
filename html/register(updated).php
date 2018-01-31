@@ -56,7 +56,7 @@
 
 	</div>	
 
-	<div id="patient_register_primary">
+	<div id="patient_register_primary" class = "form">
 
 		<!--Primary Patient Account Information-->
 		<label><b>First Name</b></label>
@@ -90,7 +90,7 @@
 		
 	</div>
 
-	<div id="patient_register_secondary">
+	<div id="patient_register_secondary" class = "form">
 
 		<!--Secondary Patient Account Information-->
 		<label><b>Religion</b></label>
@@ -126,13 +126,19 @@
 		<input type="reg-text" placeholder="Enter other information" name="other_info">
 		
 		<button type="button"  id="topatient1">Previous</button>
+
+		<div class="clearfix">
+
+		<button type="submit" name="register"class="submitbtn">Submit</button>
+		
+		</div>
 		
 	</div>
 
-	<div id="intern_register_primary">
+	<div id="intern_register_primary" class = "form">
 
 		<!--Primary intern Account Information-->
-		<label><b>Intern Name</b></label>
+		<label><b>First Name</b></label>
 		<input type="reg-text" placeholder="Enter First Name" name="firstName" required>
 
 		<label><b>Middle Name</b></label>
@@ -163,7 +169,7 @@
 
 	</div>
 
-	<div id="intern_register_secondary">
+	<div id="intern_register_secondary" class = "form">
 
 		<!--Secondary Intern Account Information-->
 		<label><b>Religion</b></label>
@@ -202,6 +208,82 @@
 		<input type="reg-text" placeholder="Enter other information" name="other_info">
 
 		<button type="button"  id="topage1">Previous</button>
+
+		<div class="clearfix">
+
+		<button type="submit" name="register"class="submitbtn">Submit</button>
+		
+		</div>
+
+	</div>
+
+	<div id="review_register_primary" class = "form">
+
+		<!--Primary intern Account Information-->
+		<label><b>First Name</b></label>
+		<input type="reg-text" placeholder="Enter First Name" name="firstName" required>
+
+		<label><b>Middle Name</b></label>
+		<input type="reg-text" placeholder="Enter Middle Name" name="middleName" required>
+
+		<label><b>Last Name</b></label>
+		<input type="reg-text" placeholder="Enter Last Name" name="lastName" required>
+
+		<br><br><label><b>Gender</b></label>
+		<select name="gender">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+		</select><br><br>
+
+		<label><b>Contact Number</b></label>
+		<input type="reg-text" placeholder="Enter Contact Number" name="contact" required>
+
+		<label><b>Age</b></label>
+		<input type="reg-text" placeholder="Enter Age" name="age" required>
+
+		<label><b>Birth Date</b></label>
+		<input type="reg-text" placeholder="Enter your birthdate" name="birthday" required>
+
+		<button type="button"  id="tointern2">Next</button>
+
+	</div>
+
+	<div id="review_register_secondary" class = "form">
+
+		<!--Primary intern Account Information-->
+		<label><b>Subject Grade in the following:</b></label><br><br>
+
+		<label><b>Psychological Assessment</b></label>
+		<input type="reg-text" placeholder="Enter First Name" name="firstName" required>
+
+		<label><b>Theories of Personality</b></label>
+		<input type="reg-text" placeholder="Enter Middle Name" name="middleName" required>
+
+		<label><b>Abnormal Psychology</b></label>
+		<input type="reg-text" placeholder="Enter Last Name" name="lastName" required>
+
+		<label><b>Industrial/Organizational Psychology</b></label>
+		<input type="reg-text" placeholder="Enter Contact Number" name="contact" required>
+
+		<br>
+		<br>
+
+		<label><b>GPA/GWA (General Point/Weight Average)</b></label>
+		<input type="reg-text" placeholder="Enter Age" name="age" required>
+
+		<label><b>Favorite among the 4 Board Exam Subjects</b></label>
+		<input type="reg-text" placeholder="Enter your birthdate" name="birthday" required>
+
+		<label><b>Weakest among the 4 Board Exam Subjects</b></label>
+		<input type="reg-text" placeholder="Enter your birthdate" name="birthday" required>
+
+		<button type="button"  id="tointern2">Previous</button>
+
+		<div class="clearfix">
+
+		<button type="submit" name="register"class="submitbtn">Submit</button>
+		
+		</div>
 
 	</div>
 <!--
