@@ -40,8 +40,9 @@ if (isset($_POST['register'])) {
   			  VALUES('$username', '$password','$email', '$name', '$gender', '$address', '$contact', '$account')";
   	$result = mysqli_query($db, $query);
 	if($result){
+    $_SESSION['userid'] = mysqli_insert_id($db);
   	$_SESSION['username'] = $username;
-	$_SESSION['accType'] = $account;
+	  $_SESSION['accType'] = $account;
     $_SESSION['success'] = "You are now logged in";
     header('location: home.php');
 	
@@ -77,9 +78,10 @@ if (isset($_POST['login'])) {
   	$results = mysqli_query($db, $query);
   	$row = $results->fetch_assoc();
 	if (mysqli_num_rows($results) > 0) {
-  	  $_SESSION['username'] = $username;
+    $_SESSION['userid'] = $row['user_id'];
+  	$_SESSION['username'] = $username;
 	  $_SESSION['accType'] = $row['accountType'];
-  	  $_SESSION['success'] = "You are now logged in";
+  	$_SESSION['success'] = "You are now logged in";
 	  array_push($errors, "Successfully logged in");
 	  
   	  header('location: home.php');
