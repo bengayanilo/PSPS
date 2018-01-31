@@ -254,28 +254,28 @@
 		<label><b>Subject Grade in the following:</b></label><br><br>
 
 		<label><b>Psychological Assessment</b></label>
-		<input type="reg-text" placeholder="Enter First Name" name="firstName" required>
+		<input type="reg-text" placeholder="What is your grade in Psychological Assessment" name="grade_psych" required>
 
 		<label><b>Theories of Personality</b></label>
-		<input type="reg-text" placeholder="Enter Middle Name" name="middleName" required>
+		<input type="reg-text" placeholder="What is your grade in Theories of Personality" name="grade_theor" required>
 
 		<label><b>Abnormal Psychology</b></label>
-		<input type="reg-text" placeholder="Enter Last Name" name="lastName" required>
+		<input type="reg-text" placeholder="What is your grade in Abnormal Psychology" name="grabe_abnorm" required>
 
 		<label><b>Industrial/Organizational Psychology</b></label>
-		<input type="reg-text" placeholder="Enter Contact Number" name="contact" required>
+		<input type="reg-text" placeholder="What is your grade in Industrial/Organizational Psychology" name="grade_iop" required>
 
 		<br>
 		<br>
 
 		<label><b>GPA/GWA (General Point/Weight Average)</b></label>
-		<input type="reg-text" placeholder="Enter Age" name="age" required>
+		<input type="reg-text" placeholder="What is your GPA/GWA (General Point/Weight Average)" name="gpa" required>
 
 		<label><b>Favorite among the 4 Board Exam Subjects</b></label>
-		<input type="reg-text" placeholder="Enter your birthdate" name="birthday" required>
+		<input type="reg-text" placeholder="What is your favorite among the 4 Board Exam Subjects" name="fave_subj" required>
 
 		<label><b>Weakest among the 4 Board Exam Subjects</b></label>
-		<input type="reg-text" placeholder="Enter your birthdate" name="birthday" required>
+		<input type="reg-text" placeholder="What is your least favorite among the 4 Board Exam Subjects" name="least_fave" required>
 
 		<button type="button"  id="tointern2">Previous</button>
 
