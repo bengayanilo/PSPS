@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="../css/register(updated).css">
 <link rel="icon" href="../images/logo.png">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="../js/register(updated).js"></script>
+<script src="../js/tryjavascript.js"></script>
 <!--<script type="text/javascript" src="../js/register.js"></script>-->
 </head>
 <?php include("../html/topbar.php"); ?>
@@ -42,17 +42,17 @@
 
 	<div id="accountType">
 
+		<form name = "radioButtons">
+
 		<!--Select Account Type-->
 		<p>Select Account Type</p>
 
-			<input type="radio" id = "patientradbtn" name = "accountType" value="pat"> Patient <br>
-			<input type="radio" id = "psyradbtn" name = "accountType" value="psy"> Psychologist <br>
-			<input type="radio"	id = "intradbtn" name = "accountType" value="int"> Intern <br>
-			<input type="radio" id = "revradbtn" name = "accountType" value="rev"> Review Applicant <br>
+			<input type="radio" id = "patientradbtn" name = "accountType" value="pat" onclick = "submitAccount()"> Patient <br>
+			<input type="radio" id = "psyradbtn" name = "accountType" value="psy" onclick = "submitAccount()"> Psychologist <br>
+			<input type="radio"	id = "intradbtn" name = "accountType" value="int" onclick = "submitAccount()"> Intern <br>
+			<input type="radio" id = "revradbtn" name = "accountType" value="rev" onclick =  "submitAccount()"> Review Applicant <br>
 
-		<br>	
-		<button type="button"  id="submit">Submit</button>
-		<BR>
+		</form>
 
 	</div>	
 
@@ -86,7 +86,7 @@
 		<label><b>Contact Number</b></label>
 		<input type="reg-text" placeholder="Enter Contact Number" name="contact" required>
 	
-		<button type="button"  id="topatient2">Next</button>
+		<button type="button"  id="topatient2" onclick = "toNextForm()">Next</button>
 		
 	</div>
 
@@ -165,7 +165,7 @@
 		<label><b>Contact Number</b></label>
 		<input type="reg-text" placeholder="Enter Contact Number" name="contact" required>
 
-		<button type="button"  id="tointern2">Next</button>
+		<button type="button"  id="tointern2" onclick = "toNextForm()">Next</button>
 
 	</div>
 
@@ -244,7 +244,7 @@
 		<label><b>Birth Date</b></label>
 		<input type="reg-text" placeholder="Enter your birthdate" name="birthday" required>
 
-		<button type="button"  id="tointern2">Next</button>
+		<button type="button"  id="toreview2" onclick = "toNextForm()">Next</button>
 
 	</div>
 
