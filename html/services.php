@@ -73,7 +73,7 @@
 </div>
 <div class = "serviceDesc">
 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-<a href = "../../test/chatjax/index.php" onclick = "window.open(this.href, 'popupwindow', 'height = 500, width = 425'); return false;">Open chat</a>
+<a id = "popupWindow" href = "../../test/chatjax/index.php" onclick = "window.open(this.href, 'popupwindow', 'height = 500, width = 410'); return false;">Open chat</a>
 </div>
 </div>
 </div>
