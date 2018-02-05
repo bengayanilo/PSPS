@@ -68,3 +68,25 @@ function toNextForm() {
 
     }
 }
+
+function toPrevForm() {
+
+    if(document.getElementById('patient_register_secondary').style.display == 'block'){
+
+        document.getElementById('patient_register_secondary').style.display = 'none';
+        document.getElementById('patient_register_primary').style.display = 'block';
+    }
+
+    else if(document.getElementById('intern_register_secondary').style.display == 'block'){
+
+        document.getElementById('intern_register_secondary').style.display = 'none';
+        document.getElementById('intern_register_primary').style.display = 'block';
+    }
+
+    else if(document.getElementById('review_register_secondary').style.display == 'block'){
+
+        document.getElementById('review_register_secondary').style.display = 'none';
+        document.getElementById('review_register_primary').style.display = 'block';
+
+    }
+}

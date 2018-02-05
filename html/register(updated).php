@@ -86,7 +86,7 @@
 			<label><b>Contact Number</b></label>
 			<input type="reg-text" placeholder="Enter Contact Number" name="contact" required>
 		
-			<button type="button"  id="topatient2" onclick = "toNextForm()">Next</button>
+			<button type="button" onclick = "toNextForm()">Next</button>
 			
 		</div>
 
@@ -125,7 +125,7 @@
 			<label><b>Other Information</b></label>
 			<input type="reg-text" placeholder="Enter other information" name="other_info">
 			
-			<button type="button"  id="topatient1">Previous</button>
+			<button type="button"  onclick="toPrevForm()">Previous</button>
 
 			<div class="clearfix">
 
@@ -165,7 +165,7 @@
 			<label><b>Contact Number</b></label>
 			<input type="reg-text" placeholder="Enter Contact Number" name="contact" required>
 
-			<button type="button"  id="tointern2" onclick = "toNextForm()">Next</button>
+			<button type="button" onclick = "toNextForm()">Next</button>
 
 		</div>
 
@@ -207,7 +207,7 @@
 			<label><b>Other Information</b></label>
 			<input type="reg-text" placeholder="Enter other information" name="other_info">
 
-			<button type="button"  id="topage1">Previous</button>
+			<button type="button"  onclick="toPrevForm()">Previous</button>
 
 			<div class="clearfix">
 
@@ -269,7 +269,7 @@
 			<label><b>Birth Date</b></label>
 			<input type="reg-text" placeholder="Enter your birthdate" name="birthday" required>
 
-			<button type="button"  id="toreview2" onclick = "toNextForm()">Next</button>
+			<button type="button" onclick = "toNextForm()">Next</button>
 
 		</div>
 
@@ -302,7 +302,7 @@
 			<label><b>Weakest among the 4 Board Exam Subjects</b></label>
 			<input type="reg-text" placeholder="What is your least favorite among the 4 Board Exam Subjects" name="least_fave" required>
 
-			<button type="button"  id="tointern2">Previous</button>
+			<button type="button"  onclick="toPrevForm()">Previous</button>
 
 			<div class="clearfix">
 
