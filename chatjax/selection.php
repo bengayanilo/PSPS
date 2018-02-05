@@ -30,7 +30,7 @@
           
             for(var i in msg){
                 output +=   '<li>'+
-                            '<button onclick="chatid(this);" value="'+msg[i].prof_id+'">'+msg[i].name+'</button>'+
+                            '<button onclick="chatid(this);" value="'+msg[i].user_id+'">'+msg[i].fullName+'</button>'+
                             '<li>';
                 }   
                 output += '</ul>';
