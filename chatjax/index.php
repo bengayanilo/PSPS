@@ -2,7 +2,7 @@
     session_start();
     if(!isset($_SESSION['username']))
     {
-        header('location: ../html/home.php');
+        header('location: ../html/register.php');
     }
     elseif(!isset($_GET['target']) || !isset($_GET['chatid']))
     {
