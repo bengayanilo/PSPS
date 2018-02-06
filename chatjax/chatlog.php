@@ -21,7 +21,7 @@ if(isset($_POST['message'])){
   
 if(isset($_POST['load'])){
     $id = mysqli_real_escape_string($conn,$_POST['load']);
-    $query = "SELECT * FROM log WHERE chat_id=$id";
+    $query = "SELECT U.username, L.message, L.time FROM log.log L inner join db_users.tb_users U on L.chat_user = U.user_id WHERE L.chat_id=$id";
     $result=mysqli_query($conn, $query);
     $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
     echo json_encode($users);
@@ -32,9 +32,7 @@ if(isset($_POST['checkchatid'])){
   $name = mysqli_escape_string($conn,$_POST['checkchatid']);
   $user_id = mysqli_real_escape_string($conn, $_SESSION['userid']);
   
-  //check if chatroom already exists
-  //$query = "SELECT * FROM chat_users WHERE chat_user='$user_id' OR chat_user='$name'";
-  
+  //check if chatroom already exists  
   $query = "SELECT chat.chat_id, chat.chat_user AS chat_user1, chat2.chat_user AS chat_user2
             FROM chat_users as chat, chat_users as chat2
             WHERE chat.chat_id = chat2.chat_id
@@ -45,9 +43,9 @@ if(isset($_POST['checkchatid'])){
 
   $result=mysqli_query($conn, $query);
   
-  //if exists
+  //if it exists
   if(mysqli_num_rows($result)>0){
-    $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    $table = mysqli_fetch_all($result, MYSQLI_ASSOC);
   }
   //if it does not exist
   else{
@@ -63,7 +61,7 @@ if(isset($_POST['checkchatid'])){
    
     //return chat id
     $result=mysqli_query($conn, $query);
-    $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    $table = mysqli_fetch_all($result, MYSQLI_ASSOC);
   }
-  echo json_encode($users);
+  echo json_encode($table);
 }

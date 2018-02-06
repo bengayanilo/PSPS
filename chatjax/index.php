@@ -74,13 +74,15 @@
                 var output = '';
           
             for(var i in msg){
-                output += '<b>'+msg[i].message+'</b><br><i>'+msg[i].time+'</i><br><br>';
+                output += '<b>'+msg[i].username+'</b><br><b>'+msg[i].message+'</b><br><i>'+msg[i].time+'</i><br><br>';
                 }   
                 document.getElementById('chat').innerHTML = output;
             }   
         }
 
         xhr.send(par);
+
+        //auto scroll to the bottom 
         var newH = document.getElementById('chat').scrollHeight - 20;
         if (newH > old || old == null) {
             old = document.getElementById('chat').scrollHeight - 20;
