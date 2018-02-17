@@ -6,7 +6,7 @@ $email    = "";
 $errors = array(); 
 
 // connect to database
-$db = mysqli_connect('localhost', 'root', '', 'db_users');
+$db = mysqli_connect('localhost', 'id4654895_username', 'pspspassword', 'id4654895_db_users');
 
 ?>
 <html>
