@@ -30,7 +30,7 @@
 	<div class = "newsContainer">
 
 		<div class = "newsArticles"> 
-			<img id = "news1" src = "../images/news/news1.jpg">
+			<img class = "newsImg" id = "news1" src = "../images/news/news1.jpg">
 			<div class = "newsHeadline">
 				<div class = "newsTitle">
 					<p><span>News Title Here</span></p>		
@@ -63,7 +63,7 @@
 	<div class = "newsContainer">
 
 		<div class = "newsArticles"> 
-			<img id = "news1" src = "../images/news/news2.jpg">
+			<img class = "newsImg" id = "news1" src = "../images/news/news2.jpg">
 			<div class = "newsHeadline">
 				<div class = "newsTitle">
 					<p><span>News Title Here</span></p>		
@@ -114,7 +114,7 @@
 	<div class = "newsContainer">
 
 		<div class = "newsArticles"> 
-			<img id = "news3" src = "../images/news/news3.jpg">
+			<img class = "newsImg" id = "news3" src = "../images/news/news3.jpg">
 			<div class = "newsHeadline">
 				<div class = "newsTitle">
 					<p><span>News Title Here</span></p>		
@@ -147,7 +147,7 @@
 	<div class = "newsContainer">
 
 		<div class = "newsArticles"> 
-			<img id = "news4" src = "../images/news/news4.jpg">
+			<img class = "newsImg" id = "news4" src = "../images/news/news4.jpg">
 			<div class = "newsHeadline">
 				<div class = "newsTitle">
 					<p><span>News Title Here</span></p>		
@@ -180,7 +180,7 @@
 	<div class = "newsContainer">
 
 		<div class = "newsArticles"> 
-			<img id = "news5" src = "../images/news/news5.jpg">
+			<img class = "newsImg" id = "news5" src = "../images/news/news5.jpg">
 			<div class = "newsHeadline">
 				<div class = "newsTitle">
 					<p><span>News Title Here</span></p>		

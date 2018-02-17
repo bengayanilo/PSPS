@@ -5,6 +5,10 @@ $(document).ready(function(){
 	$('#moreArticle1').click(function(e){
 		$('#mainArticle1').fadeIn('slow');
 		});
+
+	/*$("#moreArticle1").click(function(){
+		$("#mainArticle1").show("slide", { direction: "right" }, 1000);
+		});*/
 	
 	$('#moreArticle2').click(function(e){
 		$('#mainArticle2').fadeIn('slow');
@@ -27,6 +31,10 @@ $(document).ready(function(){
 	$('#lessArticle1').click(function(e){
 		$('#mainArticle1').fadeOut('slow');
 		});
+
+	/*$('#lessArticle1').click(function(e){
+		$('#mainArticle1').hide("slide", {direction: "left" }, 1000);
+		});*/
 		
 	$('#lessArticle2').click(function(e){
 		$('#mainArticle2').fadeOut('slow');

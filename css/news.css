@@ -12,6 +12,7 @@
 }
 
 .newsContainer {
+	position: relative;
 	background-color: black;
 }
 
@@ -36,7 +37,7 @@
 	display: none;
 	float: left;
 	height: 300px;
-	width: 700px;
+	width: 40%;
 	margin: 0 auto;
 	margin-bottom: 25px;
 	margin-top: 25px;
@@ -63,6 +64,14 @@
 	margin: 0;
 	padding: 0;
 	bottom: 0;
+	height: 0;
+	transition: .74s ease;
+}
+
+.newsArticles:hover .newsHeadline {
+	height: 140px;
+	bottom: 0;
+	position: absolute;
 }
 
 .newsTitle {
@@ -226,7 +235,7 @@
 }
 
 .moreArticle {
-	position: absolute;
+	position: relative;
 	bottom: 10%;
 	left: 12px;
 	padding: 8px 15px 8px 15px;
