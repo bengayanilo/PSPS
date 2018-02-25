@@ -6,7 +6,8 @@ $email    = "";
 $errors = array(); 
 
 // connect to database
-$db = mysqli_connect('localhost', 'id4654895_username', 'pspspassword', 'id4654895_db_users');
+//$db = mysqli_connect('localhost', 'id4654895_username', 'pspspassword', 'id4654895_db_users');
+$db = mysqli_connect('localhost', 'root', '', 'db_users');
 
 ?>
 <html>
@@ -32,39 +33,51 @@ $db = mysqli_connect('localhost', 'id4654895_username', 'pspspassword', 'id46548
 	<p>a</p>
 </div>-->
 <div id = "professionals-header">
-	<div id = "professionals-header-background">
+<div id = "professionals-header-background">
+	<!--<hr class = "style4">-->
+	<div class = "professionalsLinesDiv">
+		<!--<div class = "marginDiv"></div>-->
+		<h1 class = "lines"></h1>
+	</div>
+	<div class = "professionalsHeaderDiv"> 
 		<h1>Our Professionals</h1>
 	</div>
+	<div class = "professionalsLinesDiv">
+		<!--<div class = "marginDiv"></div>-->
+		<h1 class = "lines"></h1>
+	</div>
+	<!--<hr class = "style4">-->
 </div>
-<div id = "absolute-positioning">
-<?php
-$query = "Select * from tb_professionals";
-$result = mysqli_query($db, $query);
-while($row = $result->fetch_assoc())
-{
-	echo('<div id = "table-cell-container">');
-	echo('<div class = "blockContainer">');
-
-	echo('<div class = "primaryInfo">');
-
-	echo('<div class = "profilePic">');
-	echo('<img class = "circlePic" src = "../images/profile-placeholder.jpg">');
-	echo('</div>');
-	echo('<div class = "fullName">');
-	echo('<p>'.$row['name'].'</p>');
-	echo('<p class="secondaryinfo">'.$row['expertise'].'</p>');
-	echo('</div>');
-	echo('</div>');
-
-	echo('<div class = "summary">');
-	echo('<p>'.$row['summary'].'</p>');
-	echo('</div>');
-
-	echo('</div>');
-	echo('</div>');
-}
-?>
 </div>
+	<div id = "absolute-positioning-professionals">
+		<?php
+			$query = "Select * from tb_professionals";
+			$result = mysqli_query($db, $query);
+			while($row = $result->fetch_assoc())
+			{
+				echo('<div id = "table-cell-container">');
+				echo('<div class = "blockContainer">');
+
+				echo('<div class = "primaryInfo">');
+
+				echo('<div class = "profilePic">');
+				echo('<img class = "circlePic" src = "../images/profile-placeholder.jpg">');
+				echo('</div>');
+				echo('<div class = "fullName">');
+				echo('<p>'.$row['name'].'</p>');
+				echo('<p class="secondaryinfo">'.$row['expertise'].'</p>');
+				echo('</div>');
+				echo('</div>');
+
+				echo('<div class = "summary">');
+				echo('<p>'.$row['summary'].'</p>');
+				echo('</div>');
+
+				echo('</div>');
+				echo('</div>');
+			}
+		?>
+	</div>
 </div>
 
 </body>

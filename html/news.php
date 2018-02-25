@@ -20,10 +20,22 @@
 </div>-->
 <div id = "news-header">
 	<div id = "news-header-background">
-		<h1>News</h1>
+		<!--<hr class = "style4">-->
+		<div class = "linesDiv">
+			<!--<div class = "marginDiv"></div>-->
+			<h1 class = "lines"></h1>
+		</div>
+		<div class = "headerDiv"> 
+			<h1>News</h1>
+		</div>
+		<div class = "linesDiv">
+			<!--<div class = "marginDiv"></div>-->
+			<h1 class = "lines"></h1>
+		</div>
+		<!--<hr class = "style4">-->
 	</div>
 </div>
-<div id = "absolute-positioning">
+<div id = "absolute-positioning-news">
 
 <div class = "newsRow">
 

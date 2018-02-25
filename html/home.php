@@ -59,7 +59,7 @@
 	<div id="news-section">
 	<?php include("../html/news.php"); ?>
 	</div>
-
+  <!--<div id = "TestDiv">sdqwjkejkasdjkqwjkejkqwe</div>-->
 <!--Services-->
 	<div id="services-section">
 	<?php include("../html/services.php"); ?>
@@ -75,8 +75,8 @@
 scrolling="yes" frameborder="0" style="margin-bottom: 25px; margin-left: 25px; border:none; overflow:hidden; width:350px; height:435px; background: white; float:left; clear: right; clear: left;" allowTransparency="true">
 </iframe>
 </div>-->
-
-</div>
+<!--Test Div-->
 <!--</div>-->
+</div>
 </body>
 </html>

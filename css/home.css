@@ -1,9 +1,11 @@
 html {
+	/*background-size: cover;*/
+	background-image: url("../images/28.jpg");
 	background-size: cover;
-	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-repeat: no-repeat;
+	/*background-color: rgb(246, 245, 241);*/
 	transition: .5s ease;
-	/*font-family: "Lucida Sans Unicode";*/
 }
 
 body {
@@ -11,9 +13,10 @@ body {
 }
 
 .below-top-bar {
+	/*margin-top: 50px;*/
 	overflow-y: scroll;
 	position: absolute;
-	top: 8.5%;
+	top: 10%;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -83,14 +86,15 @@ body {
 
 /* Slideshow container */
 .slideshow-container {
-  top: 100px;
-  max-width: 1100px;
+  /*top: 100px;*/
+	/*max-width: 1100px;*/
+	max-width: 900px;
   position: relative;
-  padding: 0, 5%, 5%, 0;
-  margin-bottom: auto;
+	padding: 0, 0, 5%, 0;
+	margin-top: 50px;
+  margin-bottom: 20%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 150px;
 }
 
 /* Hide the images by default */

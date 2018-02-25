@@ -1,6 +1,3 @@
-<?php
-	include "../php/DBConn.php";
-?>
 	<html>
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -9,11 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
 	<link rel="icon" href="../images/logo.png">
 	</head>
+	<?php	/*								
+	include "../php/DBConn.php";
+*/?>
 	<body>
 	<script src="../js/home.js"></script>
 	<div id="top-bar">												<!--top bar-->
 		<div class="fixed-width">
-			
 			
 			
 			<div id="top-menu">
@@ -28,19 +27,19 @@
 				</ul>
 			</div>
 			<div id = "buttonsdiv">
-				<ul class="topnav">
+				<ul class = "topnav">
 					
-					<li id="home">
-						<a href="home.php" rel="">Home</a>
+					<li>
+						<a id = "home" href = "home.php" go = "top-of-page">Home</a>						<!--#STop-->
 					</li>
-					<li id="news">
-						<a href = "#SNews" id = "ANews">News</a>
+					<li>
+						<a id = "news" href = "#" go = "news-section">News</a>								<!--#SNews-->
 					</li>
-					<li id="services">
-						<a href = "#SServices">Services</a>
+					<li>
+						<a id = "services" href = "#" go = "services-section">Services</a>					<!--#SServices-->
 					</li>
-					<li id="professionals">
-						<a href = "#SProfessionals">Professionals</a>
+					<li>
+						<a id = "professionals" href = "#" go = "professionals-section">Professionals</a>	<!--#SProfessionals-->
 					</li>
 					<li>
 					<?php
