@@ -1,9 +1,7 @@
 #SServices {
 	width: 100% auto;
 	height: 800px;
-	/*background-color: rgba(247,120,65,0.7);*/
-	/*background-color: rgba(0,0,0,0.3);*/
-	background-color: rgb(232, 226, 214);
+	/*background-color: rgb(232, 230, 220);*/
 	/*border: solid 0.5px;*/
 	/*margin: 10% 1% 10% 1%;*/
 	margin: 0 auto;
@@ -14,6 +12,7 @@
 	border-bottom-left-radius: 10px;*/
 	text-align: center;
 	/*-webkit-box-shadow: 0 8px 20px -6px black;*/
+	padding-top: 3%;
 }
 
 #services-header {
@@ -45,7 +44,7 @@
 }
 
 .imgbtn {
-	background-color: rgba(81, 179, 254, 1);
+	background-color: rgba(120, 179, 254, 1);
 	width: 155px;
 	height: 155px;
 	padding: 10px;
@@ -62,8 +61,8 @@
 }
 
 .serviceBtn {
-	background-color: rgba(234, 234, 234, 0.2);
-	margin: 0 4.5% 0 4.5%;
+	background-color: rgba(240, 240, 240, 0.4);
+	margin: 0 0% 0 0%;
 	display: inline-block;
 	width: 255px;
 	height: 255px;
@@ -86,7 +85,10 @@
 	margin: auto;
 	/*color: rgba(234, 234, 234, 0.95);*/
 	color: rgb(10, 10, 10);
-	font-weight: lighter;
+}
+
+.serviceName h3{
+	font-weight: normal;
 }
 
 .overlayDiv .serviceDesc {
@@ -110,7 +112,7 @@
 }
 
 .serviceBtn:hover {
-	box-shadow: 0px 0px 40px rgba(10, 10, 10, 0.5);
+	box-shadow: 0px 0px 40px rgba(50, 50, 50, 0.5);
 }
 
 .overlayDiv {
@@ -162,6 +164,7 @@
 	width: 100%;
 	/*line-height: 2.08em;*/
 	margin: 0 auto;
+	font-weight: normal;
 }
 
 .headerDiv {

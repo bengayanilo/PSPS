@@ -1,9 +1,8 @@
 #SNews {
 	width: 100% auto;
 	height: 700px;
-	/*background-color: rgba(247,120,65,0.7);*/
-	/*margin: 10% 1% 10% 1%;*/
-	background-color: rgb(232, 226, 214);
+	padding-top: 3%;
+	/*background-color: rgb(240, 240, 240);*/
 	margin: 0 auto;
 	position: relative;
 	/*border-top-right-radius: 10px;
@@ -173,7 +172,7 @@
 	text-align: center;
 	/*color: white;*/
 	color: black;
-	height: 42px;
+	height: 35px;
 	/*overflow: hidden;*/
 }
 
@@ -196,12 +195,11 @@
 	z-index: 0;
 	overflow: auto;
 	position: absolute;
-	top: 11%;
-	bottom: 0.5%;
+	top: 18%;
+	bottom: 0;
 	right: 0;
 	left: 0;
-	/*background-color: rgb(244,244,244);*/
-	background-color: rgb(232, 226, 214);
+	/*background-color: rgb(232, 230, 220);*/
 }
 
 .newsRow {
@@ -272,6 +270,7 @@
 	width: 100%;
 	/*line-height: 2.08em;*/
 	margin: 0 auto;
+	font-weight: normal;
 }
 
 .headerDiv {

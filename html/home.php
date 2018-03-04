@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="../css/home.css">
 <link rel="stylesheet" type="text/css" href="../css/normalize.css">
 <link rel="stylesheet" type="text/css" href="../css/news.css">
+<!--<link rel="stylesheet" type="text/css" href="../css/bulma.css">-->
 <link rel="icon" href="../images/logo.png">
 </head>
 <body>
@@ -22,6 +23,7 @@
 	
 <div class = "below-top-bar">
 	<!-- Slideshow container -->
+<div id = "slideshow-parent-container">
 <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
@@ -53,6 +55,7 @@
 </div>
 <script>currentSlide(1);</script>
 </div>
+</div>
 <br>
 
 <!--News-->
@@ -77,6 +80,13 @@ scrolling="yes" frameborder="0" style="margin-bottom: 25px; margin-left: 25px; b
 </div>-->
 <!--Test Div-->
 <!--</div>-->
+
+<!--Bottom Bar-->
+  <div class = "bottom-bar">
+    <div class = "creditLink">
+      <a id = "bgCredit" href = "http://www.freepik.com">Background image designed by yingyang / Freepik</a>
+    </div>
+  </div>
 </div>
 </body>
 </html>

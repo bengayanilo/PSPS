@@ -16,7 +16,7 @@ body {
 	/*margin-top: 50px;*/
 	overflow-y: scroll;
 	position: absolute;
-	top: 10%;
+	top: 50px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -85,13 +85,22 @@ body {
  
 
 /* Slideshow container */
+
+#slideshow-parent-container {
+	margin: 0 auto;
+	margin-top: 1%;
+	height: 80%;
+	width: 90%;
+	padding:5% 0 0 0;
+	/*background-color: rgb(102, 53, 25);*/
+}
+
 .slideshow-container {
   /*top: 100px;*/
 	/*max-width: 1100px;*/
 	max-width: 900px;
   position: relative;
 	padding: 0, 0, 5%, 0;
-	margin-top: 50px;
   margin-bottom: 20%;
   margin-left: auto;
   margin-right: auto;
@@ -197,6 +206,29 @@ body {
 	float: right;
 }
 
-#SServices {
-	/*clear: left;*/
+.bottom-bar {
+	background-color:rgba(10, 10, 10, 0.9);
+	height: 35px;
+	/*padding-top: 4%;*/
+	padding: 0;
 }
+
+.bottom-bar .creditLink{
+	margin: 0 auto;
+	width: 900px;
+	color: rgb(250, 250, 250);
+	text-align: center;
+	height: 35px;
+	padding: 0;
+}
+
+.bottom-bar .creditLink #bgCredit {
+	font-size: 11.5px;
+	padding-top: 5px;
+	height: 50px;
+}
+
+.bottom-bar .creditLink #bgCredit:hover {
+	color: rgb(165, 39, 60);
+}
+
