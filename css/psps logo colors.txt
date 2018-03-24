@@ -1,6 +1,0 @@
-PSPS logo colors
-
-purple	#a441d0
-red		#e34e61
-blue	#4fe2cf
-orange	#f77841
