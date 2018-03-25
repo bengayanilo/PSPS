@@ -10,6 +10,7 @@ $query = "INSERT INTO tbl_users (user_name,user_email,user_password,joining_date
 			VALUES ('$username','$email','$password',NOW())";
 if(mysqli_query($db, $query)){
 	echo "Registered";
+	// $_SESSION['id']=
 }
 else{
 	echo "Registration Failed";

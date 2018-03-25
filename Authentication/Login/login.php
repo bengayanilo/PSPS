@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../../Database/config.php');
+require('../../Database/config.php');
 $username = mysqli_real_escape_string($db, $_POST['username']);
 $password = mysqli_real_escape_string($db, $_POST['password']);
 $password = md5($password);

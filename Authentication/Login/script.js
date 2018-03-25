@@ -8,12 +8,17 @@ $(document).ready(function() {
 	       success: function(data)
 	       {
 	          if (data === 'Login') {
-	            $('#text').html("successfully logged in")
+	            alert("successfully logged in")
+	            window.location.replace("../../index.php");
+	          }
+	          else if(data == 'already logged in'){
+	          	alert("Already logged in");
+	          	window.location.replace("../../index.php");
 	          }
 	          else {
 	            $('#text').html("log in failed")
 	          }
 	       }
-	   });
-	 });
+	   	});
 	});
+});
