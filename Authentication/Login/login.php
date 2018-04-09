@@ -10,6 +10,7 @@ $results = mysqli_query($db, $query);
 if (mysqli_num_rows($results) > 0) {
 	$row = $results->fetch_assoc();
 	$_SESSION['id']=$row['user_id'];
+	$_SESSION['type']=$row['user_type'];
 	echo 'Login';
 }
 
