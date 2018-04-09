@@ -12,4 +12,5 @@ if (mysqli_num_rows($results) > 0) {
 	$_SESSION['id']=$row['user_id'];
 	echo 'Login';
 }
+
 ?>
