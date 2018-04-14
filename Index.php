@@ -7,5 +7,5 @@
 		header("Location:Authentication/Login");
 	}
 ?>
-<a href="Chat">support chat</a>
+<a href="Chat/selection">support chat</a>
 <a href="logout.php">Log out</a>

@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include('../Database/config.php');
+	include('../../Database/config.php');
 	
 	$user_id = mysqli_real_escape_string($db, $_SESSION['id']);
 	$message = mysqli_real_escape_string($db, $_POST['message']);

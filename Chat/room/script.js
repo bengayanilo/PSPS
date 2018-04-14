@@ -7,8 +7,8 @@ $(document).ready(function(){
 			data: $(this).serialize(),
 			success: function(data)
 			{
-				if(data == "query success"){
-					
+				if(data != "query success"){
+					console.log("insert failed")
 				}
 			}
 		});
