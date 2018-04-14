@@ -23,7 +23,7 @@ $(document).ready(function(){
 			{
 				var output = '';
 				for(var i in data){
-					output +="<p>"+data[i].message+"</p>";	
+					output +="<p>"+data[i].message+"</p><br>";	
 				}
 				$('#log').html(output);
 			}
