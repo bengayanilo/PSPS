@@ -1,0 +1,31 @@
+.media:hover {
+    background-color: rgb(243, 242, 240);
+}
+
+.truncate {
+    /* width: 250px; */
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.select_chat {
+    display: block;
+    text-decoration: None;
+    color: black;
+}
+
+.chat_preview {
+    color: rgb(167, 151, 158);
+}
+
+.sample {
+    background-color: blue;
+    height: 250px;
+    width: 600px;
+}
+
+.time_received {
+    margin: 5px 5px 5px 0;
+}
