@@ -15,8 +15,6 @@ $(document).ready(function(){
 		   $_GET[aux[0]] = aux[1];
 		}
 	}
-	//get the 'index' query parameter
-	console.log($_GET['chat_id']);
 
 	$('#input').submit(function(e){
 		e.preventDefault();
@@ -28,6 +26,9 @@ $(document).ready(function(){
 			{
 				if(data != "query success"){
 					console.log("insert failed")
+				}
+				else{
+					$('#message').val('');
 				}
 			}
 		});
