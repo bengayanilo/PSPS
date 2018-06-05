@@ -1,4 +1,13 @@
 $(document).ready(function(){
+	$.ajax({
+		type: "POST",
+		url: 'setter.php',
+		success: function(data)
+		{
+			console.log(data)
+		}
+	});
+
 	$('#input').submit(function(e){
 		e.preventDefault();
 		$.ajax({
@@ -23,10 +32,10 @@ $(document).ready(function(){
 			{
 				var output = '';
 				for(var i in data){
-					output +="<p>"+data[i].message+"</p><br>";	
+					output +=data[i].chat_user+":<br>"+data[i].message+"<br>";	
 				}
 				$('#log').html(output);
 			}
 		});
-	}, 100);
+	}, 500);
 });
