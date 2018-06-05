@@ -35,5 +35,14 @@ $(document).ready(function(){
 });
 
 function chat(target){
-	window.location.href="../room?target="+target
+	$.ajax({
+		type: "GET",
+		url: 'setter.php',
+		data: "target="+target,
+		dataType: "JSON",
+		success: function(data)
+		{
+			window.location.href='../room?chat_id='+data[0].chat_id; 
+		}
+	});
 }
