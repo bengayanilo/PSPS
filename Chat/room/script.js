@@ -44,7 +44,7 @@ $(document).ready(function(){
 			{
 				var output = '';
 				for(var i in data){
-					output +=data[i].chat_user+":<br>"+data[i].message+"<br>";	
+					output +=data[i].user_name+":<br>"+data[i].message+"<br>";	
 				}
 				$('#log').html(output);
 			}
