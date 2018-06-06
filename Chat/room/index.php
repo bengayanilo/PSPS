@@ -1,3 +1,12 @@
+<?php
+	session_start();
+	if(isset($_SESSION['id']) && isset($_GET['chat_id'])){
+		echo "Hello!";
+	}
+	else{
+		header("Location:../selection");
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
