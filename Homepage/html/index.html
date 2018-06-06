@@ -29,9 +29,9 @@
                 </div>
               </nav> -->
 
-              <nav class="navbar" style="margin: 0 5% auto">
+              <nav class="navbar" style="margin: 0 4% auto">
                     <div class="navbar-brand">
-                      <a class="navbar-item" href="javascript:;">
+                      <a class="navbar-item" id="company-logo" href="javascript:;">
                         <img src="../../Static/images/logo.png">&nbsp;&nbsp;<img src="../../Static/images/company_name.png">
                       </a>
                   
@@ -70,7 +70,7 @@
                         <!-- <a class="navbar-item" href="javascript:;">
                           <span class="bd-emoji"></span> &nbsp;Account
                         </a> -->
-                        <div class="navbar-item has-dropdown is-hoverable" id="account-menu">
+                        <!-- <div class="navbar-item has-dropdown is-hoverable" id="account-menu">
                           <a class="navbar-link  is-active" href="javascript:;">
                               [Account Name]
                           </a>
@@ -86,7 +86,7 @@
                               Sign Out
                             </a>
                           </div>
-                        </div>
+                        </div> -->
 
                         <!-- Docs Dropdown -->
                         <!-- <div class="navbar-item has-dropdown is-hoverable">
@@ -299,29 +299,50 @@
                             <i class="fa fa-github"></i>
                           </span>
                         </a> -->
-                        <a class="navbar-item is-hidden-desktop-only" href="https://twitter.com/jgthms" target="_blank">
+                        <!-- <a class="navbar-item is-hidden-desktop-only" href="https://twitter.com/jgthms" target="_blank">
                           <span class="icon" style="color: #55acee;">
                             <i class="fa fa-twitter"></i>
                           </span>
                           PSPS Twitter
-                        </a>
+                        </a> -->
                         <div class="navbar-item">
                           <div class="field is-grouped">
                             <p class="control">
                               <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&hashtags=bulmaio&url=http://bulma.io&via=jgthms">
                                 <span class="icon">
-                      <i class="fa fa-twitter"></i>
-                    </span>
+                                    <i class="fa fa-twitter"></i>
+                                </span>
                                 <span>
-                      Tweet
-                    </span>
+                                    Tweet
+                                </span>
                               </a>
-                  
                             </p>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <div class="navbar-item has-dropdown is-hoverable" id="account-menu">
+                            <a class="navbar-link  is-active" href="javascript:;">
+                                    <figure class="image is-32x32" id="user-avatar-div">
+                                            <span id="user-avatar-1">
+                                                <img id="user-avatar" src="../../Static/images/profile-placeholder.jpg">
+                                            </span>
+                                        </figure>
+                                [Account Name]
+                            </a>
+                            <div class="navbar-dropdown ">
+                              <a class="navbar-item " href="javascript:;">
+                                Edit Profile
+                              </a>
+                              <a class="navbar-item " href="javascript:;">
+                                Settings
+                              </a>
+                              <hr id="sign-out-divider">
+                              <a class="navbar-item " href="javascript:;">
+                                Sign Out
+                              </a>
+                            </div>
+                          </div>
                   </nav>
                   <section class="hero is-primary">
                     <div class="hero-body">
