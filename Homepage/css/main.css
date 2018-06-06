@@ -12,6 +12,68 @@
   box-shadow: inset 0 0 0 10px;
 } */
 
+.navbar a {
+    font-family: "Arial";
+}
+
+.navbar a:hover {
+    color: #4a4a4a;
+}
+
 #centered-menus {
-    
+    margin: 0 auto;
+    transition: .4s ease;
+}
+
+#home-menu {
+    padding: 0.5rem 1rem;
+}
+
+#news-menu {
+    padding: 0.5rem 1rem;
+}
+
+#services-menu {
+    padding: 0.5rem 1rem;
+}
+
+#professionals-menu {
+    padding: 0.5rem 1rem;
+}
+
+#account-menu a {
+    color: #4a4a4a;
+}
+
+#sign-out-divider {
+    margin: 0.3rem 0.5rem;
+    height: 0.1rem;
+}
+
+#home-menu:hover {
+    color: #4a4a4a;
+    padding: 0.5rem 1rem 0.05rem 1rem ;
+    border-bottom: 0.45rem solid#a441d0;
+    transition: .5s ease;
+}
+
+#news-menu:hover {
+    color: #4a4a4a;
+    padding: 0.5rem 1rem 0.05rem 1rem ;
+    border-bottom: 0.45rem solid #e34e61;
+	transition: .5s ease;
+}
+
+#services-menu:hover {
+    color: #4a4a4a;
+    padding: 0.5rem 1rem 0.05rem 1rem ;
+    border-bottom: 0.45rem solid #4fe2cf;
+	transition: .5s ease;
+}
+
+#professionals-menu:hover {
+    color: #4a4a4a;
+    padding: 0.5rem 1rem 0.05rem 1rem ;
+    border-bottom: 0.45rem solid #f77841;
+	transition: .5s ease;
 }

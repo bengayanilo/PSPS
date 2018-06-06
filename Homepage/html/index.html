@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/bulma/bulma-pageloader.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/font-awesome/font-awesome.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+    <link rel="icon" href="../images/logo.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/main.js"></script>
 </head>
@@ -28,7 +29,7 @@
                 </div>
               </nav> -->
 
-              <nav class="navbar">
+              <nav class="navbar" style="margin: 0 5% auto">
                     <div class="navbar-brand">
                       <a class="navbar-item" href="javascript:;">
                         <img src="../images/logo.png">&nbsp;&nbsp;<img src="../images/company_name.png">
@@ -52,20 +53,40 @@
                         <span></span>
                       </div>
                     </div>
-                    <div id="navMenubd-example centered-menus" class="navbar-menu">
-                      <div class="navbar-start">
-                        <a class="navbar-item" href="javascript:;">
+                    <div id="navMenubd-example" class="navbar-menu">
+                      <div class="navbar-start" id="centered-menus">
+                        <a class="navbar-item" href="javascript:;" id="home-menu">
                           <span class="bd-emoji"></span> &nbsp;Home
                         </a>
-                        <a class="navbar-item" href="javascript:;">
+                        <a class="navbar-item" href="javascript:;" id="news-menu">
                           <span class="bd-emoji"></span> &nbsp;News
                         </a>
-                        <a class="navbar-item" href="javascript:;">
+                        <a class="navbar-item" href="javascript:;" id="services-menu">
                           <span class="bd-emoji"></span> &nbsp;Services
                         </a>
-                        <a class="navbar-item" href="javascript:;">
+                        <a class="navbar-item" href="javascript:;" id="professionals-menu">
                           <span class="bd-emoji"></span> &nbsp;Professionals
                         </a>
+                        <!-- <a class="navbar-item" href="javascript:;">
+                          <span class="bd-emoji"></span> &nbsp;Account
+                        </a> -->
+                        <div class="navbar-item has-dropdown is-hoverable" id="account-menu">
+                          <a class="navbar-link  is-active" href="javascript:;">
+                              [Account Name]
+                          </a>
+                          <div class="navbar-dropdown ">
+                            <a class="navbar-item " href="javascript:;">
+                              Edit Profile
+                            </a>
+                            <a class="navbar-item " href="javascript:;">
+                              Settings
+                            </a>
+                            <hr id="sign-out-divider">
+                            <a class="navbar-item " href="javascript:;">
+                              Sign Out
+                            </a>
+                          </div>
+                        </div>
 
                         <!-- Docs Dropdown -->
                         <!-- <div class="navbar-item has-dropdown is-hoverable">
@@ -273,11 +294,11 @@
                       </div>
                   
                       <div class="navbar-end">
-                        <a class="navbar-item is-hidden-desktop-only" href="https://github.com/jgthms/bulma" target="_blank">
+                        <!-- <a class="navbar-item is-hidden-desktop-only" href="https://github.com/jgthms/bulma" target="_blank">
                           <span class="icon" style="color: #333;">
                             <i class="fa fa-github"></i>
                           </span>
-                        </a>
+                        </a> -->
                         <a class="navbar-item is-hidden-desktop-only" href="https://twitter.com/jgthms" target="_blank">
                           <span class="icon" style="color: #55acee;">
                             <i class="fa fa-twitter"></i>
@@ -313,6 +334,15 @@
                         </h2>
                       </div>
                     </div>
+                  </section>
+                  <section>
+                      News Section
+                  </section>
+                  <section>
+                      Services Section
+                  </section>
+                  <section>
+                      Professionals Section
                   </section>
     <!-- Nav Bar End -->
     <div class="pageloader"><span class="title">Pageloader</span></div>
