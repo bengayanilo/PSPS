@@ -8,7 +8,7 @@ $(document).ready(function() {
 	       data: $(this).serialize(),
 	       success: function(data)
 	       {
-	       	$('#text').html(data)
+	       	window.location.href="../../index.php";
 	       }
 	   });
 	 });
