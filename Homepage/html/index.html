@@ -14,23 +14,9 @@
     <script src="../js/main.js"></script>
 </head>
 <body>
-    <!-- Nav Bar -->
-        <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                  <a class="navbar-item" href="https://bulma.io">
-                    <img src="../images/logo.png">&nbsp&nbsp<img src="../images/company_name.png">
-                  </a>
-              
-                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                  </a>
-                </div>
-              </nav> -->
-
-              <nav class="navbar" style="margin: 0 4% auto">
-                    <div class="navbar-brand">
+              <nav class="navbar">
+                  <!-- <div style="margin: 0 4% auto"> -->
+                    <div class="navbar-brand" style="margin-left: 4%">
                       <a class="navbar-item" id="company-logo" href="javascript:;">
                         <img src="../../Static/images/logo.png">&nbsp;&nbsp;<img src="../../Static/images/company_name.png">
                       </a>
@@ -55,16 +41,16 @@
                     </div>
                     <div id="navMenubd-example" class="navbar-menu">
                       <div class="navbar-start" id="centered-menus">
-                        <a class="navbar-item" href="javascript:;" id="home-menu">
+                        <a class="navbar-item" href="#home-section" id="home-menu">
                           <span class="bd-emoji"></span> &nbsp;Home
                         </a>
-                        <a class="navbar-item" href="javascript:;" id="news-menu">
+                        <a class="navbar-item" href="#news-section" id="news-menu">
                           <span class="bd-emoji"></span> &nbsp;News
                         </a>
-                        <a class="navbar-item" href="javascript:;" id="services-menu">
+                        <a class="navbar-item" href="#services-section" id="services-menu">
                           <span class="bd-emoji"></span> &nbsp;Services
                         </a>
-                        <a class="navbar-item" href="javascript:;" id="professionals-menu">
+                        <a class="navbar-item" href="#professionals-section" id="professionals-menu">
                           <span class="bd-emoji"></span> &nbsp;Professionals
                         </a>
                         <!-- <a class="navbar-item" href="javascript:;">
@@ -344,7 +330,7 @@
                             </div>
                           </div>
                   </nav>
-                  <section class="hero is-primary">
+                  <!-- <section class="hero is-primary">
                     <div class="hero-body">
                       <div class="container">
                         <h1 class="title">
@@ -355,14 +341,17 @@
                         </h2>
                       </div>
                     </div>
+                  </section> -->
+                  <section class="greetings" id="home-section">
+
                   </section>
-                  <section>
+                  <section id="news-section">
                       News Section
                   </section>
-                  <section>
+                  <section id="services-section">
                       Services Section
                   </section>
-                  <section>
+                  <section id="professionals-section">
                       Professionals Section
                   </section>
     <!-- Nav Bar End -->
