@@ -1,7 +1,16 @@
 <?php
 	session_start();
+	include('../../Database/config.php');
+
 	if(isset($_SESSION['id']) && isset($_GET['chat_id'])){
-		echo "Hello!";
+		$query = "SELECT a.user_id,user_name 
+					FROM tbl_users a INNER JOIN chat_users b 
+					ON a.user_id = b.user_id 
+					WHERE b.chat_id=".$_GET['chat_id']." AND a.user_id !=".$_SESSION['id'];
+		
+		if ($result=mysqli_query($db, $query)){
+			$row = mysqli_fetch_row($result);
+		}
 	}
 	else{
 		header("Location:../selection");
@@ -20,13 +29,15 @@
 <script src="script.js"></script>
 
 	<div class="tile is-vertical" id="chat-container">
+		<b><?php if($row){ echo $row[1]; }?></b>
 		<div class="tile" id="log-container">
 			<div id="log"></div>
 		</div>
 
 		<form class="tile" id="input" method="post">
-			<input style="width: 100%;" type="text" name="message" id="message"/>
-			<button type="submit" name="send" id="send">send</button>
+			<input class="input" style="width: 100%;" type="text" name="message" id="message"/>
+			<button class="button is-primary" type="submit" name="send" id="send">send</button>
+			<?php echo '<a class="button is-primary" href="../video?target='.$row[0].'">Video</a>' ?>
 		</form>
 	</div>
 </body>

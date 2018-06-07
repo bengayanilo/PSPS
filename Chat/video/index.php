@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+	session_start();
+	if(!isset($_SESSION['id']) || !isset($_GET['target'])){
+		header('Location: ../selection');
+	}
+?>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
