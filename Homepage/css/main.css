@@ -70,11 +70,11 @@ body {
     color: #4a4a4a;
 }
 
-#company-logo {
+.company-logo {
     padding: 0.25rem 0.5rem;
 }
 
-#company-logo img {
+.company-logo img {
     max-height: 2rem;
 }
 

@@ -11,13 +11,14 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
     <link rel="icon" href="../../Static/images/logo.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script>
     <script src="../js/main.js"></script>
 </head>
 <body>
               <nav class="navbar">
                   <!-- <div style="margin: 0 4% auto"> -->
                     <div class="navbar-brand" style="margin-left: 4%">
-                      <a class="navbar-item" id="company-logo" href="javascript:;">
+                      <a class="navbar-item company-logo" id="company-logo" href="javascript:;">
                         <img src="../../Static/images/logo.png">&nbsp;&nbsp;<img src="../../Static/images/company_name.png">
                       </a>
                   
@@ -345,16 +346,18 @@
                   <section class="greetings" id="home-section">
 
                   </section>
-                  <section id="news-section">
-                      News Section
-                  </section>
+                  <!-- <div id="news-section"> -->
+                      <!-- <div id="include-news"> -->
+	                      <?php include("../../News/html/news.php"); ?>
+	                    <!-- </div> -->
+                  <!-- </div> -->
                   <section id="services-section">
                       Services Section
                   </section>
                   <section id="professionals-section">
                       Professionals Section
                   </section>
-    <!-- Nav Bar End -->
+                  <?php include("../../Footer/html/footer-distributed-with-address-and-phones.html"); ?>
     <div class="pageloader"><span class="title">Pageloader</span></div>
 </body>
 </html>
