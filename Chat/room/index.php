@@ -37,7 +37,7 @@
 		<form class="tile" id="input" method="post">
 			<input class="input" style="width: 100%;" type="text" name="message" id="message"/>
 			<button class="button is-primary" type="submit" name="send" id="send">send</button>
-			<?php echo '<a class="button is-primary" href="../video?target='.$row[0].'">Video</a>' ?>
+			<?php echo '<a class="button is-primary" href="../video/index.php#psps'.$_GET['chat_id'].'">Video</a>' ?>
 		</form>
 	</div>
 </body>
