@@ -2,7 +2,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Home - Psyche Solution Psychological Services</title>
-<link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+<!-- <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" /> -->
 <!-- <link rel="stylesheet" type="text/css" media="screen" href="../css/bulma-timeline.sass" /> -->
 <link rel="icon" href="../images/logo.png">
 <!-- <script src="../js/news.js"></script> -->
