@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top">
+<nav class="navbar navbar-fixed-top" style="z-index: 100;">
                   <!-- <div style="margin: 0 4% auto"> -->
                     <div class="navbar-brand" style="margin-left: 4%">
                       <a class="navbar-item company-logo" id="company-logo" href="javascript:;">

@@ -5,11 +5,9 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home - Psyche Solution Psychological Services</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma-pageloader.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/font-awesome/font-awesome.css" />
-    
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
     <link rel="icon" href="../../Static/images/logo.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -21,13 +19,9 @@
                   <section class="greetings" id="home-section">
 
                   </section>
-                  <!-- <div id="news-section"> -->
-                      <!-- <div id="include-news"> -->
-	                      <?php include("../../News/html/news.php"); ?>
-	                    <!-- </div> -->
-                  <!-- </div> -->
-                  <section id="services-section">
-                      Services Section
+	                  <?php include("../../News/html/news.php"); ?>
+                  <section>
+                      <?php include("../../Services/html/services.php"); ?>
                   </section>
                   <section id="professionals-section">
                       Professionals Section
