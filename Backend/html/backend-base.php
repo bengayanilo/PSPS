@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Backend - Psyche Solution Psychological Services</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="users/user-scripts.js" type="text/javascript"></script>
 
 	<link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma-pageloader.min.css" />
@@ -39,17 +40,7 @@
 			</div>          
 		</div>
 	</nav>
-	<!-- {% with messages = get_flashed_messages() %}
-	{% if messages %} -->
-	<!-- <div class="notification is-danger">
-	<ul>
-		{% for message in messages %}
-		<li>{{ message }}</li>
-		{% endfor %}
-	</ul>
-	</div> -->
-	<!-- {% endif %}
-	{% endwith %} -->
+
 	<div class="container is-fluid">
 		<br>
 		<div class="columns">
@@ -57,7 +48,7 @@
 				<div class="panel box with-shadow"> <!-- URL FOR ALL HREFS -->
 					<p class="panel-heading">Menu</p>
 						<a href="javascript:;" class="panel-block">Home</a>
-						<a href="users/user-index.php" class="panel-block">Users</a>
+						<a href="javascript:;" class="panel-block" id = "userdiv" onclick="showusers()">Users</a>
 						<a href="javascript:;" class="panel-block">Patients</a>
 						<a href="javascript:;" class="panel-block">Reports</a>
 						<a href="javascript:;" class="panel-block">Transactions</a>
@@ -72,7 +63,11 @@
 						</a>
 				</div>
 			</div>
-			<!-- {% block content %} {% endblock %} -->
+
+			<div class="column">
+				<div id = "content"></div>
+			</div>
+
 		</div>
 	</div>
 

@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	require('../../../Database/config.php');
 
 	$getuser = "SELECT user_id, user_name, user_email FROM tbl_users";
@@ -26,7 +25,7 @@
 								<div class="dropdown-content">
 									<a class="dropdown-item" href="">View</a>
 									<a class="dropdown-item" href="">Edit</a>
-									<a class="dropdown-item confirm-delete" href="">Delete</a>
+									<a class="dropdown-item" href="">Delete</a>
 								</div>
 							</div>
 						</div>										
