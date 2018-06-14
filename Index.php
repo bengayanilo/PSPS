@@ -8,4 +8,5 @@
 	}
 ?>
 <a href="Chat/selection">support chat</a>
+<a href="Scheduling/index.php">Appointments</a>
 <a href="logout.php">Log out</a>

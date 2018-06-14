@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    if($_SESSION['id']){
+        if($_SESSION['type']=='psy'){
+            header("Location:doctor.php");
+        }
+        else if($_SESSION['type']=='adm'){
+            header("Location:manager.php");
+        }
+    }
+    else{
+        header("Location:../../Authentication/Login");
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
