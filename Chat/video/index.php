@@ -1,7 +1,7 @@
 <?php
   session_start();
   if(!isset($_SESSION['id'])){
-    header('Location: ../selection');
+    header('Location: ../selection/index.php');
   }
 ?>
 <!DOCTYPE html>

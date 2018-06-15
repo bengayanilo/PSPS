@@ -9,7 +9,7 @@
         }
     }
     else{
-        header("Location:../../Authentication/Login");
+        header("Location:../Authentication/Login/index.php");
     }
 ?>
 <!DOCTYPE html>
