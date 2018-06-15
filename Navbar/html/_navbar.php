@@ -1,8 +1,8 @@
 <nav class="navbar navbar-fixed-top" style="z-index: 100;">
                   <!-- <div style="margin: 0 4% auto"> -->
                     <div class="navbar-brand" style="margin-left: 4%">
-                      <a class="navbar-item company-logo" id="company-logo" href="javascript:;">
-                        <img src="../../Static/images/logo.png">&nbsp;&nbsp;<img src="../../Static/images/company_name.png">
+                      <a class="navbar-item company-logo" id="company-logo" href="http://localhost/Web/index.php">
+                        <img src="http://localhost/Web/Static/images/logo.png">&nbsp;&nbsp;<img src="http://localhost/Web/Static/images/company_name.png">
                       </a>
                   
                       <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
@@ -64,7 +64,7 @@
                                 <a class="navbar-link  is-active" href="javascript:;">
                                         <figure class="image is-32x32" id="user-avatar-div">
                                                 <span id="user-avatar-1">
-                                                    <img id="user-avatar" src="../../Static/images/profile-placeholder.jpg">
+                                                    <img id="user-avatar" src="http://localhost/Web/Static/images/profile-placeholder.jpg">
                                                 </span>
                                             </figure>
                                     '.$_SESSION['username'].'

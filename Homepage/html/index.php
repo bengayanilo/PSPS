@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma-pageloader.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/font-awesome/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Homepage/css/main.css" />
     <link rel="icon" href="../../Static/images/logo.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script> -->
