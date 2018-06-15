@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	header("Location:Homepage/html/index.php");
 ?>
 <a href="Chat/selection">support chat</a>
 <a href="Scheduling/index.php">Appointments</a>

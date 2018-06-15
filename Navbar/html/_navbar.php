@@ -57,26 +57,34 @@
                         </div>
                       </div>
                     </div>
-                    <div class="navbar-item has-dropdown is-hoverable" id="account-menu">
-                            <a class="navbar-link  is-active" href="javascript:;">
-                                    <figure class="image is-32x32" id="user-avatar-div">
-                                            <span id="user-avatar-1">
-                                                <img id="user-avatar" src="../../Static/images/profile-placeholder.jpg">
-                                            </span>
-                                        </figure>
-                                [Account Name]
-                            </a>
-                            <div class="navbar-dropdown ">
-                              <a class="navbar-item " href="javascript:;">
-                                Edit Profile
-                              </a>
-                              <a class="navbar-item " href="javascript:;">
-                                Settings
-                              </a>
-                              <hr id="sign-out-divider">
-                              <a class="navbar-item " href="javascript:;">
-                                Sign Out
-                              </a>
-                            </div>
-                          </div>
+                    <?php
+                      if(isset($_SESSION['id']))
+                      {
+                        echo '<div class="navbar-item has-dropdown is-hoverable" id="account-menu">
+                                <a class="navbar-link  is-active" href="javascript:;">
+                                        <figure class="image is-32x32" id="user-avatar-div">
+                                                <span id="user-avatar-1">
+                                                    <img id="user-avatar" src="../../Static/images/profile-placeholder.jpg">
+                                                </span>
+                                            </figure>
+                                    '.$_SESSION['username'].'
+                                </a>
+                                <div class="navbar-dropdown ">
+                                  <a class="navbar-item " href="javascript:;">
+                                    Edit Profile
+                                  </a>
+                                  <a class="navbar-item " href="javascript:;">
+                                    Settings
+                                  </a>
+                                  <hr id="sign-out-divider">
+                                  <a class="navbar-item " href="../../logout.php">
+                                    Sign Out
+                                  </a>
+                                </div>
+                              </div>';
+                      }
+                      else{
+                        echo '<a class="navbar-item" href="../../Authentication/Login/index.php">Log In</a>';
+                      }
+                    ?>
                   </nav>
