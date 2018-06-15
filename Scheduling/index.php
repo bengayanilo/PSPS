@@ -4,7 +4,7 @@
         if($_SESSION['type']=='psy'){
             header("Location:doctor.php");
         }
-        else if($_SESSION['type']=='adm'){
+        else if($_SESSION['type']=='admin'){
             header("Location:manager.php");
         }
     }

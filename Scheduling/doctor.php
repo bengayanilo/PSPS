@@ -5,7 +5,7 @@
         if($_SESSION['type']=='pat'){
             header("Location:index.php");
         }
-        else if($_SESSION['type']=='adm'){
+        else if($_SESSION['type']=='admin'){
             header("Location:manager.php");
         }
     }

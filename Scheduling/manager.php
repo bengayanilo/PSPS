@@ -28,7 +28,7 @@
     </head>
     <body>
         <div class="main">
-            <?php require_once '_navigation.php'; ?>
+            <?php require_once '../Navbar/html/_navbar.php'; ?>
 
             <div>
 
