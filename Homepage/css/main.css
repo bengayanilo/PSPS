@@ -4,17 +4,15 @@
 *::-webkit-scrollbar-thumb {
   width: 27px;
   border-radius: 13px;
-  background-clip: padding-box;s
+  background-clip: padding-box;
   border: 10px solid transparent;
 }
 
-*::-webkit-scrollbar-thumb {        
+*::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 0 10px;
 } */
 
 body {
-    padding: 0;
-    margin: 0;
     background-color: rgb(19, 16, 16);
 }
 
@@ -25,7 +23,7 @@ body,html{margin:0;padding:0;}
 .wrapper {
   /* The height needs to be set to a fixed value for the effect to work.
    * 100vh is the full height of the viewport. */
-  height: 100vh;
+  height: 115vh;
   /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
   overflow-x: hidden;
   /* Enable scrolling on the page. */
@@ -46,6 +44,11 @@ body,html{margin:0;padding:0;}
   justify-content: center;
   color: white;
   text-shadow: 0 0 5px #000;
+}
+
+.greetings {
+    /* border: 1px solid black; */
+    width: 40%;
 }
 
 .parallax::after {
@@ -75,28 +78,15 @@ body,html{margin:0;padding:0;}
 /* Sets the actual background images to adorable kitties. This part is crucial. */
 .bg1::after {
   /* background-image: url('https://placekitten.com/g/900/700'); */
-  background: url("../../Static/images/morning-coffee-message-hd-wallpaper.jpg") center center;
+  /* background: url("../../Static/images/morning-coffee-message-hd-wallpaper.jpg") center center; */
+  /* background: url("../../Static/images/Coffee-Wallpaper-43-3840x2160.jpg") center center; */
+  background: url("../../Static/images/background-beverage-breakfast-414645.jpg") center top;
   background-size: cover;
+  /* background-size: auto; */
   background-repeat: no-repeat;
   /* overflow: hidden; */
 }
 /* Parallax Effect End */
-
-.greetings {
-    perspective: 2px;
-    overflow-x: hidden;
-    width: 100%;
-    /* min-height: 700px;
-    max-height: 100%; */
-    height: 100vh;
-    overflow-x: hidden;
-    background: url("../../Static/images/morning-coffee-message-hd-wallpaper.jpg") center center;
-    /* background-position: center; */
-    /* background-size: contain; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* background-color: black; */
-}
 
 #news-section {
     width: 100%;

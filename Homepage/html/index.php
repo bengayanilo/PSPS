@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma-pageloader.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/font-awesome/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Homepage/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Homepage/css/main.css" />
     <link rel="icon" href="../../Static/images/logo.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script> -->
@@ -22,7 +22,9 @@
   <?php include("../../Navbar/html/_navbar.php"); ?>
   <!-- <main class="wrapper"> -->
     <section class="section parallax bg1" id="home-section">
-      <h1>This is a welcome message</hi>
+    <div class="greetings level-left">
+      <h1 style="font-size: 50px; font-family: Trebuchet; text-shadow: 2px 2px #000000;">One small positive thought in the morning can change your whole day.</hi>
+    </div>
     </section>
     <!-- <section> -->
     </section>
