@@ -14,16 +14,16 @@
         <div class="tile is-parent is-12">
           <div class="tile is-parent is-3">
             <div class="tile is-child is-light box notification" id="textChat">
-              <p class="title">Text Chat</p>
+              <p class="title">Chat</p>
               <p>Support chat for Psychological Evaluation and Assessment</p>
-              <a style="text-decoration: none; padding: 5px; margin: 10px;" href="javascript:;" class="tile notification is-danger is-4" id="textChatBtn"><span class="title">Start</span></a>
+              <a style="text-decoration: none; padding: 5px; margin: 10px;" href="../../Chat/selection/index.php" class="tile notification is-danger is-4" id="textChatBtn"><span class="title">Start</span></a>
             </div>
           </div>
           <div class="tile is-parent is-3">
             <div class="tile is-child is-light box notification" id="videoChat">
-              <p class="title">Video Chat</p>
-              <p>Video chat for Psychological Evaluation and Assessment</p>
-              <a style="text-decoration: none; padding: 5px; margin: 10px;" href="javascript:;" class="tile notification is-danger is-4" id="videoChatBtn"><span class="title">Start</span></a>
+              <p class="title">Appointment Scheduling</p>
+              <p>Request Appointments</p>
+              <a style="text-decoration: none; padding: 5px; margin: 10px;" href="../../Scheduling/index.php" class="tile notification is-danger is-4" id="videoChatBtn"><span class="title">Start</span></a>
             </div>
           </div>
     <div>

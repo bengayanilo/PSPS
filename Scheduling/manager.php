@@ -1,9 +1,26 @@
+<?php
+    session_start();
+    if($_SESSION['id']){
+        if($_SESSION['type']=='psy'){
+            header("Location:doctor.php");
+        }
+        else if($_SESSION['type']=='pat'){
+            header("Location:index.php");
+        }
+    }
+    else{
+        header("Location:../Authentication/Login/index.php");
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8" />
         <title>HTML5 Doctor Appointment Scheduling (JavaScript/PHP)</title>
-
+        <link rel="stylesheet" type="text/css" media="screen" href="../Static/css/bulma/bulma.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="../Static/css/bulma/bulma-pageloader.min.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="../Static/css/font-awesome/font-awesome.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Homepage/css/main.css" />
         <link type="text/css" rel="stylesheet" href="css/layout.css" />
 
         <!-- DayPilot library -->
@@ -11,7 +28,7 @@
     </head>
     <body>
         <div class="main">
-            <?php require_once '_navigation.php'; ?>
+            <?php require_once '../Navbar/html/_navbar.php'; ?>
 
             <div>
 

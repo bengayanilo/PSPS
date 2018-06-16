@@ -1,12 +1,14 @@
 <?php
 	session_start();
-	if($_SESSION['id']){
-		echo "Hello!";
-	}
-	else{
-		header("Location:Authentication/Login");
-	}
+	header("Location:Homepage/html/index.php");
 ?>
 <a href="Chat/selection">support chat</a>
 <a href="Scheduling/index.php">Appointments</a>
-<a href="logout.php">Log out</a>
+<?php
+	if(isset($_SESSION['id'])){
+		echo '<a href="logout.php">Log out</a>';
+	}
+	else{
+		echo '<a href="Authentication/Login/index.php">Log In</a>';
+	}
+?>

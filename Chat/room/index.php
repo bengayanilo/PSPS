@@ -13,7 +13,7 @@
 		}
 	}
 	else{
-		header("Location:../selection");
+		header("Location:../selection/index.php");
 	}
 ?>
 <!DOCTYPE html>
