@@ -15,11 +15,16 @@
     <script src="../js/main.js"></script>
 </head>
 <body>
+<main class="wrapper">
   <?php include("../../Navbar/html/_navbar.php"); ?>
-                  <section class="greetings" id="home-section">
-
-                  </section>
-	                  <?php include("../../News/html/news.php"); ?>
+  <!-- <main class="wrapper"> -->
+    <section class="section parallax bg1" id="home-section">
+      <h1>This is a welcome message</hi>
+    </section>
+    <!-- <section> -->
+    </section>
+	  <?php include("../../News/html/news.php"); ?>
+                      <!-- </section> -->
                   <section>
                       <?php include("../../Services/html/services.php"); ?>
                   </section>
@@ -28,5 +33,6 @@
                   </section>
                   <?php include("../../Footer/html/footer-distributed-with-address-and-phones.html"); ?>
     <div class="pageloader"><span class="title">Pageloader</span></div>
+    </main>
 </body>
 </html>

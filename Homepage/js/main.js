@@ -1,5 +1,7 @@
 $(document).ready(function(){
     // Add smooth scrolling to all links
+    var navBarHeight = $(".navbar").outerHeight();
+    // $('.wrapper').css('margin-top', navBarHeight/2);
     $("a").on('click', function(event) {
   
       // Make sure this.hash has a value before overriding default behavior
@@ -15,13 +17,14 @@ $(document).ready(function(){
   
         // Using jQuery's animate() method to add smooth page scroll
         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
+        // $('html, body').animate({
+        $('.wrapper').stop().animate({
         //   scrollTop: $(hash).offset().top
-          scrollTop: $target.offset().top - navBarHeight
+          scrollTop: $target.offset().top + $('.wrapper').scrollTop() - navBarHeight
         }, 800, function(){
      
           // Add hash (#) to URL when done scrolling (default click behavior)
-        //   window.location.hash = hash;
+          // window.location.hash = hash;
         });
       } // End if
     });
