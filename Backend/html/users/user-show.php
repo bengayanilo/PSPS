@@ -24,8 +24,8 @@
 							<div class="dropdown-menu">
 								<div class="dropdown-content">
 									<a class="dropdown-item" href="">View</a>
-									<a class="dropdown-item" href="">Edit</a>
-									<a class="dropdown-item" href="">Delete</a>
+									<a class="dropdown-item" href="users/user-update.php?update_id='. $row['user_id'] .'">Edit</a>
+									<a class="dropdown-item" href="users/user-delete.php?delete_id='. $row['user_id'] .'">Delete</a>
 								</div>
 							</div>
 						</div>										

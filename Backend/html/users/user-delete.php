@@ -1,4 +1,13 @@
 <?php
 	require('../../../Database/config.php');
-	include 'user-show.php';
+
+	$deleted_id = $_GET['delete_id'];
+
+	$deleteuser = "DELETE FROM tbl_users WHERE user_id=$deleted_id";
+
+	if ($db->query($deleteuser) === TRUE) {
+    echo "Record deleted successfully";
+	} else {
+	    echo "Error deleting record: " . $db->error;
+	}
 ?>
