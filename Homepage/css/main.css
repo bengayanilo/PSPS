@@ -23,7 +23,7 @@ body,html{margin:0;padding:0;}
 .wrapper {
   /* The height needs to be set to a fixed value for the effect to work.
    * 100vh is the full height of the viewport. */
-  height: 115vh;
+  height: 100vh;
   /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
   overflow-x: hidden;
   /* Enable scrolling on the page. */
@@ -113,7 +113,8 @@ body,html{margin:0;padding:0;}
 }
 
 .navbar {
-    position: sticky;
+    width: 100%;
+    position: fixed;
     position: -webkit-sticky;
     top: 0px;
     background-color: rgba(250, 250, 250, 0.95);

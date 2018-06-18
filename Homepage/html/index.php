@@ -18,12 +18,14 @@
     <script src="../js/main.js"></script>
 </head>
 <body>
-<main class="wrapper">
-  <?php include("../../Navbar/html/_navbar.php"); ?>
-  <!-- <main class="wrapper"> -->
+<!-- <main class="wrapper"> -->
+  <div class="navbar-wrapper" style="height: 100%;">
+    <?php include("../../Navbar/html/_navbar.php"); ?>
+  </div>
+  <main class="wrapper">
     <section class="section parallax bg1" id="home-section">
     <div class="greetings level-left">
-      <h1 style="font-size: 50px; font-family: Trebuchet; text-shadow: 2px 2px #000000;">One small positive thought in the morning can change your whole day.</hi>
+      <h1 style="font-size: 3rem; font-family: Trebuchet; text-shadow: 2px 2px #000000;">One small positive thought in the morning can change your whole day.</hi>
     </div>
     </section>
     <!-- <section> -->
