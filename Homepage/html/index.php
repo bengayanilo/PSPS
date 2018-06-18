@@ -16,6 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script> -->
     <script src="../js/main.js"></script>
+    <script src="../../Navbar/js/navbar.js"></script>
 </head>
 <body>
 <!-- <main class="wrapper"> -->
