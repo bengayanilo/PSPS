@@ -3,7 +3,7 @@
                     <div class="navbar-brand" style="margin-left: 4%">
                       <a class="navbar-item company-logo" id="company-logo" href=<?php //echo ($_SESSION['type']=='admin')?'../../Backend/html/backend-base.php':'../../index.php';?>>
                         <!-- <img src="../../Static/images/logo.png">&nbsp;&nbsp;<div id ="navbarLogo"></div> -->
-                        <img src="../../Static/images/logo.png">&nbsp;&nbsp;<img id="navbarLogo" src="../../Static/images/company_name_white.png">
+                        <img src="http://localhost/Web/Static/images/logo.png">&nbsp;&nbsp;<img id="navbarLogo" src="http://localhost/Web/Static/images/company_name_white.png">
                       </a>
                   
                       <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
@@ -78,7 +78,7 @@
                                     Settings
                                   </a>
                                   <hr id="sign-out-divider">
-                                  <a class="navbar-item " href="../../logout.php">
+                                  <a class="navbar-item " href="http://localhost/Web/logout.php">
                                     Sign Out
                                   </a>
                                 </div>
