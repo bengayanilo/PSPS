@@ -16,6 +16,13 @@ body {
     background-color: rgb(19, 16, 16);
 }
 
+html {
+    image-rendering: crisp-edges;
+    /* image-rendering: -webkit-optimize-contrast; */
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
 /* Parallax Effect */
 /* Tiny reset thingy */
 body,html{margin:0;padding:0;}
@@ -158,18 +165,22 @@ body,html{margin:0;padding:0;}
 }
 
 #home-menu {
+    color: black !important;
     padding: 0.5rem 1rem;
 }
 
 #news-menu {
+    color: black !important;
     padding: 0.5rem 1rem;
 }
 
 #services-menu {
+    color: black !important;
     padding: 0.5rem 1rem;
 }
 
 #professionals-menu {
+    color: black !important;
     padding: 0.5rem 1rem;
 }
 
