@@ -80,7 +80,7 @@ body,html{margin:0;padding:0;}
   /* background-image: url('https://placekitten.com/g/900/700'); */
   /* background: url("../../Static/images/morning-coffee-message-hd-wallpaper.jpg") center center; */
   /* background: url("../../Static/images/Coffee-Wallpaper-43-3840x2160.jpg") center center; */
-  background: url("../../Static/images/background-beverage-breakfast-414645.jpg") center top;
+  background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../../Static/images/background-beverage-breakfast-414645.jpg") center top;
   background-size: cover;
   /* background-size: auto; */
   background-repeat: no-repeat;
@@ -113,21 +113,35 @@ body,html{margin:0;padding:0;}
 }
 
 .navbar {
+    transition: all .5s ease;
+    color: white;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0);
     position: fixed;
     position: -webkit-sticky;
     top: 0px;
-    background-color: rgba(250, 250, 250, 0.95);
+    /* background-color: rgba(250, 250, 250, 0.95); */
     -webkit-box-shadow: 0 5px 15px -8px black;
-    /* background-color: rgb(245, 245, 245); */
 }
 
 .navbar a {
     font-family: "Arial";
 }
 
-.navbar a:hover {
-    color: #4a4a4a;
+/* .navbar-item:hover {
+
+} */
+
+.navbar-item:hover span{
+    color: black;
+}
+
+.navbar .navbarLinks {
+    color: white;
+}
+
+.navbarLinks:hover {
+    color: black !important;
 }
 
 .company-logo {
@@ -200,28 +214,24 @@ body,html{margin:0;padding:0;}
 }
 
 #home-menu:hover {
-    color: #4a4a4a;
     padding: 0.5rem 1rem 0.05rem 1rem ;
     border-bottom: 0.45rem solid#a441d0;
     transition: .3s ease;
 }
 
 #news-menu:hover {
-    color: #4a4a4a;
     padding: 0.5rem 1rem 0.05rem 1rem ;
     border-bottom: 0.45rem solid #e34e61;
 	transition: .3s ease;
 }
 
 #services-menu:hover {
-    color: #4a4a4a;
     padding: 0.5rem 1rem 0.05rem 1rem ;
     border-bottom: 0.45rem solid #4fe2cf;
 	transition: .3s ease;
 }
 
 #professionals-menu:hover {
-    color: #4a4a4a;
     padding: 0.5rem 1rem 0.05rem 1rem ;
     border-bottom: 0.45rem solid #f77841;
 	transition: .3s ease;

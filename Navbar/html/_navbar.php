@@ -2,7 +2,8 @@
                   <!-- <div style="margin: 0 4% auto"> -->
                     <div class="navbar-brand" style="margin-left: 4%">
                       <a class="navbar-item company-logo" id="company-logo" href=<?php //echo ($_SESSION['type']=='admin')?'../../Backend/html/backend-base.php':'../../index.php';?>>
-                        <img src="../../Static/images/logo.png">&nbsp;&nbsp;<img src="../../Static/images/company_name.png">
+                        <!-- <img src="../../Static/images/logo.png">&nbsp;&nbsp;<div id ="navbarLogo"></div> -->
+                        <img src="../../Static/images/logo.png">&nbsp;&nbsp;<img id="navbarLogo" src="../../Static/images/company_name_white.png">
                       </a>
                   
                       <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
@@ -26,16 +27,16 @@
                     <div id="navMenubd-example" class="navbar-menu">
                       <div class="navbar-start" id="centered-menus">
                         <a class="navbar-item" href="#home-section" id="home-menu">
-                          <span class="bd-emoji"></span> &nbsp;Home
+                          <span class="bd-emoji"></span> &nbsp;<span class="navbarLinks">Home</span>
                         </a>
                         <a class="navbar-item" href="#news-section" id="news-menu">
-                          <span class="bd-emoji"></span> &nbsp;News
+                          <span class="bd-emoji"></span> &nbsp;<span class="navbarLinks">News</span>
                         </a>
                         <a class="navbar-item" href="#services-section" id="services-menu">
-                          <span class="bd-emoji"></span> &nbsp;Services
+                          <span class="bd-emoji"></span> &nbsp;<span class="navbarLinks">Services</span>
                         </a>
                         <a class="navbar-item" href="#professionals-section" id="professionals-menu">
-                          <span class="bd-emoji"></span> &nbsp;Professionals
+                          <span class="bd-emoji"></span> &nbsp;<span class="navbarLinks">Professionals</span>
                         </a>
 
                       </div>
@@ -84,7 +85,7 @@
                               </div>';
                       }
                       else{
-                        echo '<a class="navbar-item" href="../../Authentication/Login/index.php">Log In</a>';
+                        echo '<a class="navbar-item navbarLinks" href="../../Authentication/Login/index.php">Log In</a>';
                       }
                     ?>
                   </nav>
