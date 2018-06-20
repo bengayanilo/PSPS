@@ -1,7 +1,7 @@
 
 <?php
     require_once '_db.php';
-    if($_SESSION['id']){
+    if(isset($_SESSION['id'])){
         if($_SESSION['type']=='pat'){
             header("Location:index.php");
         }
