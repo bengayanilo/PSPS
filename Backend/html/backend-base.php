@@ -6,10 +6,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="users/user-scripts.js" type="text/javascript"></script>
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma-pageloader.min.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/font-awesome/font-awesome.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Static/css/bulma/bulma.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Static/css/bulma/bulma-pageloader.min.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Static/css/font-awesome/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Backend/css/main.css" />
 	<link rel="icon" href="../../Static/images/logo.png" />
 </head>
 <body onload="setType()">
@@ -65,11 +65,4 @@
 			</div>
 
 			<div class="column">
-				<div id = "content"></div>
-			</div>
-
-		</div>
-	</div>
-
-</body>
-</html>
+				<div id = "content">
