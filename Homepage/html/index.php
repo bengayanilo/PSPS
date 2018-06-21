@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma-pageloader.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/font-awesome/font-awesome.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../../Homepage/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Navbar/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Homepage/css/hero.css" />
     <link rel="icon" href="../../Static/images/logo.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script> -->
@@ -20,13 +22,13 @@
 </head>
 <body>
 <!-- <main class="wrapper"> -->
-  <div class="navbar-wrapper" style="height: 100%;">
+  <div class="navbar-wrapper">
     <?php include("../../Navbar/html/_navbar.php"); ?>
   </div>
   <main class="wrapper">
     <section class="section parallax bg1" id="home-section">
-    <div class="greetings level-left">
-      <h1 style="font-size: 3rem; font-family: Trebuchet; text-shadow: 2px 2px #000000;">One small positive thought in the morning can change your whole day.</hi>
+    <div class="greetings hero-top">
+      <h1 style="font-family: Trebuchet; text-shadow: 2px 2px #000000;">One small positive thought in the morning can change your whole day.</hi>
     </div>
     </section>
     <!-- <section> -->

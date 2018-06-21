@@ -1,0 +1,51 @@
+/*@media screen and (max-width: 320px) {*/
+/*    .greetings h1 {*/
+/*      font-size: 6vw;*/
+/*    }*/
+    
+/*    .bg1 {*/
+/*        width: 100vw;*/
+/*    }*/
+/*  }*/
+  
+@media screen and (max-width: 320px) {
+    html, body {
+        max-width: 320px;
+        overflow-y: hidden;
+    }
+
+    .wrapper {
+        max-width: 320px;
+    }
+
+    .greetings {
+        width: 90%;
+    }
+
+    .greetings h1 {
+      font-size: 7vw;
+    }
+
+    .bg1::after {
+        background-size: cover;
+        width: 100vw;
+    }
+
+    /* #company-symbol {
+        height: 50%;
+    } */
+
+    #company-logo {
+        max-height: 40px !important;
+    }
+  }  
+
+@media screen and (max-width: 375px) {
+    .greetings h1 {
+      font-size: 8vw;
+    }
+    
+    .bg1 {
+        width: 100vw;
+    }
+  }

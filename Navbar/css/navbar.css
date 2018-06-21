@@ -1,0 +1,41 @@
+#user-avatar-div {
+	margin: 0 0.5rem 0 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+	border-radius: 50%;
+	/* border: 1px solid black; */
+	text-align: center;
+	max-height: 2.25rem;
+	max-width: 2.25rem;
+	width: 2.25rem;
+	height: 2.25rem;
+}
+
+#user-avatar-1 {
+	display: block;
+	max-height: 2.25rem;
+	height: 2.25rem;
+	width: 2.25rem;
+}
+
+#user-avatar {
+    overflow-y: hidden;
+	overflow-x: hidden;
+	width: 100%;
+	max-height: 2.25rem;
+	height: 2.25rem;
+	object-fit: cover;
+	display: inline-block;
+}
+
+#is-hoverable:hover {
+    background-color: rgba(255, 255, 255, 1) !important;
+}
+
+#account-menu a {
+    color: #4a4a4a;
+}
+
+#user-name {
+    color: white;
+}
