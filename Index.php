@@ -1,6 +1,12 @@
 <?php
 	session_start();
-	header("Location:Homepage/html/index.php");
+	if($_SESSION['type'] != 'admin'){
+		header("Location:Homepage/html/index.php");
+	}
+	else{
+		header("Location:Backend/html/index.php");
+	}
+	
 ?>
 <a href="Chat/selection">support chat</a>
 <a href="Scheduling/index.php">Appointments</a>

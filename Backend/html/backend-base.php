@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +7,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="users/user-scripts.js" type="text/javascript"></script>
 
-	<link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma-pageloader.min.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/font-awesome/font-awesome.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Static/css/bulma/bulma.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Static/css/bulma/bulma-pageloader.min.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Static/css/font-awesome/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Backend/css/main.css" />
 	<link rel="icon" href="../../Static/images/logo.png" />
 </head>
 <body onload="setType()">
@@ -17,7 +18,7 @@
 		<div class="container is-fluid">
 			<div class="navbar-brand">
 				<a href="javascript:;" class="navbar-item" id="company-logo">
-					<strong><img src="../../Static/images/logo.png">&nbsp;&nbsp;<img src="../../Static/images/company_name.png"></strong>
+					<strong><img src="http://localhost/Web/Static/images/logo.png">&nbsp;&nbsp;<img src="http://localhost/Web/Static/images/company_name.png"></strong>
 				</a>
 			</div>
 			<div class="navbar-menu">
@@ -26,14 +27,14 @@
 						<a href="#" class="navbar-link">
 							<figure class="image is-64x64" id="user-avatar-div">
 								<span id="user-avatar-1">
-									<img id="user-avatar" src="../../Static/images/profile-placeholder.jpg">
+									<img id="user-avatar" src="http://localhost/Web/Static/images/profile-placeholder.jpg">
 								</span>
 							</figure>
-						   {{ current_user.username }} <!-- Display current logged-in username -->
+						   <?php echo (isset($_SESSION['id']))?$_SESSION['username']:"Not Logged In" ?> <!-- Display current logged-in username -->
 						</a>
 						<div class="navbar-dropdown is-boxed">
 					  <a class="dropdown-item" href="javascript:;" class="navbar-item">Account Settings</a> <!-- ADMIN SETTINGS -->
-							<a href="javascript:;" class="navbar-item">Logout</a> <!-- USER LOGOUT -->
+							<a href="http://localhost/Web/logout.php" class="navbar-item">Logout</a> <!-- USER LOGOUT -->
 						</div>
 					</div>                  
 				</div>
@@ -65,11 +66,4 @@
 			</div>
 
 			<div class="column">
-				<div id = "content"></div>
-			</div>
-
-		</div>
-	</div>
-
-</body>
-</html>
+				<div id = "content">

@@ -32,7 +32,7 @@
             <div><input type="text" id="end" name="end" value="<?php print (new DateTime($event['appointment_end']))->format('d/M/y g:i A') ?>" disabled /></div>
 
             <div>Your Name: </div>
-            <div><input type="text" id="name" name="name" value="" /></div>
+            <div><input type="text" id="name" name="name" value="<?php print ($_SESSION['username']) ?>" disabled /></div>
 
             <div class="space"><input type="submit" value="Save" /> <a href="#" id="cancel">Cancel</a></div>
         </form>

@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Users</title>
-
-		<link rel="stylesheet" type="text/css" media="screen" href="../../../Static/css/bulma/bulma.css" />
-	    <link rel="stylesheet" type="text/css" media="screen" href="../../../Static/css/bulma/bulma-pageloader.min.css" />
-	</head>
-	<body>
+<?php
+	include('../backend-base.php');
+?>
 	<div class="columns">
 		<div class="column">
 			<div class="card box">
@@ -45,6 +38,12 @@
 			</div>
 		</div>
 	</div>
-		
-	</body>
+<!-- end part of backend base -->
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
 </html>
