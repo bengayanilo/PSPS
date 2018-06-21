@@ -17,7 +17,7 @@
 		<div class="container is-fluid">
 			<div class="navbar-brand">
 				<a href="javascript:;" class="navbar-item" id="company-logo">
-					<strong><img src="../../Static/images/logo.png">&nbsp;&nbsp;<img src="../../Static/images/company_name.png"></strong>
+					<strong><img src="http://localhost/Web/Static/images/logo.png">&nbsp;&nbsp;<img src="http://localhost/Web/Static/images/company_name.png"></strong>
 				</a>
 			</div>
 			<div class="navbar-menu">
@@ -26,7 +26,7 @@
 						<a href="#" class="navbar-link">
 							<figure class="image is-64x64" id="user-avatar-div">
 								<span id="user-avatar-1">
-									<img id="user-avatar" src="../../Static/images/profile-placeholder.jpg">
+									<img id="user-avatar" src="http://localhost/Web/Static/images/profile-placeholder.jpg">
 								</span>
 							</figure>
 						   {{ current_user.username }} <!-- Display current logged-in username -->
