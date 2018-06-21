@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,11 +30,11 @@
 									<img id="user-avatar" src="http://localhost/Web/Static/images/profile-placeholder.jpg">
 								</span>
 							</figure>
-						   {{ current_user.username }} <!-- Display current logged-in username -->
+						   <?php echo (isset($_SESSION['id']))?$_SESSION['username']:"Not Logged In" ?> <!-- Display current logged-in username -->
 						</a>
 						<div class="navbar-dropdown is-boxed">
 					  <a class="dropdown-item" href="javascript:;" class="navbar-item">Account Settings</a> <!-- ADMIN SETTINGS -->
-							<a href="javascript:;" class="navbar-item">Logout</a> <!-- USER LOGOUT -->
+							<a href="http://localhost/Web/logout.php" class="navbar-item">Logout</a> <!-- USER LOGOUT -->
 						</div>
 					</div>                  
 				</div>

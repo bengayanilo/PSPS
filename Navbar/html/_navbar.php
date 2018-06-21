@@ -1,7 +1,7 @@
 <nav class="navbar navbar-fixed-top" style="z-index: 100;">
                   <!-- <div style="margin: 0 4% auto"> -->
                     <div class="navbar-brand" style="margin-left: 4%">
-                      <a class="navbar-item company-logo" id="company-logo" href=<?php //echo ($_SESSION['type']=='admin')?'../../Backend/html/backend-base.php':'../../index.php';?>>
+                      <a class="navbar-item company-logo" id="company-logo" href="<?php echo ($_SESSION['type']=='admin')?'../../Backend/html/index.php':'../../index.php';?>" >
                         <!-- <img src="../../Static/images/logo.png">&nbsp;&nbsp;<div id ="navbarLogo"></div> -->
                         <img src="http://localhost/Web/Static/images/logo.png">&nbsp;&nbsp;<img id="navbarLogo" src="http://localhost/Web/Static/images/company_name_white.png">
                       </a>
