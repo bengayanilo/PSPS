@@ -28,10 +28,10 @@
     </head>
     <body>
         <div class="main">
-            <?php require_once '../Navbar/html/_navbar.php'; ?>
-
             <div>
-
+                <?php require_once '../Navbar/html/_navbar.php'; ?>
+            </div>
+            <div>
                 <div style="float:left; width:160px">
                     <div id="nav"></div>
                 </div>
