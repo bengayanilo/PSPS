@@ -24,8 +24,8 @@
 							<div class="dropdown-menu">
 								<div class="dropdown-content">
 									<a class="dropdown-item" href="">View</a>
-									<a class="dropdown-item" href="user-update.php?update_id='. $row['user_id'] .'">Edit</a>
-									<a class="dropdown-item" href="user-delete.php?delete_id='. $row['user_id'] .'" onclick="return confirm('."'Are you sure?'".');">Delete</a>
+									<a class="dropdown-item" href="update.php?update_id='. $row['user_id'] .'">Edit</a>
+									<a class="dropdown-item" href="delete.php?delete_id='. $row['user_id'] .'" onclick="return confirm('."'Are you sure?'".');">Delete</a>
 								</div>
 							</div>
 						</div>										

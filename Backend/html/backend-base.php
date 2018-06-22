@@ -17,8 +17,11 @@
 	<nav class="navbar is-light">
 		<div class="container is-fluid">
 			<div class="navbar-brand">
-				<a href="javascript:;" class="navbar-item" id="company-logo">
-					<strong><img src="http://localhost/Web/Static/images/logo.png">&nbsp;&nbsp;<img src="<?php echo $_SESSION['url']; ?>Static/images/company_name.png"></strong>
+				<a href="<?php echo $_SESSION['url']; ?>Homepage/html/index.php" class="navbar-item" id="company-logo">
+					<strong>
+						<img src="<?php echo $_SESSION['url']; ?>Static/images/logo.png">&nbsp;&nbsp;
+						<img src="<?php echo $_SESSION['url']; ?>Static/images/company_name.png">
+					</strong>
 				</a>
 			</div>
 			<div class="navbar-menu">
