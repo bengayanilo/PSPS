@@ -11,6 +11,7 @@ $query = "INSERT INTO tbl_users (user_name,user_email,user_password,user_type,jo
 			VALUES ('$username','$email','$password','$type',NOW())";
 if(mysqli_query($db, $query)){
 	$_SESSION['id']=mysqli_insert_id($db);
+	$_SESSION['username']=$username;
 	$_SESSION['type']=$type;
 	echo $_SESSION['id'];
 }

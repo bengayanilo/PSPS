@@ -1,7 +1,7 @@
 <?php
 	require('../../../Database/config.php');
 
-	$getuser = "SELECT user_id, user_name, user_email FROM tbl_users WHERE user_type='psy'";
+	$getuser = "SELECT user_id, user_name, user_email FROM tbl_users WHERE user_type='pat'";
 	$result = $db->query($getuser);
 
 	if ($result->num_rows > 0) {
