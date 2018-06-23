@@ -16,6 +16,7 @@
 
     .wrapper {
         max-width: 320px;
+        -webkit-overflow-scrolling: touch;
     }
 
     .greetings {
@@ -29,6 +30,7 @@
     .bg1::after {
         background-size: cover;
         width: 100vw;
+        transform: translate3d(0,0,3);
     }
 
     /* #company-symbol {

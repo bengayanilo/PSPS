@@ -1,13 +1,19 @@
 $(document).ready(function(){
+
     var navBarHeight = $(".navbar").outerHeight();
     var scrolledTop = $('.wrapper').scrollTop();
 
     $('.navbar-brand').hover(function() {
         $('a#company-logo').css('background-color', 'rgba(255, 255, 255, 0)');
     });
-    $('.navbar#account-menu').hover(function() {
-        $('#account-menu').css('background-color', 'rgba(255, 255, 255, 0)');
-    });
+    // $('.is-hoverable').hover(function() {
+    //     $('.is-hoverable').css('background-color', 'black');
+    // }), function() {
+    //     $('.is-hoverable').css('background-color', 'pink');
+    // };
+    // $('.navbar#account-menu').hover(function() {
+    //     $('#account-menu').css('background-color', 'rgba(255, 255, 255, 0)');
+    // });
     if($('.navbar').hasClass('scrolled'))
     {
         $('#company-logo').hover(function() {

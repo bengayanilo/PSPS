@@ -7450,8 +7450,15 @@ a.navbar-link.is-active {
   a.navbar-link.is-active:not(:hover) {
     background-color: transparent;
   }
+  /* a.navbar-item.is-active:hover,
+  a.navbar-link.is-active:hover {
+    background-color: transparent;
+  } */
   .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
     background-color: whitesmoke;
+  }
+  .navbar-item.has-dropdown:hover .navbar-link span {
+    color: black !important;
   }
 }
 

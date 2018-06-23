@@ -8,6 +8,15 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home - Psyche Solution Psychological Services</title>
+
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma-pageloader.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/font-awesome/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Homepage/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Navbar/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Homepage/css/hero.css" />
+    <link rel="icon" href="../../Static/images/logo.png" /> -->
+
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma-pageloader.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/font-awesome/font-awesome.css" />
@@ -15,10 +24,12 @@
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Navbar/css/navbar.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Homepage/css/hero.css" />
     <link rel="icon" href="<?php echo $_SESSION['url']; ?>Static/images/logo.png" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script> -->
     <script src="../js/main.js"></script>
     <script src="../../Navbar/js/navbar.js"></script>
+    <script src="../../Navbar/js/navbar-burger.js"></script>
 </head>
 <body>
 <!-- <main class="wrapper"> -->
