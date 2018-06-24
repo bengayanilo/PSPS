@@ -1,15 +1,39 @@
+<!-- <!DOCTYPE html>
+<html> -->
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Home - Psyche Solution Psychological Services</title>
 <!-- <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" /> -->
 <!-- <link rel="stylesheet" type="text/css" media="screen" href="../css/bulma-timeline.sass" /> -->
-<link rel="icon" href="../images/logo.png">
+<!-- <link rel="icon" href="../images/logo.png"> -->
 <!-- <script src="../js/news.js"></script> -->
+<link rel="stylesheet" type="text/css" media="screen" href="../../News/css/news.css">
 
 </head>
+<body class="news-body">
+  <div class="tile news-wrapper is-12" id="news-section">
+    <div class="columns columns-wrapper">
+      <div class="column news-left-side">
+        <div class="tile is-parent news-parent-tile">
+          <div class="tile news-card">
+            <div class="news-image-container">
+              <img class="news-image" src="../../News/images/news1.jpg">
+            </div>
+            <div class="news-info">
+              <h1 class="news-title">News Title Here</h1>
+              <p class="news-desc">Short description of news</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column news-right-side">
 
-<div class="timeline is-centered" id="news-section">
+      </div>
+    </div>
+  </div>
+</body>
+<!-- <div class="timeline is-centered" id="news-section">
 News Section
   <header class="timeline-header">
     <span class="tag is-medium is-primary">Start</span>
@@ -45,4 +69,5 @@ News Section
   <header class="timeline-header">
     <span class="tag is-medium is-primary">End</span>
   </header>
-</div>
+</div> -->
+<!-- </html> -->
