@@ -52,17 +52,17 @@
 				<div class="panel box with-shadow"> <!-- URL FOR ALL HREFS -->
 					<p class="panel-heading">Menu</p>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/index.php" class="panel-block">Home</a>
-						<a href="<?php echo $_SESSION['url']; ?>Backend/html/users/user-index.php" class="panel-block" id = "userdiv" onclick="showusers()">Users</a>
+						<a href="<?php echo $_SESSION['url']; ?>Backend/html/users/user-index.php" class="panel-block">Users</a>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/patients/index.php" class="panel-block">Patients</a>
 						<a href="javascript:;" class="panel-block">Reports</a>
 						<a href="javascript:;" class="panel-block">Transactions</a>
-						<a href="javascript:;" class="panel-block">Review Applications</a>
-						<a href="javascript:;" class="dropdown-item button normal-mode is-dark" id="switchModeBtn" onclick="switchMode()">
+						<a href="<?php echo $_SESSION['url']; ?>Backend/html/revappli/index.php" class="panel-block">Review Applications</a>
+						<a href="<?php echo $_SESSION['url']; ?>Scheduling/manager.php" class="dropdown-item button normal-mode is-dark" id="switchModeBtn" onclick="switchMode()">
 							<span class="icon is-small">
 								<i class="fas fa-moon"></i>
 							</span>
 							<span id="night-mode-text">
-								Night Mode
+								Manage Shifts
 							</span>
 						</a>
 				</div>
