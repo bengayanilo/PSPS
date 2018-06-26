@@ -35,8 +35,8 @@
 						   <?php echo (isset($_SESSION['id']))?$_SESSION['username']:"Not Logged In" ?> <!-- Display current logged-in username -->
 						</a>
 						<div class="navbar-dropdown is-boxed">
-					  <a class="dropdown-item" href="javascript:;" class="navbar-item">Account Settings</a> <!-- ADMIN SETTINGS -->
-							<a href="http://localhost/Web/logout.php" class="navbar-item">Logout</a> <!-- USER LOGOUT -->
+					  		<a class="dropdown-item" href="<?php echo $_SESSION['url']; ?>settings.php" class="navbar-item">Account Settings</a> <!-- ADMIN SETTINGS -->
+							<a href="<?php echo $_SESSION['url']; ?>logout.php" class="navbar-item">Logout</a> <!-- USER LOGOUT -->
 						</div>
 					</div>                  
 				</div>
@@ -54,7 +54,7 @@
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/users/index.php" class="panel-block">Users</a>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/patients/index.php" class="panel-block">Patients</a>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/reports/index.php" class="panel-block">Reports</a>
-						<a href="<?php echo $_SESSION['url']; ?>Backend/html/transactions/index.php" class="panel-block">Transactions</a>
+						<a href="<?php echo $_SESSION['url']; ?>Backend/html/sessions/index.php" class="panel-block">Sessions</a>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/revappli/index.php" class="panel-block">Review Applications</a>
 						<a href="<?php echo $_SESSION['url']; ?>Scheduling/manager.php" class="dropdown-item button normal-mode is-dark">
 							<span class="icon is-small">

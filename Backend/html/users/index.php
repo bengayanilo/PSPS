@@ -4,7 +4,9 @@
 	<div class="columns">
 		<div class="column">
 			<div class="card box">
-				<div class="card-header">
+					<div class="card-header">
+						<p class="card-header-title">Users</p>
+					</div>
 					<nav class="level">
 						<div class="level-left">
 							<div class="level-item">
@@ -18,8 +20,15 @@
 								</div>	
 							</div>
 						</div>
+						<div class="level-right">
+							<form action="" method = POST>
+								<div class="field has-addons movetoleft">
+									<p class="control"> <input type="text" class="input" name="search" placeholder="Find a user"> </p>
+									<p class="control"> <input type="submit" class="button is-info" name="submit" value="search"> </p>
+								</div>
+							</form>
+						</div>
 					</nav>
-				</div>
 				<div class="card-content">
 					<table class="table is-fullwidth">
 						<thead>

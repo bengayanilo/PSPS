@@ -16,7 +16,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>HTML5 Doctor Appointment Scheduling (JavaScript/PHP)</title>
+        <title>PSPS Scheduling (JavaScript/PHP)</title>
         <link rel="stylesheet" type="text/css" media="screen" href="../Static/css/bulma/bulma.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="../Static/css/bulma/bulma-pageloader.min.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="../Static/css/font-awesome/font-awesome.css" />

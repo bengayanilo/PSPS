@@ -67,10 +67,10 @@
 									</span>
 							</a>
 							<div class="navbar-dropdown ">
-								<a class="navbar-item " href="javascript:;">
+								<a class="navbar-item " href="'.$_SESSION['url'].'settings.php">
 									Edit Profile
 								</a>
-								<a class="navbar-item " href="javascript:;">
+								<a class="navbar-item " href="'.$_SESSION['url'].'settings.php">
 									Settings
 								</a>
 								<hr id="sign-out-divider">

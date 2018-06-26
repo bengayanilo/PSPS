@@ -5,21 +5,30 @@
 		<div class="column">
 			<div class="card box">
 				<div class="card-header">
-					<nav class="level">
-						<div class="level-left">
-							<div class="level-item">
-								<div class="card-content field has-addons">
-									<a href="/" class="button is-primary">
-										<span class="icon is-small">
-											<i class="fa fa-plus"></i>
-										</span>
-										<span>Create</span>
-									</a>
-								</div>	
-							</div>
-						</div>
-					</nav>
+					<p class="card-header-title">Patients</p>
 				</div>
+				<nav class="level">
+					<div class="level-left">
+						<div class="level-item">
+							<div class="card-content field has-addons">
+								<a href="create.php" class="button is-primary">
+									<span class="icon is-small">
+										<i class="fa fa-plus"></i>
+									</span>
+									<span>Create</span>
+								</a>
+							</div>	
+						</div>
+					</div>
+					<div class="level-right">
+						<form action="" method = POST>
+							<div class="field has-addons movetoleft">
+								<p class="control"> <input type="text" class="input" name="search" placeholder="Find a user"> </p>
+								<p class="control"> <input type="submit" class="button is-info" name="submit" value="search"> </p>
+							</div>
+						</form>
+					</div>
+				</nav>
 				<div class="card-content">
 					<table class="table is-fullwidth">
 						<thead>

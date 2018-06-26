@@ -5,7 +5,7 @@
 		<div class="column">
 			<div class="card box">
 				<div class="card-content">
-							<b>TRANSACTIONS</b>
+							<b>SESSIONS</b>
 				</div>
 			</div>
 		</div>
