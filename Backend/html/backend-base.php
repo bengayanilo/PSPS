@@ -53,10 +53,10 @@
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/index.php" class="panel-block">Home</a>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/users/index.php" class="panel-block">Users</a>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/patients/index.php" class="panel-block">Patients</a>
-						<a href="javascript:;" class="panel-block">Reports</a>
-						<a href="javascript:;" class="panel-block">Transactions</a>
+						<a href="<?php echo $_SESSION['url']; ?>Backend/html/reports/index.php" class="panel-block">Reports</a>
+						<a href="<?php echo $_SESSION['url']; ?>Backend/html/transactions/index.php" class="panel-block">Transactions</a>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/revappli/index.php" class="panel-block">Review Applications</a>
-						<a href="<?php echo $_SESSION['url']; ?>Scheduling/manager.php" class="dropdown-item button normal-mode is-dark" id="switchModeBtn" onclick="switchMode()">
+						<a href="<?php echo $_SESSION['url']; ?>Scheduling/manager.php" class="dropdown-item button normal-mode is-dark">
 							<span class="icon is-small">
 								<i class="fas fa-moon"></i>
 							</span>
