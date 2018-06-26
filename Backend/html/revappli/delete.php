@@ -6,7 +6,7 @@
 	$deleteuser = "DELETE FROM tbl_users WHERE user_id=$deleted_id";
 
 	if ($db->query($deleteuser) == TRUE) {
-    	header("Location:user-index.php");
+    	header("Location:index.php");
 	} else {
 	    echo "Error deleting record: " . $db->error;
 	}

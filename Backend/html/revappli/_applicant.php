@@ -1,7 +1,7 @@
 <?php
 	require('../../../Database/config.php');
 
-	$getuser = "SELECT user_id, user_name, user_email FROM tbl_users WHERE user_type='psy'";
+	$getuser = "SELECT user_id, user_name, user_email FROM tbl_users WHERE user_type='rev'";
 	$result = $db->query($getuser);
 
 	if ($result->num_rows > 0) {
@@ -23,9 +23,9 @@
 							</div>
 							<div class="dropdown-menu">
 								<div class="dropdown-content">
-									<a class="dropdown-item" href="">View</a>
-									<a class="dropdown-item" href="user-update.php?update_id='. $row['user_id'] .'">Edit</a>
-									<a class="dropdown-item" href="user-delete.php?delete_id='. $row['user_id'] .'" onclick="return confirm('."'Are you sure?'".');">Delete</a>
+									<a class="dropdown-item" href="show.php?id='. $row['user_id'] .'">View</a>
+									<a class="dropdown-item" href="update.php?update_id='. $row['user_id'] .'">Edit</a>
+									<a class="dropdown-item" href="delete.php?delete_id='. $row['user_id'] .'" onclick="return confirm('."'Are you sure?'".');">Delete</a>
 								</div>
 							</div>
 						</div>										

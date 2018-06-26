@@ -2,7 +2,7 @@
 	require('../../../Database/config.php');
 	
 	$updateuser = $_GET['id'];
-	$selectuser = "SELECT user_id,user_name, user_email, joining_date FROM tbl_users WHERE user_id=$updateuser";
+	$selectuser = "SELECT user_name, user_email, joining_date FROM tbl_users WHERE user_id=$updateuser";
 
 	$userdata = $db->query($selectuser);
 	$data = $userdata->fetch_assoc();
@@ -29,10 +29,6 @@
 							<div class="card-content">
 								<table class="table is-fullwidth">
 									<tbody>
-										<tr>
-											<th width="100">User ID</th>
-											<td><?php echo $data['user_id']; ?></td>
-										</tr>
 										<tr>
 											<th width="100">Username</th>
 											<td><?php echo $data['user_name']; ?></td>

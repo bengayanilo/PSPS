@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<title>Backend - Psyche Solution Psychological Services</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="<?php echo $_SESSION['url']; ?>Backend/html/users/user-scripts.js" type="text/javascript"></script>
 
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma-pageloader.min.css" />
@@ -52,7 +51,7 @@
 				<div class="panel box with-shadow"> <!-- URL FOR ALL HREFS -->
 					<p class="panel-heading">Menu</p>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/index.php" class="panel-block">Home</a>
-						<a href="<?php echo $_SESSION['url']; ?>Backend/html/users/user-index.php" class="panel-block">Users</a>
+						<a href="<?php echo $_SESSION['url']; ?>Backend/html/users/index.php" class="panel-block">Users</a>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/patients/index.php" class="panel-block">Patients</a>
 						<a href="javascript:;" class="panel-block">Reports</a>
 						<a href="javascript:;" class="panel-block">Transactions</a>

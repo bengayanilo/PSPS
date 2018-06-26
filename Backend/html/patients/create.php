@@ -1,17 +1,12 @@
 <?php
 	require('../../../Database/config.php');
-	
-	$updateuser = $_GET['update_id'];
-	$selectuser = "SELECT user_name, user_email FROM tbl_users WHERE user_id=$updateuser";
-
-	$userdata = $db->query($selectuser);
-	$data = $userdata->fetch_assoc();
-
 	include('../backend-base.php');
 ?>
+
+<div class="column">
 	<div class="columns">
 		<div class="column">
-			<a href="<?php echo $_SESSION['url']; ?>Backend/html/users/index.php" class="button">
+			<a href="/backend/users" class="button">
 				<span class="icon is-small">
     				<i class="fa fa-long-arrow-left"></i>
 				</span>
@@ -23,20 +18,20 @@
 		<div class="column">
 			<div class="card box">
 				<div class="card-header">
-					<p class="card-header-title">Edit details</p>
+					<p class="card-header-title">Register</p>
 				</div>
 				<div class="card-content">
 					<form action="" method="post">
 						<div class="field">
 							<label> Username </label>
 							<div class="control">
-								<input type="text" class="input" name="new_username" value="<?php echo $data['user_name']; ?>" autofocus>
+								<input type="text" class="input" name="new_username" autofocus>
 							</div>
 						</div>
 						<div class="field">
 							<label> Email </label>
 							<div class="control">
-								<input type="text" class="input" name="new_email" value="<?php echo $data['user_email']; ?>">
+								<input type="text" class="input" name="new_email" >
 							</div>
 						</div>
 						<div class="field">
@@ -52,12 +47,13 @@
 							</div>
 						</div>
 						<hr>
-						<input type="submit" class="button is-primary" name="submitupdate" value="Submit">
+						<input type="submit" class="button is-primary" name="submitcreate" value="Submit">
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 <!-- end part of backend base -->
 				</div>
 			</div>
@@ -68,7 +64,7 @@
 </body>
 </html>
 <?php
-	if (isset($_POST['submitupdate'])){
+	if (isset($_POST['submitcreate'])){
 
 		$username = $_POST['new_username'];
 		$email = $_POST['new_email'];
@@ -78,17 +74,14 @@
 		if($pass === $conpass){
 
 			$password = md5($pass);
-			$insertdata = "UPDATE tbl_users SET user_name = '$username', 
-												user_email='$email',
-												user_password='$password'
-											WHERE user_id='$updateuser'";
+			$insertdata = "INSERT INTO tbl_users (user_name,user_email,user_password,user_type,joining_date)
+			VALUES ('$username','$email','$password','pat',NOW())";
 											
 			$insert = $db->query($insertdata);
 
-			if ($db->query($insertdata) === TRUE) {
+			if ($insert) {
 
-				echo '<script type="text/javascript"> 
-						alert("Data successfully updated");
+				echo '<script type="text/javascript">
 						window.location.replace("index.php");
 					</script>';
 			} else {

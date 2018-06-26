@@ -9,7 +9,7 @@
 						<div class="level-left">
 							<div class="level-item">
 								<div class="card-content field has-addons">
-									<a href="/" class="button is-primary">
+									<a href="create.php" class="button is-primary">
 										<span class="icon is-small">
 											<i class="fa fa-plus"></i>
 										</span>
@@ -31,7 +31,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<?php include 'user-show.php'; ?>
+							<?php include '_user.php'; ?>
 						</tbody>
 					</table>
 				</div>

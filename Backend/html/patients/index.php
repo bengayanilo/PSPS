@@ -31,7 +31,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<?php include 'show.php'; ?>
+							<?php include '_patient.php'; ?>
 						</tbody>
 					</table>
 				</div>
