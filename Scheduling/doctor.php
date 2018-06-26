@@ -21,6 +21,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="../Static/css/bulma/bulma.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="../Static/css/bulma/bulma-pageloader.min.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="../Static/css/font-awesome/font-awesome.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/scheduling.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Homepage/css/main.css" />
         <link type="text/css" rel="stylesheet" href="css/layout.css" />
 
@@ -31,7 +32,7 @@
         <div class="main">
             <?php require_once '../Navbar/html/_navbar.php'; ?>
 
-            <div>
+            <div class="content-wrapper">
 
                 <div style="float:left; width:160px">
                     <div id="nav"></div>
