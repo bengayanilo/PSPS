@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    $('.is-light').hover(function() {
-        $(this).removeClass('is-light').addClass('is-dark');
+    $('.is-white').hover(function() {
+        $(this).removeClass('is-white').addClass('is-light');
     }, function() {
-        $(this).removeClass('is-dark').addClass('is-light');
+        $(this).removeClass('is-light').addClass('is-white');
     });
 });
