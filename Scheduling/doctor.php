@@ -39,9 +39,9 @@
                 </div>
                 <div style="margin-left: 160px">
                     <div class="space">
-                        <select id="doctor" name="doctor">
+                        <select id="doctor" name="doctor" hidden>
                         <?php
-                            foreach($db->query('SELECT * FROM tbl_users WHERE user_type="psy"') as $item) {
+                            foreach($db->query('SELECT * FROM tbl_users WHERE user_id="'.$_SESSION['id'].'"') as $item) {
                                 echo "<option value='".$item["user_id"]."'>".$item["user_name"]."</option>";
                             }
                         ?>
