@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Services/css/services.css" />
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-    <script src="../../Services/js/services.js"></script>
+    <script src="<?php echo $_SESSION['url']; ?>Services/js/services.js"></script>
 </head>
 <body>
   <div class="tile services-wrapper is-12" id="services-section">
