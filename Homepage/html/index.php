@@ -21,6 +21,7 @@
 	<script src="../js/main.js"></script>
 	<script src="../../Navbar/js/navbar.js"></script>
 	<script src="../../Navbar/js/navbar-burger.js"></script>
+	 <script src="../../Scheduling/js/daypilot/daypilot-all.min.js"></script>
 </head>
 <body>
 <!-- <main class="wrapper"> -->

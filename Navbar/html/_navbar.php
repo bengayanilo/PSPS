@@ -108,7 +108,24 @@
 		}
 		else{
 			// echo '<a class="navbar-item navbarLinks navbar-menu" href="../../Authentication/Login/index.php">Log In</a>';
-			echo '<a class="navbar-item navbarLinks navbar-menu" href="'.$_SESSION['url'].'Authentication/Login/index.php">Log In</a>';
+			// echo '<a class="navbar-item navbarLinks navbar-menu" href="'.$_SESSION['url'].'Authentication/Login/index.php">Log In</a>';
+			echo '<a class="navbar-item navbarLinks navbar-menu" href="" onclick="showmodal()">Log In</a>
+
+				<script>
+
+					function showmodal(){
+
+						var modal = new DayPilot.Modal({
+								onClosed: function(args) {
+								if (args.result) { 
+									console.log("Model is closed");
+								}
+							}
+						});
+						modal.showUrl("'.$_SESSION['url'].'Authentication/Login/index.php");
+					};
+
+				</script>';
 		}
 	?>
 	</div>

@@ -7,6 +7,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma-pageloader.min.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/font-awesome/font-awesome.css" />
+	
 	<title>Log-in</title>
 </head>
 <body>
@@ -14,15 +18,26 @@
 <script src="script.js"></script>
 
 	<div id="text"></div>
-	
+
 	<form id="loginform" method="post">
-    Username: <input type="text" name="username" id="username" value="" required>
-    <br>
-    Password: <input type="password" name="password" id="password" value="" required>
-	<br>
-    <button type="submit" name="login" id="login" value="">Log in</button>
-    <br>
-    don't have an account yet? register <a href="../Register">here</a>.
-    </form>
+
+			<div class="field">
+				<label for="" class="label">Username: </label>
+				<input class="input" type="text" name="username" id="username" value="" required>
+			</div>
+			
+			<div class="field">
+				<label for="" class="label">Password: </label>
+				<input class="input" type="password" name="password" id="password" value="" required>
+			</div>
+
+			<br>
+
+			<p class="control is-small">Don't have an account yet? Register <a href="../Register">here </a></p>
+
+			<button class="button is-success" type="submit" name="login" id="login" value="">Confirm</button>
+
+	</form>
+	
 </body>
 </html>
