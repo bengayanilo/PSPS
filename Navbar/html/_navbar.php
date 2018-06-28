@@ -79,35 +79,8 @@
 								</a>
 							</div>
 						</div>';
-						
-
-						/* echo '<div class="navbar-item navbarLinks has-dropdown is-hoverable navbar-menu" id="account-menu is-hoverable">
-						<a class="navbar-link is-active" href="javascript:;">
-										<figure class="image is-32x32" id="user-avatar-div">
-														<span id="user-avatar-1">
-																<img id="user-avatar" src="../../Static/images/profile-placeholder.jpg">
-														</span>
-												</figure>
-												<span id="user-name">
-								'.$_SESSION['username'].'
-								</span>
-						</a>
-						<div class="navbar-dropdown ">
-							<a class="navbar-item " href="javascript:;">
-								Edit Profile
-							</a>
-							<a class="navbar-item " href="javascript:;">
-								Settings
-							</a>
-							<hr id="sign-out-divider">
-							<a class="navbar-item " href="../../logout.php">
-								Sign Out
-							</a>
-						</div>
-					</div>'; */
 		}
 		else{
-			// echo '<a class="navbar-item navbarLinks navbar-menu" href="../../Authentication/Login/index.php">Log In</a>';
 			// echo '<a class="navbar-item navbarLinks navbar-menu" href="'.$_SESSION['url'].'Authentication/Login/index.php">Log In</a>';
 			echo '<a class="navbar-item navbarLinks navbar-menu" href="" onclick="showmodal()">Log In</a>
 
