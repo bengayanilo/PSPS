@@ -7,7 +7,7 @@ $(document).ready(function(){
 		{
 			var output = '';
 			for(var i in data){
-				output +='<button onclick="chat('+data[i].user_id+')">'+
+				output +='<button class="select-convo" onclick="chat('+data[i].user_id+')">'+
 						        '<div class="media">'+
 						            '<div class="media-left">'+
 						                '<p class="image is-96x96">'+

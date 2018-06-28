@@ -2,12 +2,19 @@
     background-color: rgb(243, 242, 240);
 }
 
+.select-convo {
+    width: 100%;
+}
+
 .truncate {
     /* width: 250px; */
     display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* overflow-x: scroll; */
+    /* text-overflow: ellipsis; */
+    overflow-wrap: break-word;
+    overflow: auto;
 }
 
 .select_chat {
