@@ -16,7 +16,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <div class="columns">
-    	<div class="column is-3" id="log"></div>
+    	<div class="column is-5" id="log"></div>
     	<div class="column" id="chat">
     		
     	</div>
