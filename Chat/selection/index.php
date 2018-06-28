@@ -1,11 +1,6 @@
 <?php
 	session_start();
-	if($_SESSION['id']){
-		if($_SESSION['type']!='psy'){
-			echo "PSPS Psychologists";
-		}
-	}
-	else{
+	if(!isset($_SESSION['id'])){
 		header("Location:../../Authentication/Login/index.php");
 	}
 ?>

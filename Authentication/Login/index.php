@@ -24,8 +24,5 @@
     <br>
     don't have an account yet? register <a href="../Register">here</a>.
     </form>
-
-	
-
 </body>
 </html>
