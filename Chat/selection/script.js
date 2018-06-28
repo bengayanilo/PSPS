@@ -42,7 +42,7 @@ function chat(target){
 		dataType: "JSON",
 		success: function(data)
 		{
-			window.location.href='../room?chat_id='+data[0].chat_id; 
+			window.open('../room/index.php?chat_id='+data[0].chat_id,'windowNew','width=500, height=500');
 		}
 	});
 }
