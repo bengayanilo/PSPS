@@ -6,15 +6,24 @@
     width: 100%;
 }
 
+.profile-pic {
+    border-radius: 50%;
+}
+
 .truncate {
     /* width: 250px; */
+    max-height: 2.5rem;
     display: block;
     /* white-space: nowrap; */
     /* overflow: hidden; */
     /* overflow-x: scroll; */
-    /* text-overflow: ellipsis; */
+    text-overflow: ellipsis;
     overflow-wrap: break-word;
     overflow: auto;
+}
+
+.truncate::-webkit-scrollbar {
+    display: none;
 }
 
 .select_chat {

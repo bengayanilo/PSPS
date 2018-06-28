@@ -11,7 +11,7 @@ $(document).ready(function(){
 						        '<div class="media">'+
 						            '<div class="media-left">'+
 						                '<p class="image is-96x96">'+
-						                    '<img src="https://bulma.io/images/placeholders/128x128.png">'+
+						                    '<img class="profile-pic" src="https://bulma.io/images/placeholders/128x128.png">'+
 						            	'</p>'+
 						            '</div>'+
 						            '<div class="media-content">'+
