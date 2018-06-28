@@ -39,7 +39,7 @@
 					<?php include("../../Services/html/services.php"); ?>
 				</section>
 				<section id="professionals-section">
-					Professionals Section
+					<?php include("../../Professionals/html/professionals.php"); ?>
 				</section>
 				<?php include("../../Footer/html/footer-distributed-with-address-and-phones.html"); ?>
 	<div class="pageloader"><span class="title">Pageloader</span></div>

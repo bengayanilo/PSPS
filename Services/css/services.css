@@ -24,11 +24,6 @@
     border-right: 1px solid #ccc;
 }
 
-.services-tile-container {
-    /* border-left: 1px solid black;
-    border-right: 1px solid black; */
-}
-
 .services-tile {
     margin: auto;
     /* height: 22vw;
@@ -47,6 +42,7 @@
 }
 
 .services-link {
+    transition: all .3s ease;
     /* padding: 1.3rem 2rem 2rem 2rem !important; */
     text-align: center;
     /* height: 250px;
@@ -92,12 +88,4 @@
     width: 100%;
     text-align: center;
     color: #4a4a4a;
-}
-
-#textChat {
-    transition: all .25s ease;
-}
-
-#videoChat {
-    transition: all .25s ease;
 }
