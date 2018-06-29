@@ -29,7 +29,7 @@
 						<a href="#" class="navbar-link">
 							<figure class="image is-64x64" id="user-avatar-div">
 								<span id="user-avatar-1">
-									<img id="user-avatar" src="<?php echo $_SESSION['url']; ?>Static/images/profile-placeholder.jpg">
+									<img id="user-avatar" src="<?php echo ($_SESSION['pic'] != NULL?$_SESSION['url'].$_SESSION['pic']:$_SESSION['url']."Static/images/profile-placeholder.jpg") ?>">
 								</span>
 							</figure>
 						   <?php echo (isset($_SESSION['id']))?$_SESSION['username']:"Not Logged In" ?> <!-- Display current logged-in username -->

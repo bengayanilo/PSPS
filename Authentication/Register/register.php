@@ -13,6 +13,7 @@ if(mysqli_query($db, $query)){
 	$_SESSION['id']=mysqli_insert_id($db);
 	$_SESSION['username']=$username;
 	$_SESSION['type']=$type;
+	$_SESSION['pic']=NULL;
 	echo $_SESSION['id'];
 }
 else{

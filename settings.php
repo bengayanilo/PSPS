@@ -133,7 +133,7 @@
 					$insert = $db->query($insertdata);
 
 					if ($db->query($insertdata) === TRUE) {
-
+						$_SESSION['pic']=$target_file;
 						echo '<script type="text/javascript"> 
 								alert("Data successfully updated");
 								window.location.replace("index.php");
@@ -145,8 +145,6 @@
 				} else {
 					die ("Passwords do not match");
 				};
-
-		        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
 		    } else {
 		        echo "Sorry, there was an error updating your profile.";
 		    }

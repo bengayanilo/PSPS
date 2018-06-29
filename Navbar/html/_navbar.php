@@ -59,7 +59,7 @@
 							<a class="navbar-link  is-active" href="javascript:;">
 											<figure class="image is-32x32" id="user-avatar-div">
 															<span id="user-avatar-1">
-																	<img id="user-avatar" src="'.$_SESSION['url'].'Static/images/profile-placeholder.jpg">
+																	<img id="user-avatar" src="'.($_SESSION['pic'] != NULL?$_SESSION['url'].$_SESSION['pic']:$_SESSION['url']."Static/images/profile-placeholder.jpg").'">
 															</span>
 													</figure>
 													<span id="user-name">
