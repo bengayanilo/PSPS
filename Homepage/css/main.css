@@ -118,14 +118,16 @@ body,html{margin:0;padding:0;width:100vw;}
 }
 
 .navbar {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+/* .navbar {
     transition: all .5s ease;
     color: white;
     width: 100%;
     background-color: rgba(255, 255, 255, 0);
     position: fixed !important;
-    /* position: -webkit-sticky; */
     top: 0px;
-    /* background-color: rgba(250, 250, 250, 0.95); */
     -webkit-box-shadow: 0 5px 15px -8px black;
     box-shadow: 0 5px 15px -8px black;
     visibility: visible;
@@ -178,7 +180,7 @@ body,html{margin:0;padding:0;width:100vw;}
 #professionals-menu {
     color: black;
     padding: 0.5rem 1rem;
-}
+} */
 
 /* #user-avatar-div {
 	margin: 0 0.5rem 0 0;
@@ -213,7 +215,7 @@ body,html{margin:0;padding:0;width:100vw;}
     color: #4a4a4a;
 } */
 
-#sign-out-divider {
+/* #sign-out-divider {
     color: #4a4a4a;
     margin: 0.3rem 0.5rem;
     height: 0.05rem;
@@ -245,4 +247,4 @@ body,html{margin:0;padding:0;width:100vw;}
     border-bottom: 0.45rem solid #f77841;
     transition: .3s ease;
     background-color: #f2f2f2;
-}
+} */
