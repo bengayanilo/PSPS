@@ -69,20 +69,22 @@
 						</div>
 					</div>
 					<hr>
-					<div class="file">
-						<label class="file-label">
-							<input class="file-input" type="file" name="fileToUpload" id="fileToUpload">
-							<span class="file-cta">
-								<span class="file-icon">
-									<i class="fas fa-upload"></i>
-								</span>
+					<div class="level">
+						<div class="file">
+							<label class="file-label">
+								<input class="file-input" type="file" name="fileToUpload" id="fileToUpload">
+								<span class="file-cta">
+									<!-- <span class="file-icon">
+										<i class="fas fa-upload"></i>
+									</span> -->
 									<span class="file-label">
 										Choose a file…
 									</span>
 								</span>
-						</label>
+							</label>
+						</div>
+						<input type="submit" class="button is-primary" name="submit" value="submit">
 					</div>
-					<input type="submit" class="button is-primary" name="submit" value="submit">
 				</form>
 			</div>
 		</div>
