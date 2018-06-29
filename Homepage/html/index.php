@@ -18,10 +18,9 @@
 	<link rel="icon" href="<?php echo $_SESSION['url']; ?>Static/images/logo.png" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="../js/main.js"></script>
-	<script src="../../Navbar/js/navbar.js"></script>
-	<script src="../../Navbar/js/navbar-burger.js"></script>
-	 <script src="../../Scheduling/js/daypilot/daypilot-all.min.js"></script>
+	<script src="<?php echo $_SESSION['url']; ?>Homepage/js/main.js"></script>
+	<script src="<?php echo $_SESSION['url']; ?>Homepage/js/homepage-navbar.js"></script>
+	<script src="../../Scheduling/js/daypilot/daypilot-all.min.js"></script>
 </head>
 <body>
 <!-- <main class="wrapper"> -->
