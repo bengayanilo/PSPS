@@ -43,7 +43,7 @@
 				<p class="card-header-title">Account Settings</p>
 			</div>
 			<div class="card-content">
-				<form form method=POST enctype=multipart/form-data action="">					
+				<form id="form" method=POST enctype=multipart/form-data action="">					
 					<div class="field">
 						<label> Username </label>
 						<div class="control">
@@ -69,8 +69,8 @@
 						</div>
 					</div>
 					<hr>
-					<input type=file name=photo>
-					<input type="submit" class="button is-primary" name="submitupdate" value="Submit">
+					<input type="file" name="fileToUpload" id="fileToUpload">
+					<input type="submit" class="button is-primary" name="submit" value="submit">
 				</form>
 			</div>
 		</div>
@@ -78,3 +78,78 @@
 </div>
 </body>
 </html>
+<?php
+	if(isset($_POST['submit'])){
+		$target_dir = "Static/images/users/";
+		$target_file = $target_dir . $_SESSION['id'].".".pathinfo($_FILES["fileToUpload"]["name"], PATHINFO_EXTENSION);
+		echo $target_file;
+		$uploadOk = 1;
+		$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+		$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+	    if($check !== false) {
+	        echo "File is an image - " . $check["mime"] . ".";
+	        $uploadOk = 1;
+	    } else {
+	        echo "File is not an image.";
+	        $uploadOk = 0;
+	    }
+
+	    // Check if file already exists
+		// if (file_exists($target_file)) {
+		//     echo "Sorry, file already exists.";
+		//     $uploadOk = 0;
+		// }
+		// Check file size
+		if ($_FILES["fileToUpload"]["size"] > 500000) {
+		    echo "Sorry, your file is too large.";
+		    $uploadOk = 0;
+		}
+		// Allow certain file formats
+		if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+		&& $imageFileType != "gif" ) {
+		    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+		    $uploadOk = 0;
+		}
+		// Check if $uploadOk is set to 0 by an error
+		if ($uploadOk == 0) {
+		    echo "Sorry, there was an error.";
+		// if everything is ok, try to upload file
+		} else {
+		    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+				$username = $_POST['new_username'];
+				$email = $_POST['new_email'];
+				$pass = $_POST['new_pass'];
+				$conpass = $_POST['new_passcon'];
+
+				if($pass === $conpass){
+
+					$password = md5($pass);
+					$insertdata = "UPDATE tbl_users SET user_name = '$username', 
+														user_email='$email',
+														user_password='$password',
+														picture='$target_file'
+													WHERE user_id='$updateuser'";
+													
+					$insert = $db->query($insertdata);
+
+					if ($db->query($insertdata) === TRUE) {
+
+						echo '<script type="text/javascript"> 
+								alert("Data successfully updated");
+								window.location.replace("index.php");
+							</script>';
+					} else {
+						echo "Error updating record: " . $db->error;
+					};
+
+				} else {
+					die ("Passwords do not match");
+				};
+
+		        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+		    } else {
+		        echo "Sorry, there was an error updating your profile.";
+		    }
+		}
+	}
+?>
