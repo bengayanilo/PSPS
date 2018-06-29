@@ -127,16 +127,13 @@ body,html{margin:0;padding:0;width:100vw;}
     top: 0px;
     /* background-color: rgba(250, 250, 250, 0.95); */
     -webkit-box-shadow: 0 5px 15px -8px black;
+    box-shadow: 0 5px 15px -8px black;
     visibility: visible;
 }
 
 .navbar a {
     font-family: "Arial";
 }
-
-/* .navbar-item:hover {
-
-} */
 
 .navbar-item:hover span{
     color: black;
