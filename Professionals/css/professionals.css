@@ -6,9 +6,9 @@
     height: 100%;
 }
 
-/* .single-row-container {
-
-} */
+.single-row-container {
+    overflow-x: scroll;
+}
 
 .professionals-card-link span {
     color: #4a4a4a;
