@@ -26,7 +26,7 @@
 					<p class="card-header-title">Edit news details</p>
 				</div>
 				<div class="card-content">
-					<form action="" method="post">
+					<form action="_updatenews.php" method="post" enctype="multipart/form-data">
 						<div class="field">
 							<label> Title </label>
 							<div class="control">
@@ -53,7 +53,8 @@
 						<hr>
 						<div class="file">
 							<label class="file-label">
-								<input class="file-input" type="file" name="new_image">
+								<input class="file-input" type="file" name="new_image" id="new_image">
+								<input type="hidden" name="updateid" value="<?php echo $updatenews; ?>">
 								<span class="file-cta">
 									<span class="file-icon">
 									<i class="fas fa-upload"></i>
@@ -80,32 +81,3 @@
 
 </body>
 </html>
-<?php
-	if (isset($_POST['submitupdate'])){
-
-		$title = $_POST['new_title'];
-		$author = $_POST['new_author'];
-		$body = $_POST['new_body'];
-		// $image = $_POST['new_image'];
-
-		$insertdata = "UPDATE news SET title = '$title', 
-										author='$author',
-										body='$body'
-										-- image_header='$image'
-									WHERE news_id='$updatenews'";
-										
-		$insert = $db->query($insertdata);
-
-		if ($db->query($insertdata) === TRUE) {
-
-			echo '<script type="text/javascript"> 
-					alert("Data successfully updated");
-					window.location.replace("index.php");
-				</script>';
-		} else {
-			echo "Error updating record: " . $db->error;
-		};
-	};
-
-	$db->close();
-?>
