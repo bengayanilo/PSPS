@@ -28,7 +28,7 @@
 			  </span>
             </figure>
             <div class="professionals-name-container">
-              <span class="professionals-name">'.$row['surname'].'</span>
+              <span class="professionals-name">'.$row['firstname'].'&nbsp;'.$row['surname'].'</span>
             </div>
           </div>
 
