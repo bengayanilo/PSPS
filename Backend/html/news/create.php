@@ -21,7 +21,7 @@
 					<p class="card-header-title">Create news</p>
 				</div>
 				<div class="card-content">
-					<form action="" method="post">
+					<form action="_createnews.php" method="post" enctype="multipart/form-data">
 						<!-- Title of the News -->
 						<div class="field">
 							<label> News title </label>
@@ -52,7 +52,7 @@
 						<!-- Image file for the news -->
 						<div class="file">
 							<label class="file-label">
-								<input class="file-input" type="file" name="news_image">
+								<input class="file-input" type="file" name="news_image" id="news_image">
 								<span class="file-cta">
 									<span class="file-icon">
 									<i class="fas fa-upload"></i>
@@ -81,28 +81,3 @@
 
 </body>
 </html>
-<?php
-	if (isset($_POST['submitnews'])){
-
-		$title = $_POST['news_title'];
-		$author = $_POST['news_author'];
-		$body = $_POST['news_body'];
-		// $image = $_POST['news_image'];
-
-		$insertdata = "INSERT INTO news(title,author,body,image_header,news_date)
-							VALUES ('$title','$author','$body','image',NOW())";
-										
-		$insert = $db->query($insertdata);
-
-		if ($insert) {
-
-			echo '<script type="text/javascript">
-					window.location.replace("index.php");
-				</script>';
-		} else {
-			echo "Error posting news: " . $db->error;
-		};
-	};
-
-	$db->close();
-?>
