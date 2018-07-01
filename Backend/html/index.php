@@ -68,13 +68,13 @@
 		}
 		// Check if $uploadOk is set to 0 by an error
 		if ($uploadOk == 0) {
-		    echo "Sorry, there was an error.";
+		    echo "<script type='text/javascript'>alert('Sorry, there was an error.'); </script>";
 		// if everything is ok, try to upload file
 		} else {
 		    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-		    	echo "File uploaded";
+		    	echo "<script>alert('File uploaded');</script>";
 		    } else {
-		        echo "Sorry, there was an error updating your profile.";
+		        echo "<script type='text/javascript'>alert('Sorry, there was an error updating your profile.');</script>";
 		    }
 		}
 	}
