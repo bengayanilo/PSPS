@@ -1,4 +1,10 @@
-
+<head>
+  <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma-pageloader.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/font-awesome/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Navbar/css/navbar.css" />
+  <script src="<?php echo $_SESSION['url']; ?>Navbar/js/navbar.js"></script>
+</head>
 <nav class="navbar navbar-fixed-top scrolledToTop" style="z-index: 100;">
 <!-- <div style="margin: 0 4% auto"> -->
 	<div class="navbar-brand" style="margin-left: 4%">
@@ -82,7 +88,7 @@
 		}
 		else{
 			// echo '<a class="navbar-item navbarLinks navbar-menu" href="'.$_SESSION['url'].'Authentication/Login/index.php">Log In</a>';
-			echo '<a class="navbar-item navbarLinks navbar-menu" href="" onclick="showmodal()">Log In</a>
+			echo '<a class="navbar-item navbarLinks navbar-menu" href="javascript:;" onclick="showmodal()">Log In</a>
 
 				<script>
 

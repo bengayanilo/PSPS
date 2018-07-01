@@ -53,6 +53,7 @@
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/index.php" class="panel-block">Home</a>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/users/index.php" class="panel-block">Users</a>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/patients/index.php" class="panel-block">Patients</a>
+						<a href="<?php echo $_SESSION['url']; ?>Backend/html/news/index.php" class="panel-block">News</a>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/reports/index.php" class="panel-block">Reports</a>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/sessions/index.php" class="panel-block">Sessions</a>
 						<a href="<?php echo $_SESSION['url']; ?>Backend/html/revappli/index.php" class="panel-block">Review Applications</a>

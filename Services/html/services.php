@@ -18,7 +18,7 @@
       <div class="tile services-tile-container">
         <div class="services-tile">
           <div class="tile is-parent is-vertical is-white notification services-link" id="textChat">
-            <a class="services-circle-link" href="../../Chat/selection/index.php">
+            <a class="services-circle-link" href="<?php echo $_SESSION['url']; ?>Chat/selection/index.php">
               <div class="tile is-vertical services-info">
                 <div class="services-logo">
                   <i class="fa fa-5x fa-comments services-icon" aria-hidden="true"></i>
@@ -50,7 +50,6 @@
               <p class="services-desc-p">Request available time and date for appointments</p>
             </div>
           </div>
-          <!-- <a style="text-decoration: none; padding: 5px; margin: 10px;" href="../../Scheduling/index.php" class="tile notification is-danger is-4" id="videoChatBtn"><span class="title">Start</span></a> -->
         </a></div>
       </div></div>
 
@@ -69,12 +68,10 @@
               <p class="services-desc-p">Submit information for Preparatory Review Program</p>
             </div>
           </div>
-          <!-- <a style="text-decoration: none; padding: 5px; margin: 10px;" href="../../Scheduling/index.php" class="tile notification is-danger is-4" id="videoChatBtn"><span class="title">Start</span></a> -->
         </a></div>
       </div></div>
 
       <span class="divider"></span>
-
     </div>
   <div>
 </body>
