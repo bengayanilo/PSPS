@@ -2,7 +2,7 @@
 
 	require('../../../Database/config.php');
 
-	$target_dir = "../../../Static/news/images/";
+	$target_dir = "../../../Static/images/news/";
 	$target_file = $target_dir . basename($_FILES["news_image"]["name"]);
 	$file_name = basename($_FILES["news_image"]["name"]);
 	$uploadOk = 1;
