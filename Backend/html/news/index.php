@@ -5,7 +5,7 @@
 		<div class="column">
 			<div class="card box">
 				<div class="card-header">
-					<p class="card-header-title">Patients</p>
+					<p class="card-header-title">News</p>
 				</div>
 				<nav class="level">
 					<div class="level-left">

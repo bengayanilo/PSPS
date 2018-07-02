@@ -6,7 +6,7 @@
 <div class="column">
 	<div class="columns">
 		<div class="column">
-			<a href="/backend/users" class="button">
+			<a href="<?php echo $_SESSION['url']; ?>Backend/html/news/index.php" class="button">
 				<span class="icon is-small">
 					<i class="fa fa-long-arrow-left"></i>
 				</span>
