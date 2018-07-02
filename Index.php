@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$_SESSION['url'] = 'http://localhost:8080/Web/';
+	$_SESSION['url'] = 'http://localhost/Web/';
 	if($_SESSION['type'] != 'admin'){
 		header("Location:Homepage/html/index.php");
 	}

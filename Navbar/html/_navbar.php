@@ -97,7 +97,7 @@
 						var modal = new DayPilot.Modal({
 								onClosed: function(args) {
 								if (args.result) { 
-									console.log("Model is closed");
+									window.location.replace("'.$_SESSION['url'].'index.php");
 								}
 							}
 						});
