@@ -14,7 +14,25 @@ if(document.location.toString().indexOf('?') !== -1) {
 	}
 }
 
+const log_div = document.getElementById('log');
+
+function scrollToBottom() {
+	log_div.scrollTop = log_div.scrollHeight;
+  }
+
 $(document).ready(function(){
+	if($('#log-outer').scrollTop >= $('#log').css('height')){
+		$('#new-message-container').addClass('hidden-notice');
+	}
+	$('#log-outer').stop().animate({
+		//   scrollTop: $(hash).offset().top
+		  scrollTop:$('#log').css('height')
+		}, 700, function(){
+	 
+		  // Add hash (#) to URL when done scrolling (default click behavior)
+		  // window.location.hash = hash;
+		});
+
 	log();
 
 	$('#input').submit(function(e){
@@ -52,9 +70,41 @@ function log(){
 			{
 				var output = '';
 				for(var i in data){
-					output +=data[i].user_name+":<br>"+data[i].message+"<br>";	
+					output +="<span class='sender'>"+data[i].user_name+"</span>:<br><div class='text-message-container'><span class='text-message'>"+data[i].message+"</span></div>";	
 				}
 				$('#log').html(output);
+
+				var lastHeight = $("#log").css('height');
+				function checkForChanges()
+				{
+    				if ($("#log").css('height') != lastHeight)
+    				{
+						if($('#log-outer').scrollTop() < $('#log').css('height'))
+						{
+							alert('scrolled up');
+							$('#new-message-container').removeClass('hidden-notice');
+						}
+						else
+						{
+							$('#log-outer').stop().animate({
+								scrollTop:$('#log').css('height')
+								}, 100, function(){
+							});
+							$('#new-message-container').removeClass('hidden-notice');
+							lastHeight = $('#log').css('height'); 
+						}
+    				}
+					setTimeout(checkForChanges, 1);
+				}
+
+				// if( $('#log-outer').scrollTop() < $('#log').css('height') )
+				// {
+				// 	newMessageAlert();
+				// }
+				// else
+				// {
+					checkForChanges();
+				// }
 			}
 		});
 	}

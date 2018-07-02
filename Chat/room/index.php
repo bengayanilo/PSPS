@@ -31,7 +31,19 @@
 	<div class="tile is-vertical" id="chat-container">
 		<b><?php if($row){ echo $row[1]; }?></b>
 		<div class="tile" id="log-container">
+		<div id="new-message-container-container">
+		  <div class="hidden-notice" id="new-message-container">
+			<a class="is-vertical" href="javascript:;" id="scroll-to-new-messages">
+				<div class="is-vertical">
+					<div style="line-height: 1rem;"><span id="new-message-alert">New messages</span></div>
+					<div style="line-height: 1rem;"><span id="click-notice">(Click to view)</span></div>
+				</div>
+			</a>
+		  </div>
+		  <div id="log-outer">
 			<div id="log"></div>
+		  </div>
+		</div>
 		</div>
 
 		<form class="tile" id="input" method="post">
