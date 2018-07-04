@@ -1,5 +1,5 @@
 .services-wrapper {
-    padding: 5% 0 5% 0;
+    padding: 10% 0 10% 0;
     height: 100%;
     width: 100vh;
     /* background-color: #f2f3f5; */
@@ -22,6 +22,10 @@
     height: 10em;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
+}
+
+.services-tile-container {
+    transition: all .3s ease;
 }
 
 .services-tile {
@@ -85,6 +89,58 @@
 }
 
 .services-desc-p {
+    width: 100%;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.div-hidden {
+    display: none !important;
+    transition: all .3s ease;
+}
+
+/* #applications-hover {
+    height: 10vw;
+} */
+
+#services-applications-pyramid {
+    width: 14vw;
+    display: none;
+}
+
+.top-row {
+    width: 100%;
+}
+
+.bottom-row {
+    width: 100%;
+}
+
+.services-applications-link {
+    transition: all .3s ease;
+    /* padding: 1.3rem 2rem 2rem 2rem !important; */
+    text-align: center;
+    /* height: 250px;
+    width: 250px; */
+    height: 9vw;
+    width: 9vw;
+    border-radius: 50%;
+    /* background-color: gray; */
+}
+
+.services-applications-logo {
+    /* margin-bottom: 10px; */
+    margin: 1.2rem .5rem .5rem .5rem;
+}
+
+.services-applications-info {
+    margin: auto;
+    width: 6vw;
+}
+
+.services-applications-title-p {
+    font-weight: bold;
+    font-size: .8rem;
     width: 100%;
     text-align: center;
     color: #4a4a4a;

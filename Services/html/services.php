@@ -15,9 +15,9 @@
 
       <span class="divider"></span>
 
-      <div class="tile services-tile-container">
+      <div class="tile services-tile-container not-applications">
         <div class="services-tile">
-          <div class="tile is-parent is-vertical is-white notification services-link" id="textChat">
+          <div class="tile is-parent is-vertical is-white notification services-link" id="chat">
             <a class="services-circle-link" href="<?php echo $_SESSION['url']; ?>Chat/selection/index.php">
               <div class="tile is-vertical services-info">
                 <div class="services-logo">
@@ -37,8 +37,9 @@
 
       <span class="divider"></span>
 
-      <div class="tile services-tile-container"><div class="services-tile">
-        <div class="tile is-parent is-vertical is-white notification services-link" id="videoChat"><a class="services-circle-link" href="../../Scheduling/index.php">
+      <!-- <div class="width-retainer"><span style="font-color: rgba(0, 0, 0, 0);">width-retainer</span></div> -->
+      <div class="tile services-tile-container not-applications"><div class="services-tile">
+        <div class="tile is-parent is-vertical is-white notification services-link" id="scheduling"><a class="services-circle-link" href="../../Scheduling/index.php">
           <div class="tile is-vertical services-info">
             <div class="services-logo">
               <i class="fa fa-5x fa-calendar services-icon" aria-hidden="true"></i>
@@ -55,21 +56,76 @@
 
       <span class="divider"></span>
 
-      <div class="tile services-tile-container"><div class="services-tile">
-        <div class="tile is-parent is-vertical is-white notification services-link" id="reviewApply"><a class="services-circle-link" href="../../Scheduling/index.php">
+      <div id="applications-hover" class="tile services-tile-container applications-hover"><div class="services-tile">
+        <div class="tile is-parent is-vertical is-white notification services-link" id="applications"><a class="services-circle-link" href="../../Scheduling/index.php">
           <div class="tile is-vertical services-info">
             <div class="services-logo">
-              <i class="fa fa-5x fa-book services-icon" aria-hidden="true"></i>
+              <i class="fa fa-5x fa-upload services-icon" aria-hidden="true"></i>
             </div>
             <div class="services-title">
-              <p class="services-title-p">Review Program</p>
+              <p class="services-title-p">Applications</p>
             </div>
             <div class="services-desc">
-              <p class="services-desc-p">Submit information for Preparatory Review Program</p>
+              <p class="services-desc-p">Submit forms for different applications</p>
             </div>
           </div>
         </a></div>
       </div></div>
+
+      <div id="services-applications-pyramid" style="height: 5vh; border: 1px solid black" class="tile is-vertical services-applications-pyramid">
+      <div class="tile top-row"> <!-- Top Row -->
+      <div class="tile services-tile-container applications-branch"><div class="services-tile">
+        <div class="tile is-parent is-vertical is-white notification services-applications-link" id="review"><a class="services-circle-link" href="../../Scheduling/index.php">
+          <div class="tile is-vertical services-applications-info">
+            <div class="services-applications-logo">
+              <i class="fa fa-2x fa-book services-icon" aria-hidden="true"></i>
+            </div>
+            <div class="services-title">
+              <p class="services-applications-title-p">Review Program</p>
+            </div>
+            <!-- <div class="services-desc">
+              <p class="services-desc-p">Submit application for Preparatory Review Program</p>
+            </div> -->
+          </div>
+        </a></div>
+      </div></div>
+      </div> <!-- Top Row End -->
+
+      <div class="tile bottom-row"> <!-- Bottom Row -->
+      <div class="tile services-tile-container applications-branch"><div class="services-tile">
+        <div class="tile is-parent is-vertical is-white notification services-applications-link" id="internship"><a class="services-circle-link" href="../../Scheduling/index.php">
+          <div class="tile is-vertical services-applications-info">
+            <div class="services-applications-logo">
+              <i class="fa fa-2x fa-user-md services-icon" aria-hidden="true"></i>
+            </div>
+            <div class="services-title">
+              <p class="services-applications-title-p">Internship</p>
+            </div>
+            <!-- <div class="services-desc">
+              <p class="services-desc-p">Submit application for Internship</p>
+            </div> -->
+          </div>
+        </a></div>
+      </div></div>
+
+      <div class="tile services-tile-container applications-branch"><div class="services-tile">
+        <div class="tile is-parent is-vertical is-white notification services-applications-link" id="ngo"><a class="services-circle-link" href="../../Scheduling/index.php">
+          <div class="tile is-vertical services-applications-info">
+            <div class="services-applications-logo">
+              <i class="fa fa-2x fa-upload services-icon" aria-hidden="true"></i>
+            </div>
+            <div class="services-title">
+              <p class="services-applications-title-p">NGO(Kasapi)</p>
+            </div>
+            <!-- <div class="services-desc">
+              <p class="services-desc-p">Submit forms for different applications</p>
+            </div> -->
+          </div>
+        </a></div>
+      </div></div>
+      </div> <!-- Bottom Row End -->
+
+      </div>
 
       <span class="divider"></span>
     </div>
