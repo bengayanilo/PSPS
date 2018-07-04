@@ -10,6 +10,19 @@ $stmt->bindParam(':name', $params->name);
 $stmt->bindParam(':status', $params->status);
 $stmt->execute();
 
+$stmt = $db->prepare("SELECT t2.user_email,t1.user_name as Doctor,t2.appointment_start,t2.appointment_status 
+					FROM tbl_users t1 
+					INNER JOIN (
+					    SELECT * 
+					    FROM `appointment` 
+					    INNER JOIN tbl_users 
+					    WHERE user_name = appointment_patient_name 
+					    AND appointment_id = :id) t2 
+					ON t1.user_id = t2.doctor_id");
+$stmt->bindParam(':id', $params->id);
+$stmt->execute();
+$appointment = $stmt->fetch();
+
 class Result {}
 $response = new Result();
 $response->result = 'OK';
