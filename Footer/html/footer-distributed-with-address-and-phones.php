@@ -12,7 +12,7 @@
 
 	<link rel="stylesheet" href="<?php echo $_SESSION['url']; ?>/Footer/css/footer-distributed-with-address-and-phones.css">
 	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> -->
 
 	<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
@@ -23,7 +23,7 @@
 		<!-- <header>
 
 			<h1>Freebie: 5 Responsive Footer Templates</h1>
-			<h2><a href="http://tutorialzine.com/2015/01/freebie-5-responsive-footer-templates/">Download</a></h2>
+			<h2><a href="https://tutorialzine.com/2015/01/freebie-5-responsive-footer-templates/">Download</a></h2>
 
 			<ul>
 				<li><a href="index.html">Basic Centered</a></li>

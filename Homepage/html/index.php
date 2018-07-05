@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Homepage/css/hero.css" />
 	<link rel="icon" href="<?php echo $_SESSION['url']; ?>Static/images/logo.png" />
 
+	<script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="<?php echo $_SESSION['url']; ?>Homepage/js/main.js"></script>
 	<script src="<?php echo $_SESSION['url']; ?>Homepage/js/homepage-navbar.js"></script>
@@ -40,7 +41,7 @@
 				<section id="professionals-section">
 					<?php include("../../Professionals/html/professionals.php"); ?>
 				</section>
-				<?php include("../../Footer/html/footer-distributed-with-address-and-phones.html"); ?>
+				<?php include("../../Footer/html/footer-distributed-with-address-and-phones.php"); ?>
 	<div class="pageloader"><span class="title">Pageloader</span></div>
 	</main>
 </body>
