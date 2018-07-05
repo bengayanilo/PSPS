@@ -72,7 +72,7 @@
         </a></div>
       </div></div>
 
-      <div id="services-applications-pyramid" style="height: 5vh; border: 1px solid black" class="tile is-vertical services-applications-pyramid">
+      <div id="services-applications-pyramid" style="height: 5vh;" class="tile is-vertical services-applications-pyramid">
       <div class="tile top-row"> <!-- Top Row -->
       <div class="tile services-tile-container applications-branch"><div class="services-tile">
         <div class="tile is-parent is-vertical is-white notification services-applications-link" id="review"><a class="services-circle-link" href="../../Scheduling/index.php">

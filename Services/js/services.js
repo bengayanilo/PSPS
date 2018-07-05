@@ -12,6 +12,13 @@ $(document).ready(function(){
         });
     });
 
+    $('#applications').click(function(e) {
+        e.preventDefault();
+        $(this).parent().closest('#applications-hover').css('height', '5vh !important').stop().fadeOut(400, function() {
+            $('#services-applications-pyramid').stop().fadeIn(400);
+        });
+    });
+
     $('#services-applications-pyramid').parent().hover(function(e) {
         e.preventDefault();
         $('#services-applications-pyramid', '#services-section').stop().fadeOut(400, function() {
