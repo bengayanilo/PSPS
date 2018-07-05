@@ -108,7 +108,8 @@ body,html{margin:0;padding:0;width:100vw;}
 
 #professionals-section {
     width: 100%;
-    min-height: 400px;
+    /* min-height: 400px; */
+    height: 100vh;
     background-color: #f2f3f5;
     /* background-color: rgb(240, 240, 240); */
 }
