@@ -1,8 +1,11 @@
 <?php
 	$newsdata = "SELECT * FROM news ORDER BY news_date DESC";
+	// $date = "SELECT news_date FROM news ORDER BY news_date DESC";
 
 	$startingnews = $db->query($newsdata)->fetch_assoc();
 	$row = $db->query($newsdata);
+	$date = strtr($startingnews['news_date'], '/', '-');
+	// $dateFormatted = date('d-F-Y', strtotime($row['news_date']));
 
 	echo '
 	<!-- News Left Side -->
@@ -52,10 +55,16 @@
 
 		<!-- News Right Side -->
 		<div class="column news-right-side">
-			<div id="show-news-here" class="news-article-content">
-				<h1 class="news-content-title">'. $startingnews['title']. '</h1>
+			<div class="tile is-vertical">
+				<div id="show-news-here" class="news-article-content">
+					<h1 class="news-content-title">'. $startingnews['title']. '</h1>
+					<p><span class="author-and-date">Posted by '.$startingnews['author'].' on '.date('F d, Y', strtotime($date)).'</span></p>
+					<br>
+					<p>'.nl2br($startingnews['body']). '</p>
+				</div>
 				<br>
-				<p>'.($startingnews['body']). '</p>
+				<div class="comments-header-container"><span class="comments-header">Comments</span></div>
+				<div class="fb-comments" data-href="https://psps.ml" data-width="500px" data-numposts="5"></div>
 			</div>
 		</div>
 		<!-- News Right Side End -->';

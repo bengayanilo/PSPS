@@ -129,13 +129,13 @@
         overflow: hidden;
         min-height: 170px;
         max-height: 170px;
-        min-width: 170px;
-        max-width: 200px;
+        /* min-width: 170px; */
+        max-width: 300px;
     }
 
     .news-older-info {
-        min-width: 170px;
-        max-width: 200px;
+        /* min-width: 170px; */
+        max-width: 300px;
         /* border: 1px solid black; */
         overflow-y: scroll;
         height: 60px;
@@ -152,14 +152,19 @@
         /* text-align: center; */
         font-weight: bold;
         font-size: 2rem;
-    }    
-
-    .parent-tile {
-        /* border: 2px solid pink; */
     }
 
-    .child-tile {
-        /* border: 1px solid blue; */
+    .author-and-date {
+        font-size: 0.8rem;
+    }
+
+    .comments-header-container {
+        border-top: 2px solid #4a4a4a;
+        width: 100%;
+    }
+
+    .comments-header {
+        font-size: 2rem;
     }
 
 }

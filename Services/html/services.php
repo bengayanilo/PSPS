@@ -112,7 +112,7 @@
         <div class="tile is-parent is-vertical is-white notification services-applications-link" id="ngo"><a class="services-circle-link" href="../../Scheduling/index.php">
           <div class="tile is-vertical services-applications-info">
             <div class="services-applications-logo">
-              <i class="fa fa-2x fa-upload services-icon" aria-hidden="true"></i>
+              <i class="fa fa-2x fa-group services-icon" aria-hidden="true"></i>
             </div>
             <div class="services-title">
               <p class="services-applications-title-p">NGO(Kasapi)</p>
