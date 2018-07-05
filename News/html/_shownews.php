@@ -1,8 +1,7 @@
 <?php
 	$newsdata = "SELECT * FROM news ORDER BY news_date DESC";
-	$forfirstrow = "SELECT * FROM news ORDER BY news_date DESC";
 
-	$startingnews = $db->query($forfirstrow)->fetch_assoc();
+	$startingnews = $db->query($newsdata)->fetch_assoc();
 	$row = $db->query($newsdata);
 
 	echo '

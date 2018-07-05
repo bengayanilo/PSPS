@@ -22,6 +22,17 @@ $stmt = $db->prepare("SELECT t2.user_email,t1.user_name as Doctor,t2.appointment
 $stmt->bindParam(':id', $params->id);
 $stmt->execute();
 $appointment = $stmt->fetch();
+// if($appointment)
+// {
+//     $to      = 'khaosneel@gmail.com';
+//     $subject = 'Appointment Confirmation';
+//     $message = 'Your appointment with '.$appointment['Doctor'].'  has been '.$appointment['appointment_status'];
+//     $headers = 'From: renlino70@gmail.com' . "\r\n" .
+//         'Reply-To: renlino70@gmail.com.com' . "\r\n" .
+//         'X-Mailer: PHP/' . phpversion();
+
+//     mail($to, $subject, $message, $headers);
+// }
 
 class Result {}
 $response = new Result();
