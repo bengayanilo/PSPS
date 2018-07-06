@@ -57,7 +57,7 @@
       <span class="divider"></span>
 
       <div id="applications-hover" class="tile services-tile-container applications-hover"><div class="services-tile">
-        <div class="tile is-parent is-vertical is-white notification services-link" id="applications"><a class="services-circle-link" href="../../Scheduling/index.php">
+        <div class="tile is-parent is-vertical is-white notification services-link" id="applications"><a class="services-circle-link" href="javascript:;">
           <div class="tile is-vertical services-info">
             <div class="services-logo">
               <i class="fa fa-5x fa-upload services-icon" aria-hidden="true"></i>
@@ -72,10 +72,10 @@
         </a></div>
       </div></div>
 
-      <div id="services-applications-pyramid" style="height: 5vh;" class="tile is-vertical services-applications-pyramid">
+      <div id="services-applications-pyramid" style="margin-top:4%; margin-bottom:4%; height: 9vh" class="tile is-vertical services-applications-pyramid">
       <div class="tile top-row"> <!-- Top Row -->
       <div class="tile services-tile-container applications-branch"><div class="services-tile">
-        <div class="tile is-parent is-vertical is-white notification services-applications-link" id="review"><a class="services-circle-link" href="../../Scheduling/index.php">
+        <div class="tile is-parent is-vertical is-white notification services-applications-link" id="review"><a target="_blank" class="services-circle-link" href="https://goo.gl/forms/wPwy28kXVT0J6BSW2">
           <div class="tile is-vertical services-applications-info">
             <div class="services-applications-logo">
               <i class="fa fa-2x fa-book services-icon" aria-hidden="true"></i>
@@ -93,7 +93,7 @@
 
       <div class="tile bottom-row"> <!-- Bottom Row -->
       <div class="tile services-tile-container applications-branch"><div class="services-tile">
-        <div class="tile is-parent is-vertical is-white notification services-applications-link" id="internship"><a class="services-circle-link" href="../../Scheduling/index.php">
+        <div class="tile is-parent is-vertical is-white notification services-applications-link" id="internship"><a target="_blank" class="services-circle-link" href="https://goo.gl/forms/8ZyKCAwmW5oDsNTB3">
           <div class="tile is-vertical services-applications-info">
             <div class="services-applications-logo">
               <i class="fa fa-2x fa-user-md services-icon" aria-hidden="true"></i>
@@ -109,13 +109,13 @@
       </div></div>
 
       <div class="tile services-tile-container applications-branch"><div class="services-tile">
-        <div class="tile is-parent is-vertical is-white notification services-applications-link" id="ngo"><a class="services-circle-link" href="../../Scheduling/index.php">
+        <div class="tile is-parent is-vertical is-white notification services-applications-link" id="ngo"><a target="_blank" class="services-circle-link" href="https://goo.gl/forms/QycNT0opKi2fRFo93">
           <div class="tile is-vertical services-applications-info">
             <div class="services-applications-logo">
               <i class="fa fa-2x fa-group services-icon" aria-hidden="true"></i>
             </div>
             <div class="services-title">
-              <p class="services-applications-title-p">NGO(Kasapi)</p>
+              <p class="services-applications-title-p">Kalinga sa Pag-asa</p>
             </div>
             <!-- <div class="services-desc">
               <p class="services-desc-p">Submit forms for different applications</p>
