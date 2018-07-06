@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.news-select').on('click', function(event){
+    $('.news-select').click( function(event){
         var newsid = $(this).attr('id');
         // alert(newsid);
         $.ajax({

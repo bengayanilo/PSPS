@@ -74,8 +74,10 @@
 
       <div id="services-applications-pyramid" style="margin-top:4%; margin-bottom:4%; height: 9vh" class="tile is-vertical services-applications-pyramid">
       <div class="tile top-row"> <!-- Top Row -->
-      <div class="tile services-tile-container applications-branch"><div class="services-tile">
-        <div class="tile is-parent is-vertical is-white notification services-applications-link" id="review"><a target="_blank" class="services-circle-link" href="https://goo.gl/forms/wPwy28kXVT0J6BSW2">
+      <div class="tile services-tile-container applications-branch">
+        <div class="services-tile">
+        <div class="tile is-parent is-vertical is-white notification services-applications-link" id="review">
+          <a target="_blank" class="services-circle-link" href="https://goo.gl/forms/wPwy28kXVT0J6BSW2">
           <div class="tile is-vertical services-applications-info">
             <div class="services-applications-logo">
               <i class="fa fa-2x fa-book services-icon" aria-hidden="true"></i>
@@ -87,13 +89,16 @@
               <p class="services-desc-p">Submit application for Preparatory Review Program</p>
             </div> -->
           </div>
-        </a></div>
-      </div></div>
+        </a>
+      </div>
+      </div>
+    </div>
       </div> <!-- Top Row End -->
 
       <div class="tile bottom-row"> <!-- Bottom Row -->
       <div class="tile services-tile-container applications-branch"><div class="services-tile">
-        <div class="tile is-parent is-vertical is-white notification services-applications-link" id="internship"><a target="_blank" class="services-circle-link" href="https://goo.gl/forms/8ZyKCAwmW5oDsNTB3">
+        <div class="tile is-parent is-vertical is-white notification services-applications-link" id="internship">
+          <a target="_blank" class="services-circle-link" href="https://goo.gl/forms/8ZyKCAwmW5oDsNTB3">
           <div class="tile is-vertical services-applications-info">
             <div class="services-applications-logo">
               <i class="fa fa-2x fa-user-md services-icon" aria-hidden="true"></i>

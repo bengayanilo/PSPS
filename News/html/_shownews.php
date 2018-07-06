@@ -9,18 +9,18 @@
 
 	echo '
 	<!-- News Left Side -->
-	<div class="column news-left-side">
-	<div class="tile is-vertical">
-	<div id="show-news-here" class="news-article-content">
-		<h1 class="news-content-title">'. $startingnews['title']. '</h1>
-		<p><span class="author-and-date">Posted by '.$startingnews['author'].' on '.date('F d, Y', strtotime($date)).'</span></p>
-		<br>
-		<p>'.nl2br($startingnews['body']). '</p>
-	</div>
-	<br>
-	<div class="comments-header-container"><span class="comments-header">Comments</span></div>
-	<div class="fb-comments" data-href="https://psps.ml" data-width="500px" data-numposts="5"></div>
-</div>
+		<div id="currentnews" class="column news-left-side">
+			<div class="tile is-vertical">
+				<div id="show-news-here" class="news-article-content">
+					<h1 class="news-content-title">'. $startingnews['title']. '</h1>
+					<p><span class="author-and-date">Posted by '.$startingnews['author'].' on '.date('F d, Y', strtotime($date)).'</span></p>
+					<br>
+					<p>'.nl2br($startingnews['body']). '</p>
+				</div>
+				<br>
+				<div class="comments-header-container"><span class="comments-header">Comments</span></div>
+				<div class="fb-comments" data-href="https://psps.ml" data-width="500px" data-numposts="5"></div>
+			</div>
 		</div>
 		<!-- News Left Side End -->
 				

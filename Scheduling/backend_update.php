@@ -24,7 +24,7 @@ $stmt->execute();
 $appointment = $stmt->fetch();
 // if($appointment)
 // {
-//     $to      = 'khaosneel@gmail.com';
+//     $to      = $appointment['user_email'];
 //     $subject = 'Appointment Confirmation';
 //     $message = 'Your appointment with '.$appointment['Doctor'].'  has been '.$appointment['appointment_status'];
 //     $headers = 'From: renlino70@gmail.com' . "\r\n" .

@@ -14,7 +14,6 @@
 <!-- <script src="../js/news.js"></script> -->
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>News/css/news.css">
 <script src="<?php echo $_SESSION['url']; ?>News/js/news.js"></script>
-
 </head>
 <body class="news-body">
 	<div class="tile news-wrapper is-12" id="news-section">
@@ -22,4 +21,19 @@
 			<?php include '_shownews.php'?>
 		</div>
 	</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $('.news-select').click(function(){
+	        $.ajax({
+	            type: "POST",
+	            url: 'http://localhost/PSPS/News/html/show_news.php',
+	            data: {"id":$(this).attr('id')},
+	            success: function(data){
+	                $('#currentnews').html(data)
+	            }
+	        });
+	    });
+	});
+</script>
 </body>
