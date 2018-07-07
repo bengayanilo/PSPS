@@ -34,7 +34,7 @@
 
 			<br>
 
-			<p class="control is-small">Don't have an account yet? Register <a href="../Register">here </a></p>
+			<p class="control is-small">Don't have an account yet? Register <a href="<?php echo $_SESSION['url']; ?>Authentication/Register/html/index.php">here </a></p>
 
 			<button class="button is-success" type="submit" name="login" id="login" value="">Confirm</button>
 
