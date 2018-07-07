@@ -16,7 +16,7 @@
 			<h1 class="news-content-title">'. $event['title']. '</h1>
 			<p><span class="author-and-date">Posted by '.$event['author'].' on '.date('F d, Y', strtotime($date)).'</span></p>
 			<br>
-			<p>'.nl2br($event['body']). '</p>
+			<p style="max-width: 500px;word-wrap: break-word;">'.nl2br($event['body']). '</p>
 		</div>
 		<br>
 		<div class="comments-header-container"><span class="comments-header">Comments</span></div>
