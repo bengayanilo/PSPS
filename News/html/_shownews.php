@@ -10,12 +10,12 @@
 	echo '
 	<!-- News Left Side -->
 		<div id="currentnews" class="column news-left-side">
-			<div class="tile is-vertical">
+			<div class="tile is-vertical left-side-container">
 				<div id="show-news-here" class="news-article-content">
 					<h1 class="news-content-title">'. $startingnews['title']. '</h1>
 					<p><span class="author-and-date">Posted by '.$startingnews['author'].' on '.date('F d, Y', strtotime($date)).'</span></p>
 					<br>
-					<p>'.nl2br($startingnews['body']). '</p>
+					<p class="article-body">'.nl2br($startingnews['body']). '</p>
 				</div>
 				<br>
 				<div class="comments-header-container"><span class="comments-header">Comments</span></div>
@@ -44,8 +44,8 @@
 		<!-- Featured News End -->
 
 		<!-- Older News Carousel -->
-		<div class="news-carousel-tile-container">
-		<div class="tile is-parent news-carousel-tile">';
+		<div class="news-carousel-tile-container" id="news-carousel-tile-container">
+		<div height: 230px;" class="tile is-parent news-carousel-tile">';
 
 		if (mysqli_num_rows($row) > 0){
 			while ($result = mysqli_fetch_assoc($row)) {

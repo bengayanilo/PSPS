@@ -24,16 +24,53 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-	    $('.news-select').click(function(){
-	        $.ajax({
-	            type: "POST",
-	            url: 'http://localhost/PSPS/News/html/show_news.php',
-	            data: {"id":$(this).attr('id')},
-	            success: function(data){
-	                $('#currentnews').html(data)
-	            }
-	        });
-	    });
+		var x,y,top,left,down,moved;
+
+		$(".news-carousel-tile").mousedown(function(e){
+			e.preventDefault();
+			down = true;
+			x = e.pageX;
+			y = e.pageY;
+			top = $(this).scrollTop();
+			left = $(this).scrollLeft();
+		});
+
+		$("body").mousemove(function(e){
+			if(down){
+				moved = true;
+				var newX = e.pageX;
+				var newY = e.pageY;
+
+				// $("#stuff").scrollTop(top - newY + y);    
+				$(".news-carousel-tile").scrollLeft(left - newX + x);    
+			}
+			else
+			{
+				moved = false;
+			}
+		});
+
+    	$("body").mouseup(function(e){
+			down = false;
+			if(moved)
+			{
+				$('.news-select').off('click');
+			}
+			else
+			{
+				$('.news-select').click(function(event){
+					$.ajax({
+						type: "POST",
+						url: '<?php echo $_SESSION['url']; ?>News/html/show_news.php',
+						data: {"id":$(this).attr('id')},
+						success: function(data)
+						{
+							$('#currentnews').html(data)
+						}
+					});
+				});
+			}
+		});
 	});
 </script>
 </body>
