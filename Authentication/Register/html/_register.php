@@ -1,16 +1,17 @@
 <?php
+	session_start();
 	require('../../../Database/config.php');
 
-	if (isset($_POST['register'])){
+	// if (isset($_POST['register'])){
 
-		$username = $_POST['reg_user'];
-		$fname = $_POST['fname'];
-		$lname = $_POST['lname'];
-		$email = $_POST['email'];
-		$pass = $_POST['reg_pass'];
-		$conpass = $_POST['confirmpass'];
-		$contact = $_POST['contact_no'];
-		$type = $_POST['type'];
+		$username = mysqli_real_escape_string($db, $_POST['reg_user']);
+		$fname = mysqli_real_escape_string($db, $_POST['fname']);
+		$lname = mysqli_real_escape_string($db, $_POST['lname']);
+		$email = mysqli_real_escape_string($db, $_POST['email']);
+		$pass = mysqli_real_escape_string($db, $_POST['reg_pass']);
+		$conpass = mysqli_real_escape_string($db, $_POST['confirmpass']);
+		$contact = mysqli_real_escape_string($db, $_POST['contact_no']);
+		$type = mysqli_real_escape_string($db, $_POST['type']);
 
 		if($pass === $conpass){
 
@@ -20,11 +21,11 @@
 			$insert = $db->query($insertdata);
 
 			if ($insert) {
-				echo '<script type="text/javascript">
-						if(confirm("Registration Succesful")){
-							window.close();
-						}
-					</script>';
+				$_SESSION['id']=mysqli_insert_id($db);
+				$_SESSION['username']=$username;
+				$_SESSION['type']=$type;
+				$_SESSION['pic']=NULL;
+				echo 'Registered';
 			} else {
 				echo "There is an error in your registration: " . $db->error;
 			};
@@ -32,7 +33,7 @@
 		} else {
 			die ("Passwords do not match");
 		};
-	};
+	// };
 
 	$db->close();
 ?>

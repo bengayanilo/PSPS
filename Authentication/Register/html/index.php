@@ -18,15 +18,16 @@
 
 	<script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="<?php echo $_SESSION['url']; ?>Scheduling/js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
 
 </head>
 <body>
-
+<script src="../script.js"></script>
 <div class="container is-fluid">
 
 	<div class="box center">
 
-		<form action="_register.php" method="post">
+		<form id="form" action="" method="post">
 
 			<div class="field">
 				<label for="" class="label is-small">Username: </label>
@@ -35,12 +36,12 @@
 
 			<div class="field">
 				<label for="" class="label is-small">First Name: </label>
-				<input class="input is-small" type="text" name="fname" id="reg_user" value="" required>
+				<input class="input is-small" type="text" name="fname"  value="" required>
 			</div>
 
 			<div class="field">
 				<label for="" class="label is-small">Last Name: </label>
-				<input class="input is-small" type="text" name="lname" id="reg_user" value="" required>
+				<input class="input is-small" type="text" name="lname"  value="" required>
 			</div>
 
 			<div class="field">
@@ -80,7 +81,7 @@
 
 			<br>
 
-			<button class="button is-success" type="submit" name="register" id="register">Confirm</button>
+			<button class="button is-success" type="submit" name="submit" id="register">Confirm</button>
 
 		</form>
 

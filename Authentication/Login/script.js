@@ -7,9 +7,9 @@ $(document).ready(function(){
 	       data: $(this).serialize(),
 	       success: function(data)
 	       {
-	          if (data === 'Login') {
+	          if (data == 'Login') {
 	            alert("successfully logged in")
-	            // window.location.href("../../index.php");
+	            window.location.href("../../index.php");
 	            DayPilot.Modal.close(data);
 	          }
 	          else if(data == 'already logged in'){

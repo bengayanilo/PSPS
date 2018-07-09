@@ -4,11 +4,14 @@ $(document).ready(function() {
 	    e.preventDefault();
 	    $.ajax({
 	       type: "POST",
-	       url: 'register.php',
+	       url: '_register.php',
 	       data: $(this).serialize(),
 	       success: function(data)
 	       {
-	       	window.location.href="../../index.php";
+	       	if (data == 'Registered') {
+	       		alert('Registration Successful');
+	       		DayPilot.Modal.close(data);
+	       	}	       	
 	       }
 	   });
 	 });
