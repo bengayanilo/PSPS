@@ -22,7 +22,7 @@
 				</div>
 				<br>
 				<div class="comments-header-container"><span class="comments-header">Comments</span></div>
-				<div class="fb-comments" data-href="https://psps.ml" data-width="500px" data-numposts="5"></div>
+				<div class="fb-comments" data-href="https://psps.ml/'.$startingnews['news_id'].'" data-width="500px" data-numposts="5"></div>
 			</div>
 		</div>
 		<!-- News Left Side End -->

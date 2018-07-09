@@ -1,6 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-function loadAPI() {
+
    (function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
@@ -8,19 +8,18 @@ function loadAPI() {
 	  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
-}
 
 
 
 
 $(document).ready(function(){
-	loadAPI();
 $('#button').click(function(){
 	$('#coment').html('<div id="comments" class="fb-comments" data-href="https://psps.ml/1" data-numposts="5" data-colorscheme="light"></div>');
- 
+ 	FB.XFBML.parse();
   });
 $('#button2').click(function(){
 	$('#coment').html('<div id="comments" class="fb-comments" data-href="https://psps.ml/2" data-numposts="5" data-colorscheme="light"></div>');
+	FB.XFBML.parse();
   });
 });
 
