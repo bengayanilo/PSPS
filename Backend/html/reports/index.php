@@ -33,11 +33,13 @@
 					<table class="table is-fullwidth">
 						<thead>
 							<tr>
-								<th>Sample</th>
-								<th>Sample</th>
-								<th>Sample</th>
-								<th>Sample</th>
-								<th>Sample</th>
+								<th>Appointment ID</th>
+								<th>Doctor Name</th>
+								<th>Patient Name</th>
+								<th>Patient Session</th>
+								<th>Start</th>
+								<th>End</th>
+								<th>Status</th>
 							</tr>
 						</thead>
 						<tbody>
