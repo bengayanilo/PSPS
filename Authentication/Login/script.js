@@ -9,7 +9,7 @@ $(document).ready(function(){
 	       {
 	          if (data == 'Login') {
 	            alert("successfully logged in")
-	            window.location.href("../../index.php");
+	            window.location.replace("../../index.php");
 	            DayPilot.Modal.close(data);
 	          }
 	          else if(data == 'already logged in'){

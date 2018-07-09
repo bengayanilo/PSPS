@@ -10,7 +10,11 @@ $(document).ready(function() {
 	       {
 	       	if (data == 'Registered') {
 	       		alert('Registration Successful');
+	       		window.location.replace("../../../index.php");
 	       		DayPilot.Modal.close(data);
+	       	}
+	       	else{
+	       		alert(data);
 	       	}	       	
 	       }
 	   });
