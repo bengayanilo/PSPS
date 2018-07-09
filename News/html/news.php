@@ -16,7 +16,10 @@
 <script src="<?php echo $_SESSION['url']; ?>News/js/news.js"></script>
 </head>
 <body class="news-body">
-	<div class="tile news-wrapper is-12" id="news-section">
+	<div class="tile is-vertical news-wrapper is-12" style="width: 100vw;" id="news-section">
+		<div class="columns header-columns-wrapper news-header-container">
+			<span class="news-header">Latest News</span>
+		</div>
 		<div class="columns columns-wrapper">
 			<?php include '_shownews.php'?>
 		</div>
