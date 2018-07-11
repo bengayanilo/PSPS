@@ -36,14 +36,12 @@
 								<th>Appointment ID</th>
 								<th>Doctor Name</th>
 								<th>Patient Name</th>
-								<th>Patient Session</th>
-								<th>Start</th>
-								<th>End</th>
 								<th>Status</th>
+								<th>Actions</th>
 							</tr>
 						</thead>
 						<tbody>
-							<!-- Insert php include _reports.php  -->
+							<?php include '_reports.php'; ?> 
 						</tbody>
 					</table>
 				</div>
