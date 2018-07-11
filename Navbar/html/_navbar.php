@@ -3,7 +3,9 @@
   <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma-pageloader.min.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/font-awesome/font-awesome.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Navbar/css/navbar.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="<?php echo $_SESSION['url']; ?>Navbar/js/navbar.js"></script>
+  <script src="<?php echo $_SESSION['url']; ?>Navbar/js/navbar-burger.js"></script>  
 </head>
 <nav class="navbar navbar-fixed-top scrolledToTop" style="z-index: 100;">
 <!-- <div style="margin: 0 4% auto"> -->
@@ -21,6 +23,7 @@
 
 		<!-- <div class="navbar-burger burger" data-target="navMenubd-example" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');"> -->
 		<div class="navbar-burger burger" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+		<!-- <div class="navbar-burger burger" href="javascript:;"> -->
 			<span></span>
 			<span></span>
 			<span></span>
@@ -83,14 +86,14 @@
 									</span>
 							</a>
 							<div class="navbar-dropdown ">
-								<a class="navbar-item " href="'.$_SESSION['url'].'settings.php">
+								<a class="navbar-item navbarLinks" href="'.$_SESSION['url'].'settings.php">
 									Edit Profile
 								</a>
-								<a class="navbar-item " href="'.$_SESSION['url'].'settings.php">
+								<a class="navbar-item navbarLinks" href="'.$_SESSION['url'].'settings.php">
 									Settings
 								</a>
 								<hr id="sign-out-divider">
-								<a class="navbar-item " href="'.$_SESSION['url'].'logout.php">
+								<a class="navbar-item navbarLinks" href="'.$_SESSION['url'].'logout.php">
 									Sign Out
 								</a>
 							</div>

@@ -1,9 +1,16 @@
 $(document).ready(function(){
+  $('html', 'body').click(function(){
+    if($('#navMenubd-example').hasClass('is-active'))
+    {
+        $(this).removeClass('is-active');
+    }
+});
+
+
     // Add smooth scrolling to all links
     var navBarHeight = $(".navbar").outerHeight();
     // $('.wrapper').css('margin-top', navBarHeight/2);
     $("#home-menu").on('click', function(event) {
-  
       // Make sure this.hash has a value before overriding default behavior
       if (this.hash !== "") {
         // Prevent default anchor click behavior
@@ -31,7 +38,7 @@ $(document).ready(function(){
 
 
     $("a").on('click', function(event) {
-  
+      $(this).closest('#navMenubd-example').toggleClass('is-active');
       // Make sure this.hash has a value before overriding default behavior
       if (this.hash !== "") {
         // Prevent default anchor click behavior
@@ -55,7 +62,8 @@ $(document).ready(function(){
           // window.location.hash = hash;
         });
       } // End if
-    });
+      // $(this).closest('#navMenubd-example').toggleClass('is-active');
+    });    
   });
 
 // // ------------------------------
