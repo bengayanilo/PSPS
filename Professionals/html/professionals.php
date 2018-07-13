@@ -20,11 +20,11 @@
       <div class="tile single-row-container"> <!-- 1 Row -->
         <?php while($row = mysqli_fetch_array($professionalsdata))
         {
-        echo '<div class="tile is-white is-3 is-vertical professionals-card"><a class="professionals-card-link" href="javascript:;"> <!-- Card Template -->
+        echo '<div class="tile is-white is-2.5 is-vertical professionals-card"><a class="professionals-card-link" href="javascript:;"> <!-- Card Template -->
           <div class="tile primary-info">
             <figure class="image is-128x128 profile-pic-fig">
 			  <span class="profile-pic-span">
-			    <img class="profile-pic-img" src="'.$_SESSION['url'].'Static/images/default.png">
+			    <img class="profile-pic-img" src="'.$_SESSION['url'].'Static/images/profile-placeholder.jpg">
 			  </span>
             </figure>
             <div class="professionals-name-container">

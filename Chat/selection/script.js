@@ -10,14 +10,15 @@ $(document).ready(function(){
 				output +='<button class="select-convo" onclick="chat('+data[i].user_id+')">'+
 						        '<div class="media">'+
 						            '<div class="media-left">'+
-						                '<p class="image is-96x96">'+
-						                    '<img class="profile-pic" src="https://bulma.io/images/placeholders/128x128.png">'+
+										'<p class="image is-96x96">'+
+											'<img class="profile-pic" src="https://bulma.io/images/placeholders/128x128.png">'+
+						                    // '<img class="profile-pic" src="https://bulma.io/images/placeholders/128x128.png">'+
 						            	'</p>'+
 						            '</div>'+
 						            '<div class="media-content">'+
 						                '<div class="content">'+
 						                    '<p>'+
-						                        '<strong>'+data[i].user_name+'</strong> <small>'+data[i].user_email+'</small> <!--<small class="time_passed">31m</small>-->'+
+						                        '<strong>'+data[i].firstname+' '+data[i].surname+'</strong> <small>'+data[i].user_email+'</small> <!--<small class="time_passed">31m</small>-->'+
 						                        '<br>'+
 						                        '<span class="chat_preview truncate"><span class="name_of_sender">Person Name: </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</span>'+
 						                    '</p>'+

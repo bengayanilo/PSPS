@@ -20,8 +20,9 @@
     display: inline-block;
     width: 0;
     height: 10em;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 2px solid #ccc;
+    /* border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc; */
 }
 
 .services-tile-container {

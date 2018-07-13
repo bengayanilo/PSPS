@@ -13,7 +13,7 @@
 <!-- <link rel="icon" href="../images/logo.png"> -->
 <!-- <script src="../js/news.js"></script> -->
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>News/css/news.css">
-<!-- <script src="<?php echo $_SESSION['url']; ?>News/js/news.js"></script> -->
+<script src="<?php echo $_SESSION['url']; ?>News/js/news.js"></script>
 </head>
 <body class="news-body">
 	<div class="tile is-vertical news-wrapper is-12" style="width: 100vw;" id="news-section">
@@ -48,7 +48,8 @@
 		});
 
 		$("body").mousemove(function(e){
-			if(down){
+			if(down)
+			{
 				moved = true;
 				var newX = e.pageX;
 				var newY = e.pageY;
@@ -70,7 +71,7 @@
 			}
 			else
 			{
-				$('.news-select').click(function(event){
+				$('.news-select').click(function(e){
 					$.ajax({
 						type: "POST",
 						url: '<?php echo $_SESSION['url']; ?>News/html/show_news.php',

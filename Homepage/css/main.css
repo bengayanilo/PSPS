@@ -11,241 +11,375 @@
 *::-webkit-scrollbar-thumb {gr
   box-shadow: inset 0 0 0 10px;
 } */
+@media screen and (max-width: 799px) {
+    .modal_default_background {
+        z-index: 9998;
+    }
 
-body {
-    background-color: rgb(19, 16, 16);
-}
+    .modal_default_main {
+        z-index: 9999;
+        top: 20vw !important;
+    }
 
-/* Parallax Effect */
-/* Tiny reset thingy */
-body,html{margin:0;padding:0;width:100vw;}
+    body {
+        background-color: rgb(19, 16, 16);
+    }
 
-.greetings h1 {
-    font-size: 3vw;
-}
+    /* Parallax Effect */
+    /* Tiny reset thingy */
+    body,html{margin:0;padding:0;width:100vw;}
 
-.wrapper {
-  /* The height needs to be set to a fixed value for the effect to work.
-   * 100vh is the full height of the viewport. */
-  height: 100vh;
-  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
-  overflow-x: hidden;
-  /* Enable scrolling on the page. */
-  /* overflow-y: scroll; */
-  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-  perspective: 2px;
-}
+    .greetings h1 {
+        font-size: 3vw;
+    }
 
-.section {
-  /* Needed for children to be absolutely positioned relative to the parent. */
-  position: relative;
-  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 100vh;
-  
-  /* For text formatting. */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-shadow: 0 0 5px #000;
-}
-
-.greetings {
-    /* border: 1px solid black; */
-    width: 60%;
-}
-
-.parallax::after {
-  /* Display and position the pseudo-element */
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  
-  /* Move the pseudo-element back away from the camera,
-   * then scale it back up to fill the viewport.
-   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-  transform: translateZ(-1px) scale(1.5);
-  /* Force the background image to fill the whole element. */
-  background-size: 100%;
-  /* Keep the image from overlapping sibling elements. */ 
-  z-index: -1;
-}
-
-/* The styling for the static div. */
-.static {
-  background: red;
-}
-
-/* Sets the actual background images to adorable kitties. This part is crucial. */
-.bg1::after {
-  /* background-image: url('https://placekitten.com/g/900/700'); */
-  /* background: url("../../Static/images/morning-coffee-message-hd-wallpaper.jpg") center center; */
-  /* background: url("../../Static/images/Coffee-Wallpaper-43-3840x2160.jpg") center center; */
-  background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../../Static/images/background-beverage-breakfast-414645.jpg") center top;
-  background-size: cover;
-  /* background-size: auto; */
-  background-repeat: no-repeat;
-  /* overflow: hidden; */
-  max-width: 100%;
-}
-/* Parallax Effect End */
-
-#news-section {
-    width: 100%;
-    min-height: 400px;
-    background-color: #f2f3f5;
-    /* background-color: rgb(240, 240, 240); */
-}
-
-#services-section {
-    width: 100%;
-    min-height: 400px;
-    background-color: rgb(255, 255, 255);
-}
-
-#professionals-section {
-    width: 100%;
-    /* min-height: 400px; */
+    .wrapper {
+    /* The height needs to be set to a fixed value for the effect to work.
+    * 100vh is the full height of the viewport. */
     height: 100vh;
-    background-color: #f2f3f5;
-    /* background-color: rgb(240, 240, 240); */
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-.navbar {
-    background-color: rgba(255, 255, 255, 0);
-}
-
-/* .navbar {
-    transition: all .5s ease;
-    color: white;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0);
-    position: fixed !important;
-    top: 0px;
-    -webkit-box-shadow: 0 5px 15px -8px black;
-    box-shadow: 0 5px 15px -8px black;
-    visibility: visible;
-}
-
-.navbar a {
-    font-family: "Arial";
-}
-
-.navbar-item:hover span{
-    color: black;
-}
-
-.navbar .navbarLinks {
-    color: white;
-}
-
-.navbarLinks:hover {
-    color: black !important;
-}
-
-.company-logo {
-    padding: 0.25rem 0.5rem;
-}
-
-.company-logo img {
-    max-height: 2rem;
-}
-
-#centered-menus {
-    margin-left: 0;
-    transition: .4s ease;
-}
-
-#home-menu {
-    color: #0a0a0a;
-    padding: 0.5rem 1rem;
-}
-
-#news-menu {
-    color: black;
-    padding: 0.5rem 1rem;
-}
-
-#services-menu {
-    color: black;
-    padding: 0.5rem 1rem;
-}
-
-#professionals-menu {
-    color: black;
-    padding: 0.5rem 1rem;
-} */
-
-/* #user-avatar-div {
-	margin: 0 0.5rem 0 0;
+    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
     overflow-x: hidden;
-    overflow-y: hidden;
-	border-radius: 50%;
-	text-align: center;
-	max-height: 2.25rem;
-	max-width: 2.25rem;
-	width: 2.25rem;
-	height: 2.25rem;
+    /* Enable scrolling on the page. */
+    /* overflow-y: scroll; */
+    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+    perspective: 2px;
+    }
+
+    .section {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 100vh;
+    
+    /* For text formatting. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+    }
+
+    .greetings {
+        /* border: 1px solid black; */
+        width: 60%;
+    }
+
+    .parallax::after {
+    /* Display and position the pseudo-element */
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    /* Move the pseudo-element back away from the camera,
+    * then scale it back up to fill the viewport.
+    * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: 100%;
+    /* Keep the image from overlapping sibling elements. */ 
+    z-index: -1;
+    }
+
+    /* The styling for the static div. */
+    .static {
+    background: red;
+    }
+
+    /* Sets the actual background images to adorable kitties. This part is crucial. */
+    .bg1::after {
+    /* background-image: url('https://placekitten.com/g/900/700'); */
+    /* background: url("../../Static/images/morning-coffee-message-hd-wallpaper.jpg") center center; */
+    /* background: url("../../Static/images/Coffee-Wallpaper-43-3840x2160.jpg") center center; */
+    background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../../Static/images/background-beverage-breakfast-414645.jpg") center top;
+    background-size: cover;
+    /* background-size: auto; */
+    background-repeat: no-repeat;
+    /* overflow: hidden; */
+    max-width: 100%;
+    }
+    /* Parallax Effect End */
+
+    #news-section {
+        width: 100%;
+        min-height: 100vh;
+        background-color: #f2f3f5;
+        /* background-color: rgb(240, 240, 240); */
+    }
+
+    #services-section {
+        width: 100%;
+        min-height: 100vh;
+        background-color: rgb(255, 255, 255);
+    }
+
+    #professionals-section {
+        width: 100%;
+        /* min-height: 400px; */
+        min-height: 100vh;
+        background-color: #f2f3f5;
+        /* background-color: rgb(240, 240, 240); */
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .navbar {
+        background-color: rgba(255, 255, 255, 0);
+    }
 }
+@media screen and (min-width: 1024px) {
+    .modal_default_background {
+        /* top: 5vw !important; */
+        z-index: 9998;
+    }
 
-#user-avatar-1 {
-	display: block;
-	max-height: 2.25rem;
-	height: 2.25rem;
-	width: 2.25rem;
+    .modal_default_main {
+        /* position: sticky !important; */
+        /* position: relative !important; */
+        z-index: 9999;
+        top: 5vw !important;
+        /* padding: 2rem; */
+    }
+
+    body {
+        background-color: rgb(19, 16, 16);
+    }
+
+    /* Parallax Effect */
+    /* Tiny reset thingy */
+    body,html{margin:0;padding:0;width:100vw;}
+
+    .greetings h1 {
+        font-size: 3vw;
+    }
+
+    .wrapper {
+    /* The height needs to be set to a fixed value for the effect to work.
+    * 100vh is the full height of the viewport. */
+    height: 100vh;
+    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+    overflow-x: hidden;
+    /* Enable scrolling on the page. */
+    /* overflow-y: scroll; */
+    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+    perspective: 2px;
+    }
+
+    .section {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 100vh;
+    
+    /* For text formatting. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+    }
+
+    .greetings {
+        /* border: 1px solid black; */
+        width: 60%;
+    }
+
+    .parallax::after {
+    /* Display and position the pseudo-element */
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    /* Move the pseudo-element back away from the camera,
+    * then scale it back up to fill the viewport.
+    * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: 100%;
+    /* Keep the image from overlapping sibling elements. */ 
+    z-index: -1;
+    }
+
+    /* The styling for the static div. */
+    .static {
+    background: red;
+    }
+
+    /* Sets the actual background images to adorable kitties. This part is crucial. */
+    .bg1::after {
+    /* background-image: url('https://placekitten.com/g/900/700'); */
+    /* background: url("../../Static/images/morning-coffee-message-hd-wallpaper.jpg") center center; */
+    /* background: url("../../Static/images/Coffee-Wallpaper-43-3840x2160.jpg") center center; */
+    background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("../../Static/images/background-beverage-breakfast-414645.jpg") center top;
+    background-size: cover;
+    /* background-size: auto; */
+    background-repeat: no-repeat;
+    /* overflow: hidden; */
+    max-width: 100%;
+    }
+    /* Parallax Effect End */
+
+    #news-section {
+        width: 100%;
+        min-height: 100vh;
+        background-color: #f2f3f5;
+        /* background-color: rgb(240, 240, 240); */
+    }
+
+    #services-section {
+        width: 100%;
+        min-height: 100vh;
+        background-color: rgb(255, 255, 255);
+    }
+
+    #professionals-section {
+        width: 100%;
+        /* min-height: 400px; */
+        min-height: 100vh;
+        background-color: #f2f3f5;
+        /* background-color: rgb(240, 240, 240); */
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .navbar {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    /* .navbar {
+        transition: all .5s ease;
+        color: white;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0);
+        position: fixed !important;
+        top: 0px;
+        -webkit-box-shadow: 0 5px 15px -8px black;
+        box-shadow: 0 5px 15px -8px black;
+        visibility: visible;
+    }
+
+    .navbar a {
+        font-family: "Arial";
+    }
+
+    .navbar-item:hover span{
+        color: black;
+    }
+
+    .navbar .navbarLinks {
+        color: white;
+    }
+
+    .navbarLinks:hover {
+        color: black !important;
+    }
+
+    .company-logo {
+        padding: 0.25rem 0.5rem;
+    }
+
+    .company-logo img {
+        max-height: 2rem;
+    }
+
+    #centered-menus {
+        margin-left: 0;
+        transition: .4s ease;
+    }
+
+    #home-menu {
+        color: #0a0a0a;
+        padding: 0.5rem 1rem;
+    }
+
+    #news-menu {
+        color: black;
+        padding: 0.5rem 1rem;
+    }
+
+    #services-menu {
+        color: black;
+        padding: 0.5rem 1rem;
+    }
+
+    #professionals-menu {
+        color: black;
+        padding: 0.5rem 1rem;
+    } */
+
+    /* #user-avatar-div {
+        margin: 0 0.5rem 0 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        border-radius: 50%;
+        text-align: center;
+        max-height: 2.25rem;
+        max-width: 2.25rem;
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    #user-avatar-1 {
+        display: block;
+        max-height: 2.25rem;
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    #user-avatar {
+        overflow-y: hidden;
+        overflow-x: hidden;
+        width: 100%;
+        max-height: 2.25rem;
+        height: 2.25rem;
+        object-fit: cover;
+        display: inline-block;
+    }
+
+    #account-menu a {
+        color: #4a4a4a;
+    } */
+
+    /* #sign-out-divider {
+        color: #4a4a4a;
+        margin: 0.3rem 0.5rem;
+        height: 0.05rem;
+    }
+
+    #home-menu:hover {
+        padding: 0.5rem 1rem 0.05rem 1rem ;
+        border-bottom: 0.45rem solid#a441d0;
+        transition: .3s ease;
+        background-color: #f2f2f2;
+    }
+
+    #news-menu:hover {
+        padding: 0.5rem 1rem 0.05rem 1rem ;
+        border-bottom: 0.45rem solid #e34e61;
+        transition: .3s ease;
+        background-color: #f2f2f2;
+    }
+
+    #services-menu:hover {
+        padding: 0.5rem 1rem 0.05rem 1rem ;
+        border-bottom: 0.45rem solid #4fe2cf;
+        transition: .3s ease;
+        background-color: #f2f2f2;
+    }
+
+    #professionals-menu:hover {
+        padding: 0.5rem 1rem 0.05rem 1rem ;
+        border-bottom: 0.45rem solid #f77841;
+        transition: .3s ease;
+        background-color: #f2f2f2;
+    } */
 }
-
-#user-avatar {
-    overflow-y: hidden;
-	overflow-x: hidden;
-	width: 100%;
-	max-height: 2.25rem;
-	height: 2.25rem;
-	object-fit: cover;
-	display: inline-block;
-}
-
-#account-menu a {
-    color: #4a4a4a;
-} */
-
-/* #sign-out-divider {
-    color: #4a4a4a;
-    margin: 0.3rem 0.5rem;
-    height: 0.05rem;
-}
-
-#home-menu:hover {
-    padding: 0.5rem 1rem 0.05rem 1rem ;
-    border-bottom: 0.45rem solid#a441d0;
-    transition: .3s ease;
-    background-color: #f2f2f2;
-}
-
-#news-menu:hover {
-    padding: 0.5rem 1rem 0.05rem 1rem ;
-    border-bottom: 0.45rem solid #e34e61;
-    transition: .3s ease;
-    background-color: #f2f2f2;
-}
-
-#services-menu:hover {
-    padding: 0.5rem 1rem 0.05rem 1rem ;
-    border-bottom: 0.45rem solid #4fe2cf;
-    transition: .3s ease;
-    background-color: #f2f2f2;
-}
-
-#professionals-menu:hover {
-    padding: 0.5rem 1rem 0.05rem 1rem ;
-    border-bottom: 0.45rem solid #f77841;
-    transition: .3s ease;
-    background-color: #f2f2f2;
-} */
