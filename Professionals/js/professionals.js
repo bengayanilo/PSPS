@@ -4,4 +4,11 @@ $(document).ready(function(){
     }, function() {
         $('.is-light', this).removeClass('is-light').addClass('is-white');
     });
+
+    $('#closemodal').click(function(){
+
+    	DayPilot.Modal.close();
+    });
 });
+
+
