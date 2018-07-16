@@ -108,12 +108,6 @@
 	        echo "File is not an image.";
 	        $uploadOk = 0;
 	    }
-
-	    // Check if file already exists
-		// if (file_exists($target_file)) {
-		//     echo "Sorry, file already exists.";
-		//     $uploadOk = 0;
-		// }
 		// Check file size
 		if ($_FILES["fileToUpload"]["size"] > 500000) {
 		    echo "Sorry, your file is too large.";
@@ -131,38 +125,48 @@
 		// if everything is ok, try to upload file
 		} else {
 		    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-				$username = $_POST['new_username'];
-				$email = $_POST['new_email'];
-				$pass = $_POST['new_pass'];
-				$conpass = $_POST['new_passcon'];
-
-				if($pass === $conpass){
-
-					$password = md5($pass);
-					$insertdata = "UPDATE tbl_users SET user_name = '$username', 
-														user_email='$email',
-														user_password='$password',
-														picture='$target_file'
-													WHERE user_id='$updateuser'";
-													
-					$insert = $db->query($insertdata);
-
-					if ($db->query($insertdata) === TRUE) {
-						$_SESSION['pic']=$target_file;
-						echo '<script type="text/javascript"> 
-								alert("Data successfully updated");
-								window.location.replace("index.php");
-							</script>';
-					} else {
-						echo "Error updating record: " . $db->error;
-					};
-
-				} else {
-					die ("Passwords do not match");
-				};
+		    	$fileadd = ',picture='.$target_file;
+		    	$_SESSION['pic']=$target_file;
 		    } else {
+		        $fileadd = "";
 		        echo "Sorry, there was an error updating your profile.";
 		    }
 		}
+
+		$username = $_POST['new_username'];
+		$email = $_POST['new_email'];
+		$pass = $_POST['new_pass'];
+		$conpass = $_POST['new_passcon'];
+
+		if($pass == $conpass){
+
+			$password = md5($pass);
+			if (!empty($pass)) {
+				$passadd = ",user_password=".$password;
+			}else{
+				$passadd = "";
+			}
+			$insertdata = "UPDATE tbl_users SET user_name = '$username', 
+												user_email='$email'"
+												.$passadd
+												.$fileadd."
+											WHERE user_id='$updateuser'";
+											
+			$insert = $db->query($insertdata);
+		
+			
+
+			if ($insert) {
+				echo '<script type="text/javascript"> 
+						alert("Data successfully updated");
+						window.location.replace("index.php");
+					</script>';
+			} else {
+				echo "Error updating record: " . $db->error;
+			};
+
+		} else {
+			die ("Passwords do not match");
+		};
 	}
 ?>
