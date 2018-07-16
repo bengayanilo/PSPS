@@ -3,12 +3,12 @@
 	require('../../Database/config.php');
 
 	session_start();
-	if(isset($_SESSION['id'])){
-		header("Location:../../index.php");
-	}
+	// if(isset($_SESSION['id'])){
+	// 	header("Location:../../index.php");
+	// }
 
 	$doctorid = $_GET['doctor'];
-	$showdoctor = "SELECT surname, firstname, user_email FROM tbl_users WHERE user_id='$doctorid'";
+	$showdoctor = "SELECT surname, firstname, user_email, additional_info FROM tbl_users WHERE user_id='$doctorid'";
 
 	$doctordata = $db->query($showdoctor);
 	$data = $doctordata->fetch_assoc();
@@ -26,12 +26,30 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="<?php echo $_SESSION['url']; ?>Scheduling/js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
-<script src="../js/professionals.js"></script>
+<script src="<?php echo $_SESSION['url']; ?>Professionals/js/professionals.js"></script>
 	
-<div class="container is-fluid">
+<!-- <div class="container is-fluid">
 
 	<div class="box">
 
+		<p class="title is-5">Firstname</p>
+		<p class="subtitle is-6"><?php // echo $data['firstname']?></p>
+
+		<p class="title is-5">Surname</p>
+		<p class="subtitle is-6"><?php // echo $data['surname']?></p>
+
+		<p class="title is-5">Email</p>
+		<p class="subtitle is-6"><?php // echo $data['user_email']?></p>
+
+		<br>
+		<button id="closemodal" class="button is-primary">OK</button>
+	</div>
+	
+</div> -->
+
+<div class="container is-fluid">
+  <div class="tile">
+	<div class="tile">
 		<p class="title is-5">Firstname</p>
 		<p class="subtitle is-6"><?php echo $data['firstname']?></p>
 
@@ -40,11 +58,13 @@
 
 		<p class="title is-5">Email</p>
 		<p class="subtitle is-6"><?php echo $data['user_email']?></p>
-
-		<br>
+	</div>
+	<div class="tile">
+		<p class="title is-5">Additional Information</p>
+		<p class="subtitle is-6"><?php echo nl2br($data['additional_info']) ?></p>
 		<button id="closemodal" class="button is-primary">OK</button>
 	</div>
-	
+  </div>
 </div>
 	
 </body>
