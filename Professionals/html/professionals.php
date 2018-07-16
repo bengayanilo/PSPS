@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>Professionals - Psyche Solution Psychological Services</title>
 		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>/Professionals/css/professionals.css">
-		<script src="../../Professionals/js/professionals.js""></script>
+		<script src="<?php echo $_SESSION['url']; ?>Professionals/js/professionals.js"></script>
 
 </head>
 
