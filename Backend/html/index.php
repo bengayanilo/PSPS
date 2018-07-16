@@ -36,22 +36,22 @@
 	          var barChart = new Chart(chart, {
 	            type: "bar",
 	            data: {
-	                  labels: ["Free","Confirmed","Waiting"],
+	                  labels: ["Free","Waiting","Confirmed"],
 	                  datasets: [{
 	                      label: "Reports",
-	                      data: [free, confirm, waiting],
+	                      data: [free, waiting, confirm],
 	                      backgroundColor: [
-	                          "rgba(255, 99, 132, 0.2)",
-	                          "rgba(54, 162, 235, 0.2)",
+	                          "rgba(0, 128, 0, 0.5)",
 	                          "rgba(255, 206, 86, 0.2)",
+														"rgba(255, 99, 132, 0.5)",
 	                      ],
 	                      borderColor: [
-	                          "rgba(255,99,132,1)",
-	                          "rgba(54, 162, 235, 1)",
+	                          "rgba(0, 128, 0, 1)",
 	                          "rgba(255, 206, 86, 1)",
+														"rgba(255,99,132,1)",
 	                      ],
 	                      borderWidth: 1
-	                  }]
+	                  }],
 	              },
 	              options: {
 	                  scales: {
