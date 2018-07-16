@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<title>Backend - Psyche Solution Psychological Services</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma-pageloader.min.css" />
@@ -38,9 +40,9 @@
 					  		<a class="dropdown-item" href="<?php echo $_SESSION['url']; ?>settings.php" class="navbar-item">Account Settings</a> <!-- ADMIN SETTINGS -->
 							<a href="<?php echo $_SESSION['url']; ?>logout.php" class="navbar-item">Logout</a> <!-- USER LOGOUT -->
 						</div>
-					</div>                  
+					</div>
 				</div>
-			</div>          
+			</div>
 		</div>
 	</nav>
 
