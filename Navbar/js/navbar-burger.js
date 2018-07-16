@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    $(document).click(function(e) {
-        // $(".is-active").removeClass(".is-active");
-        $('.is-active').hide();
-    });
+    // $(document).click(function(e) {
+    //     // $(".is-active").removeClass(".is-active");
+    //     $('.is-active').hide();
+    // });
     $("body").click(function(e) {
         e.stopPropagation(); // This is the preferred method.
         // return false;        // This should not be used unless you do not want
@@ -20,12 +20,12 @@ $(document).ready(function(){
     //     $('.is-active').removeClass('.is-active');
     // });
 
-    $('html', 'body').click(function(){
-        if($('#navMenubd-example').hasClass('is-active'))
-        {
-            $(this).removeClass('is-active');
-        }
-    });
+    // $('html', 'body').click(function(){
+    //     if($('#navMenubd-example').hasClass('is-active'))
+    //     {
+    //         $(this).removeClass('is-active');
+    //     }
+    // });
 
 
     // function burger(e) {
