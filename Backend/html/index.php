@@ -16,56 +16,90 @@
 	$waitingdata = $waitingresult->fetch_assoc();
 
 	echo '<div class="columns">
-	  <div class="column">
-	    <div class="card box">
-	      <div class="card-header">
-	        <p class="card-header-title">Session report</p>
-	      </div>
-	      <div class="card-content" style="width: 500px; height: 500px;">
-	        <canvas id="barchart" width="400px" height="400px"></canvas>
+	  			<div class="column">
+	    			<div class="card box">
 
-	        <script type="text/javascript">
+							<div class="tile is-ancestor">
+								<div class="tile is-6">
+									<div class="tile is-vertical is-parent">
+										<div class="tile is-child box">
+											<p class="title">Pie Chart</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+										</div>
+										<div class="tile is-child box">
+											<p class="title">Weekly</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+										</div>
+									</div>
 
-	          var free = '. $freedata['free'] .';
-						var confirm = '. $confirmdata['confirmed'] .';
-						var waiting = '. $waitingdata['waiting'] .';
+									<div class="tile is-vertical is-parent">
+										<div class="tile is-child box">
+											<p class="title">Monthly</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+										</div>
 
-	          var chart = document.getElementById("barchart");
-	          console.log(chart);
+										<div class="tile is-child box">
+											<p class="title">Yearly</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+										</div>
 
-	          var barChart = new Chart(chart, {
-	            type: "bar",
-	            data: {
-	                  labels: ["Free","Waiting","Confirmed"],
-	                  datasets: [{
-	                      label: "Reports",
-	                      data: [free, waiting, confirm],
-	                      backgroundColor: [
-	                          "rgba(0, 128, 0, 0.5)",
-	                          "rgba(255, 206, 86, 0.2)",
-														"rgba(255, 99, 132, 0.5)",
-	                      ],
-	                      borderColor: [
-	                          "rgba(0, 128, 0, 1)",
-	                          "rgba(255, 206, 86, 1)",
-														"rgba(255,99,132,1)",
-	                      ],
-	                      borderWidth: 1
-	                  }],
-	              },
-	              options: {
-	                  scales: {
-	                      yAxes: [{
-	                          ticks: {
-	                              beginAtZero:true
-	                          }
-	                      }]
-	                  }
-	              }
-	          });
+									</div>
+								</div>
 
-	        </script>
-	      </div>
+						  <div class="tile is-parent">
+						    <div class="tile is-child box">
+						      <p class="title">Graph Accdg to Appointment</p>
+
+									<div class="card-content style="width:300px; height:300px;">
+						        <canvas id="barchart"></canvas>
+
+						        <script type="text/javascript">
+
+						          var free = '. $freedata['free'] .';
+											var confirm = '. $confirmdata['confirmed'] .';
+											var waiting = '. $waitingdata['waiting'] .';
+
+						          var chart = document.getElementById("barchart");
+						          console.log(chart);
+
+						          var barChart = new Chart(chart, {
+						            type: "bar",
+						            data: {
+						                  labels: ["Free","Waiting","Confirmed"],
+						                  datasets: [{
+						                      label: "Appointments",
+						                      data: [free, waiting, confirm],
+						                      backgroundColor: [
+						                          "rgba(0, 128, 0, 0.5)",
+						                          "rgba(255, 206, 86, 0.2)",
+																			"rgba(255, 99, 132, 0.5)",
+						                      ],
+						                      borderColor: [
+						                          "rgba(0, 128, 0, 1)",
+						                          "rgba(255, 206, 86, 1)",
+																			"rgba(255,99,132,1)",
+						                      ],
+						                      borderWidth: 1
+						                  }],
+						              },
+						              options: {
+						                  scales: {
+						                      yAxes: [{
+						                          ticks: {
+						                              beginAtZero:true
+						                          }
+						                      }]
+						                  }
+						              }
+						          });
+
+						        </script>
+						      </div>
+
+						    </div>
+						  </div>
+						</div>
+
 	    </div>
 	  </div>
 	</div>';
