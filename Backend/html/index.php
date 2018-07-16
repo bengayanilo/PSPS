@@ -21,7 +21,7 @@
 	      <div class="card-header">
 	        <p class="card-header-title">Session report</p>
 	      </div>
-	      <div class="card-content">
+	      <div class="card-content" style="width: 500px; height: 500px;">
 	        <canvas id="barchart" width="400px" height="400px"></canvas>
 
 	        <script type="text/javascript">
