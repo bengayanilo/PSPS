@@ -3,7 +3,7 @@
 
 	$getreport = "SELECT p.appointment_id, p.appointment_status, p.appointment_patient_name, t.surname, t.firstname 
 					FROM appointment AS p, tbl_users as t
-					WHERE p.doctor_id=t.user_id";
+					WHERE p.doctor_id=t.user_id AND p.appointment_status != 'free' ";
 	$result = $db->query($getreport);
 
 	if ($result->num_rows > 0) {
