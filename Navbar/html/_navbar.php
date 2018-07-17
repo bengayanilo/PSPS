@@ -65,7 +65,7 @@
 
 		if(isset($_SESSION['id']))
 		{
-			if($_SESSION['type'] == 'psy' || $_SESSION['type'] == 'admin')
+			if($_SESSION['type'] == 'admin')
 			{
 				echo 	'<a class="backend-link" href="'.$_SESSION['url'].'Backend/html">
 							<div class="navbar-item backend-link-container">
