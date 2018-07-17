@@ -113,7 +113,6 @@
             loadEvents();
 
             function loadEvents(day) {
-//                var start = nav.visibleStart() > new DayPilot.Date() ? nav.visibleStart() : new DayPilot.Date();
                 var start = nav.visibleStart();
 
                 var params = {
