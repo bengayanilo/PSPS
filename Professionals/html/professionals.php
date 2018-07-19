@@ -20,13 +20,25 @@
 			<div class="tile single-row-container"> <!-- 1 Row -->
 				<?php while($row = mysqli_fetch_array($professionalsdata))
 				{
-				echo '<div class="tile is-white is-2.5 is-vertical professionals-card"><a class="professionals-card-link" href="javascript:;" onclick="showdoctor('.$row['user_id'].')"> <!-- Card Template -->
-					<div class="tile primary-info">
-						<figure class="image is-128x128 profile-pic-fig">
-				<span class="profile-pic-span">
-					<img class="profile-pic-img" src="'.$_SESSION['url'].'Static/images/profile-placeholder.jpg">
-				</span>
-						</figure>
+					if($row['picture'] != NULL)
+					{
+						echo '<div class="tile is-white is-2.5 is-vertical professionals-card"><a class="professionals-card-link" href="javascript:;" onclick="showdoctor('.$row['user_id'].')"> <!-- Card Template -->
+							<div class="tile primary-info">
+								<figure class="image is-128x128 profile-pic-fig">
+									<span class="profile-pic-span">
+										<img class="profile-pic-img" src="'.$_SESSION['url'].$row['picture'].'">
+									</span>';
+					}
+					else
+					{
+						echo '<div class="tile is-white is-2.5 is-vertical professionals-card"><a class="professionals-card-link" href="javascript:;" onclick="showdoctor('.$row['user_id'].')"> <!-- Card Template -->
+							<div class="tile primary-info">
+								<figure class="image is-128x128 profile-pic-fig">
+									<span class="profile-pic-span">
+										<img class="profile-pic-img" src="'.$_SESSION['url'].'Static/images/profile-placeholder.jpg">
+									</span>';
+					}
+					echo '</figure>
 						<div class="professionals-name-container">
 							<span class="professionals-name">'.$row['firstname'].'&nbsp;'.$row['surname'].'</span>
 						</div>

@@ -13,7 +13,7 @@ body, html {
     height: 500px; */
     margin: auto;
     background-color: rgb(245, 245, 245);
-    padding: 30px;
+    padding: 0 30px 30px 30px;
 }
 
 #log-container {
