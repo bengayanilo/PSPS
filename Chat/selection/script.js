@@ -7,13 +7,13 @@ $(document).ready(function(){
 		{
 			var output = '';
 			for(var i in data){
-				var picture = (data[i].picture != null)?('<img class="user-pic-img" src="http://localhost/PSPS/'+data[i].picture+'">'):('<img class="user-pic-img" src="http://localhost/PSPS/Static/images/profile-placeholder.jpg">')
+				var picture = (data[i].picture != null)?(data[i].picture):('Static/images/profile-placeholder.jpg')
 				output +='<button class="select-convo" onclick="chat('+data[i].user_id+')">'+
 						        '<div class="media">'+
 						            '<div class="media-left">'+
 										'<figure class="image is-128x128 user-pic-fig">'+
 											'<span class="user-pic-span">'+
-												picture+
+												'<img class="user-pic-img" src="http://localhost/PSPS/'+picture+'">'+
 											'</span>'+
 										'</figure>'+
 						            '</div>'+
