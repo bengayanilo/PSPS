@@ -7,20 +7,13 @@ $(document).ready(function(){
 		{
 			var output = '';
 			for(var i in data){
-				var picture = data[i].picture;
-				if(data[i].picture != '')
-				{
+				var picture = (data[i].picture != null)?('<img class="user-pic-img" src="http://localhost/PSPS/'+data[i].picture+'">'):('<img class="user-pic-img" src="http://localhost/PSPS/Static/images/profile-placeholder.jpg">')
 				output +='<button class="select-convo" onclick="chat('+data[i].user_id+')">'+
 						        '<div class="media">'+
 						            '<div class="media-left">'+
-										// '<p class="image is-96x96">'+
-										// 	'<img class="profile-pic" src="https://bulma.io/images/placeholders/128x128.png">'+
-						                //     // '<img class="profile-pic" src="https://bulma.io/images/placeholders/128x128.png">'+
-										// '</p>'+
 										'<figure class="image is-128x128 user-pic-fig">'+
 											'<span class="user-pic-span">'+
-												'<img class="user-pic-img" src="http://localhost:8080/Web/'+data[i].picture+'">'+
-												// '<img class="user-pic-img" src="'.$_SESSION['url']+data[i].['picture']+'">'+
+												picture+
 											'</span>'+
 										'</figure>'+
 						            '</div>'+
@@ -29,7 +22,7 @@ $(document).ready(function(){
 						                    '<p>'+
 						                        '<strong>'+data[i].firstname+' '+data[i].surname+'</strong> <small>'+data[i].user_email+'</small> <!--<small class="time_passed">31m</small>-->'+
 						                        '<br>'+
-						                        '<span class="chat_preview truncate"><span class="name_of_sender">Person Name: </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</span>'+
+						                        '<span class="chat_preview truncate"><span class="name_of_sender"></span>'+data[i].message+'</span>'+
 						                    '</p>'+
 						                '</div>'+
 						            '</div>'+
@@ -38,38 +31,6 @@ $(document).ready(function(){
 						            '</div>'+
 						        '</div>'+
 							'</button>';	
-				}
-				else
-				{
-					output +='<button class="select-convo" onclick="chat('+data[i].user_id+')">'+
-						        '<div class="media">'+
-						            '<div class="media-left">'+
-										// '<p class="image is-96x96">'+
-										// 	'<img class="profile-pic" src="https://bulma.io/images/placeholders/128x128.png">'+
-						                //     // '<img class="profile-pic" src="https://bulma.io/images/placeholders/128x128.png">'+
-										// '</p>'+
-										'<figure class="image is-128x128 user-pic-fig">'+
-											'<span class="user-pic-span">'+
-												'<img class="user-pic-img" src="http://localhost:8080/Web/Static/images/profile-placeholder.jpg">'+
-												// '<img class="user-pic-img" src="'.$_SESSION['url']+data[i].['picture']+'">'+
-											'</span>'+
-										'</figure>'+
-						            '</div>'+
-						            '<div class="media-content">'+
-						                '<div class="content">'+
-						                    '<p>'+
-						                        '<strong>'+data[i].firstname+' '+data[i].surname+'</strong> <small>'+data[i].user_email+'</small> <!--<small class="time_passed">31m</small>-->'+
-						                        '<br>'+
-						                        '<span class="chat_preview truncate"><span class="name_of_sender">Person Name: </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</span>'+
-						                    '</p>'+
-						                '</div>'+
-						            '</div>'+
-						            '<div class="media-right">'+
-						                '<small class="time_received">10:00PM</small>'+
-						            '</div>'+
-						        '</div>'+
-							'</button>';
-				}
 			}
 			$('#log').html(output);
 			
