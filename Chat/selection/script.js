@@ -7,7 +7,7 @@ $(document).ready(function(){
 		{
 			var output = '';
 			for(var i in data){
-				var picture = (data[i].picture != null)?(data[i].picture):('Static/images/profile-placeholder.jpg')
+				var picture = (data[i].picture)?(data[i].picture):('Static/images/profile-placeholder.jpg')
 				output +='<button class="select-convo" onclick="chat('+data[i].user_id+')">'+
 						        '<div class="media">'+
 						            '<div class="media-left">'+
