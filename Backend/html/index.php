@@ -2,18 +2,44 @@
 	require('../../Database/config.php');
 	include('backend-base.php');
 
-	$free = "SELECT COUNT(appointment_status) AS free FROM appointment WHERE appointment_status='free'";
-	$confirmed = "SELECT COUNT(appointment_status) AS confirmed FROM appointment WHERE appointment_status='confirmed'";
-	$waiting = "SELECT COUNT(appointment_status) AS waiting FROM appointment WHERE appointment_status='waiting'";
-
+	$free = "SELECT COUNT(appointment_status) AS free
+						FROM appointment
+						WHERE appointment_status='free'";
 	$freeresult = $db->query($free);
 	$freedata = $freeresult->fetch_assoc();
 
+	$confirmed = "SELECT COUNT(appointment_status) AS confirmed
+									FROM appointment
+									WHERE appointment_status='confirmed'";
 	$confirmresult = $db->query($confirmed);
 	$confirmdata = $confirmresult->fetch_assoc();
 
+	$waiting = "SELECT COUNT(appointment_status) AS waiting
+								FROM appointment
+								WHERE appointment_status='waiting'";
 	$waitingresult = $db->query($waiting);
 	$waitingdata = $waitingresult->fetch_assoc();
+
+	$weekly = "SELECT WEEK(appointment_start, 5) AS showweek, COUNT(appointment_start) as weekcount
+							FROM appointment
+							WHERE appointment_status='confirmed'
+							GROUP BY WEEK(appointment_start)";
+	$weeklyresult = $db->query($weekly) or die($db->error);
+	$weeklycount = mysqli_fetch_array($weeklyresult, MYSQLI_ASSOC);
+
+	$monthly = "SELECT MONTH(appointment_start) AS showmonth, COUNT(appointment_start) as monthcount
+							FROM appointment
+							WHERE appointment_status='confirmed'
+							GROUP BY MONTH(appointment_start)";
+	$monthlyresult = $db->query($monthly) or die($db->error);
+	$monthlycount = mysqli_fetch_array($monthlyresult, MYSQLI_ASSOC);
+
+	$yearly = "SELECT YEAR(appointment_start) AS showyear, COUNT(appointment_start) as yearcount
+							FROM appointment
+							WHERE appointment_status='confirmed'
+							GROUP BY YEAR(appointment_start)";
+	$yearlyresult = $db->query($yearly) or die($db->error);
+	$yearlycount = mysqli_fetch_array($yearlyresult, MYSQLI_ASSOC);
 
 	echo '<div class="columns">
 	  			<div class="column">
@@ -22,14 +48,58 @@
 							<div class="tile is-ancestor">
 								<div class="tile is-6">
 									<div class="tile is-vertical is-parent">
+
 										<div class="tile is-child box">
 											<p class="title">Pie Chart</p>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
 										</div>
+
 										<div class="tile is-child box">
 											<p class="title">Weekly</p>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+											<div class="card-content" style="width:300px;">
+												<canvas id="weeklychart"></canvas>
+
+												<script type="text/javascript">
+
+													var week = '. $weeklycount['showweek'] .';
+													var countweek = '. $weeklycount['weekcount'].'
+								          var chart = document.getElementById("weeklychart");
+
+								          var weeklyChart = new Chart(chart, {
+								            type: "line",
+								            data: {
+															    labels: ["Week " + week],
+															    datasets: [
+															        {
+															            label: "Weekly appointments",
+															            fill: false,
+															            lineTension: 0.1,
+															            backgroundColor: "rgba(75,192,192,0.4)",
+															            borderColor: "rgba(75,192,192,1)",
+															            borderCapStyle: "butt",
+															            borderDash: [],
+															            borderDashOffset: 0.0,
+															            borderJoinStyle: "miter",
+															            pointBorderColor: "rgba(75,192,192,1)",
+															            pointBackgroundColor: "#fff",
+															            pointBorderWidth: 1,
+															            pointHoverRadius: 5,
+															            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+															            pointHoverBorderColor: "rgba(220,220,220,1)",
+															            pointHoverBorderWidth: 2,
+															            pointRadius: 5,
+															            pointHitRadius: 10,
+															            data: [countweek],
+															        }
+															    ]
+															},
+								          });
+
+								        </script>
+
+											</div>
 										</div>
+
 									</div>
 
 									<div class="tile is-vertical is-parent">
