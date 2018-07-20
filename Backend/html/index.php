@@ -29,22 +29,30 @@
 	$weekcount = array();
 	while($weeklycount = $weeklyresult->fetch_assoc()){
 		$showweek[] = $weeklycount['showweek'];
-		$weekcount[] = $weeklycount['weekcount']; 
+		$weekcount[] = $weeklycount['weekcount'];
 	}
 
-	$monthly = "SELECT MONTH(appointment_start) AS showmonth, COUNT(appointment_start) as monthcount
+	$monthly = "SELECT MONTHNAME(appointment_start) AS showmonth, COUNT(appointment_start) as monthcount
 							FROM appointment
 							WHERE appointment_status='confirmed'
-							GROUP BY MONTH(appointment_start)";
+							GROUP BY MONTHNAME(appointment_start)";
 	$monthlyresult = $db->query($monthly) or die($db->error);
-	$monthlycount = mysqli_fetch_array($monthlyresult, MYSQLI_ASSOC);
+	$showmonth = array();
+	$monthcount = array();
+	while($monthlycount = $monthlyresult->fetch_assoc()){
+		$showmonth[] = $monthlycount['showmonth'];
+		$monthcount[] = $monthlycount['monthcount'];
+	}
 
 	$yearly = "SELECT YEAR(appointment_start) AS showyear, COUNT(appointment_start) as yearcount
 							FROM appointment
 							WHERE appointment_status='confirmed'
 							GROUP BY YEAR(appointment_start)";
 	$yearlyresult = $db->query($yearly) or die($db->error);
-	$yearlycount = mysqli_fetch_array($yearlyresult, MYSQLI_ASSOC);
+	while($yearlycount = $yearlyresult->fetch_assoc()){
+		$showyear[] = $yearlycount['showyear'];
+		$yearcount[] = $yearlycount['yearcount'];
+	}
 
 	echo '<div class="columns">
 	  			<div class="column">
@@ -61,14 +69,14 @@
 
 										<div class="tile is-child box">
 											<p class="title">Weekly</p>
-											<div class="card-content" style="width:300px;">
+											<div class="card-content" style="width:250px;">
 												<canvas id="weeklychart"></canvas>
 
 												<script type="text/javascript">
 
 													var weeks = '. json_encode($showweek) .';
-													var countweek = '. json_encode($weekcount).'
-													console.log(weeks)
+													var countweek = '. json_encode($weekcount).';
+													console.log(countweek)
 								          var chart = document.getElementById("weeklychart");
 
 								          var weeklyChart = new Chart(chart, {
@@ -111,12 +119,95 @@
 									<div class="tile is-vertical is-parent">
 										<div class="tile is-child box">
 											<p class="title">Monthly</p>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+											<div class="card-content" style="width:250px;">
+												<canvas id="monthlychart"></canvas>
+
+												<script type="text/javascript">
+
+													var month = '. json_encode($showmonth) .';
+													var countmonth = '. json_encode($monthcount) .';
+													console.log(countmonth);
+								          var chart = document.getElementById("monthlychart");
+
+								          var monthlyChart = new Chart(chart, {
+								            type: "line",
+								            data: {
+															    labels: month,
+															    datasets: [
+															        {
+															            label: "Monthly appointments",
+															            fill: false,
+															            lineTension: 0.1,
+															            backgroundColor: "rgba(75,192,192,0.4)",
+															            borderColor: "rgba(75,192,192,1)",
+															            borderCapStyle: "butt",
+															            borderDash: [],
+															            borderDashOffset: 0.0,
+															            borderJoinStyle: "miter",
+															            pointBorderColor: "rgba(75,192,192,1)",
+															            pointBackgroundColor: "#fff",
+															            pointBorderWidth: 1,
+															            pointHoverRadius: 5,
+															            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+															            pointHoverBorderColor: "rgba(220,220,220,1)",
+															            pointHoverBorderWidth: 2,
+															            pointRadius: 5,
+															            pointHitRadius: 10,
+															            data: countmonth,
+															        }
+															    ]
+															},
+								          });
+
+								        </script>
+
+											</div>
 										</div>
 
 										<div class="tile is-child box">
 											<p class="title">Yearly</p>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+											<div class="card-content" style="width:250px;">
+												<canvas id="yearlychart"></canvas>
+
+												<script type="text/javascript">
+
+													var year = '. json_encode($showyear) .';
+													var countyear = '. json_encode($yearcount) .';
+								          var chart = document.getElementById("yearlychart");
+
+								          var yearlyChart = new Chart(chart, {
+								            type: "line",
+								            data: {
+															    labels: year,
+															    datasets: [
+															        {
+															            label: "Yearly appointments",
+															            fill: false,
+															            lineTension: 0.1,
+															            backgroundColor: "rgba(75,192,192,0.4)",
+															            borderColor: "rgba(75,192,192,1)",
+															            borderCapStyle: "butt",
+															            borderDash: [],
+															            borderDashOffset: 0.0,
+															            borderJoinStyle: "miter",
+															            pointBorderColor: "rgba(75,192,192,1)",
+															            pointBackgroundColor: "#fff",
+															            pointBorderWidth: 1,
+															            pointHoverRadius: 5,
+															            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+															            pointHoverBorderColor: "rgba(220,220,220,1)",
+															            pointHoverBorderWidth: 2,
+															            pointRadius: 5,
+															            pointHitRadius: 10,
+															            data: countyear,
+															        }
+															    ]
+															},
+								          });
+
+								        </script>
+
+											</div>
 										</div>
 
 									</div>
