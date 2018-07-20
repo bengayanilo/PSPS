@@ -20,7 +20,7 @@ $(document).ready(function(){
 						            '<div class="media-content">'+
 						                '<div class="content">'+
 						                    '<p>'+
-						                        '<strong>'+data[i].firstname+' '+data[i].surname+'</strong> <small>'+data[i].user_email+'</small> <!--<small class="time_passed">31m</small>-->'+
+						                        '<strong>'+data[i].firstname+' '+data[i].surname+'</strong><small>'+data[i].user_email+'</small>'+
 						                        '<br>'+
 						                        '<span class="chat_preview truncate"><span class="name_of_sender"></span>'+data[i].message+'</span>'+
 						                    '</p>'+
