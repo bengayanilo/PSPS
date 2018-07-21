@@ -66,273 +66,258 @@
 		$hourcount[] = $hourlycount['hourcount'];
 	}
 
-	echo '<div class="columns">
-					<div class="column">
-						<div class="card box">
+	echo '<div class="tile" style="min-width: 45%; max-width: 96%; margin-right: 1%;">
+									<div class="tile is-12 is-vertical">
+										<div class="tile">
+											<div class="tile graph-link-containers selected-graph">
+												<a class="button is-light is-dark graph-links show-weekly" href="javascript:;">Weekly</a>
+											</div>
+											<div class="tile graph-link-containers">
+												<a class="button is-light graph-links show-monthly" href="javascript:;">Monthly</a>
+											</div>
+											<div class="tile graph-link-containers" style="margin-bottom: 1.5rem;">
+												<a class="button is-light graph-links show-yearly" href="javascript:;">Yearly</a>
+											</div>
+										</div>
+										<div class="tile">
+											<div class="tile is-vertical box weekly-graph" style="width: 100%;">
+												<p class="title">Weekly</p>
+												<div class="card-content" style="width:100%;">
+													<canvas id="weeklychart"></canvas>
 
-						<div class="tile is-ancestor">
+													<script type="text/javascript">
 
-							<div class="tile is-vertical is-6">
+														var weeks = '. json_encode($showweek) .';
+														var countweek = '. json_encode($weekcount).';
+														console.log(countweek)
+														var chart = document.getElementById("weeklychart");
 
-								<div class="tile">
+														var weeklyChart = new Chart(chart, {
+															type: "line",
+															data: {
+																		labels: weeks,
+																		datasets: [
+																				{
+																						label: "Weekly appointments",
+																						fill: false,
+																						lineTension: 0.1,
+																						backgroundColor: "rgba(75,192,192,0.4)",
+																						borderColor: "rgba(75,192,192,1)",
+																						borderCapStyle: "butt",
+																						borderDash: [],
+																						borderDashOffset: 0.0,
+																						borderJoinStyle: "miter",
+																						pointBorderColor: "rgba(75,192,192,1)",
+																						pointBackgroundColor: "#fff",
+																						pointBorderWidth: 1,
+																						pointHoverRadius: 5,
+																						pointHoverBackgroundColor: "rgba(75,192,192,1)",
+																						pointHoverBorderColor: "rgba(220,220,220,1)",
+																						pointHoverBorderWidth: 2,
+																						pointRadius: 5,
+																						pointHitRadius: 10,
+																						data: countweek,
+																				}
+																		]
+																},
+														});
 
-									<div class="tile is-parent is-vertical">
+													</script>
 
-										<div class="tile is-child box">
-											<p class="title">Monthly</p>
-											<div class="card-content" style="width:400px; height: 250px">
-												<canvas id="monthlychart"></canvas>
+												</div>
+											</div>
+											<div class="tile is-vertical box monthly-graph" style="display: none;">
+												<p class="title">Monthly</p>
+												<div class="card-content" style="width:100%;">
+													<canvas id="monthlychart"></canvas>
 
-												<script type="text/javascript">
+													<script type="text/javascript">
 
-													var month = '. json_encode($showmonth) .';
-													var countmonth = '. json_encode($monthcount) .';
-													console.log(countmonth);
-													var chart = document.getElementById("monthlychart");
+														var month = '. json_encode($showmonth) .';
+														var countmonth = '. json_encode($monthcount) .';
+														console.log(countmonth);
+														var chart = document.getElementById("monthlychart");
 
-													var monthlyChart = new Chart(chart, {
-														type: "line",
-														data: {
-																	labels: month,
+														var monthlyChart = new Chart(chart, {
+															type: "line",
+															data: {
+																		labels: month,
+																		datasets: [
+																				{
+																						label: "Monthly appointments",
+																						fill: false,
+																						lineTension: 0.1,
+																						backgroundColor: "rgba(75,192,192,0.4)",
+																						borderColor: "rgba(75,192,192,1)",
+																						borderCapStyle: "butt",
+																						borderDash: [],
+																						borderDashOffset: 0.0,
+																						borderJoinStyle: "miter",
+																						pointBorderColor: "rgba(75,192,192,1)",
+																						pointBackgroundColor: "#fff",
+																						pointBorderWidth: 1,
+																						pointHoverRadius: 5,
+																						pointHoverBackgroundColor: "rgba(75,192,192,1)",
+																						pointHoverBorderColor: "rgba(220,220,220,1)",
+																						pointHoverBorderWidth: 2,
+																						pointRadius: 5,
+																						pointHitRadius: 10,
+																						data: countmonth,
+																				}
+																		]
+																},
+														});
+
+													</script>
+
+												</div>
+											</div>
+
+											<div class="tile is-vertical box yearly-graph" style="display: none; margin-bottom: 1.5rem;">
+												<p class="title">Yearly</p>
+												<div class="card-content" style="width:100%;">
+													<canvas id="yearlychart"></canvas>
+
+													<script type="text/javascript">
+
+														var year = '. json_encode($showyear) .';
+														var countyear = '. json_encode($yearcount) .';
+														var chart = document.getElementById("yearlychart");
+
+														var yearlyChart = new Chart(chart, {
+															type: "line",
+															data: {
+																	labels: year,
 																	datasets: [
-																			{
-																					label: "Monthly appointments",
-																					fill: false,
-																					lineTension: 0.1,
-																					backgroundColor: "rgba(75,192,192,0.4)",
-																					borderColor: "rgba(75,192,192,1)",
-																					borderCapStyle: "butt",
-																					borderDash: [],
-																					borderDashOffset: 0.0,
-																					borderJoinStyle: "miter",
-																					pointBorderColor: "rgba(75,192,192,1)",
-																					pointBackgroundColor: "#fff",
-																					pointBorderWidth: 1,
-																					pointHoverRadius: 5,
-																					pointHoverBackgroundColor: "rgba(75,192,192,1)",
-																					pointHoverBorderColor: "rgba(220,220,220,1)",
-																					pointHoverBorderWidth: 2,
-																					pointRadius: 5,
-																					pointHitRadius: 10,
-																					data: countmonth,
-																			}
-																	]
-															},
-													});
-
-												</script>
-
-											</div>
-
-										</div>
-
-										<div class="tile is-child box">
-											<p class="title">Yearly</p>
-											<div class="card-content" style="width:400px; height: 250px">
-												<canvas id="yearlychart"></canvas>
-
-												<script type="text/javascript">
-
-													var year = '. json_encode($showyear) .';
-													var countyear = '. json_encode($yearcount) .';
-								          var chart = document.getElementById("yearlychart");
-
-								          var yearlyChart = new Chart(chart, {
-								            type: "line",
-								            data: {
-															    labels: year,
-															    datasets: [
-															        {
-															            label: "Yearly appointments",
-															            fill: false,
-															            lineTension: 0.1,
-															            backgroundColor: "rgba(75,192,192,0.4)",
-															            borderColor: "rgba(75,192,192,1)",
-															            borderCapStyle: "butt",
-															            borderDash: [],
-															            borderDashOffset: 0.0,
-															            borderJoinStyle: "miter",
-															            pointBorderColor: "rgba(75,192,192,1)",
-															            pointBackgroundColor: "#fff",
-															            pointBorderWidth: 1,
-															            pointHoverRadius: 5,
-															            pointHoverBackgroundColor: "rgba(75,192,192,1)",
-															            pointHoverBorderColor: "rgba(220,220,220,1)",
-															            pointHoverBorderWidth: 2,
-															            pointRadius: 5,
-															            pointHitRadius: 10,
-															            data: countyear,
-															        }
-															    ]
-															},
-								          });
-
-								        </script>
-
-											</div>
-										</div>
-
-									</div>
-
-									<div class="tile is-parent">
-										<div class="tile is-child box">
-											<p class="title">Weekly</p>
-											<div class="card-content" width="width: 300px;">
-												<canvas id="weeklychart"></canvas>
-
-												<script type="text/javascript">
-
-													var weeks = '. json_encode($showweek) .';
-													var countweek = '. json_encode($weekcount).';
-													console.log(countweek)
-													var chart = document.getElementById("weeklychart");
-
-													var weeklyChart = new Chart(chart, {
-														type: "line",
-														data: {
-																	labels: weeks,
-																	datasets: [
-																			{
-																					label: "Weekly appointments",
-																					fill: false,
-																					lineTension: 0.1,
-																					backgroundColor: "rgba(75,192,192,0.4)",
-																					borderColor: "rgba(75,192,192,1)",
-																					borderCapStyle: "butt",
-																					borderDash: [],
-																					borderDashOffset: 0.0,
-																					borderJoinStyle: "miter",
-																					pointBorderColor: "rgba(75,192,192,1)",
-																					pointBackgroundColor: "#fff",
-																					pointBorderWidth: 1,
-																					pointHoverRadius: 5,
-																					pointHoverBackgroundColor: "rgba(75,192,192,1)",
-																					pointHoverBorderColor: "rgba(220,220,220,1)",
-																					pointHoverBorderWidth: 2,
-																					pointRadius: 5,
-																					pointHitRadius: 10,
-																					data: countweek,
-																			}
-																	]
-															},
-													});
-
-												</script>
-
-											</div>
-										</div>
-										</div>
-								</div>
-
-								<div class="tile is-parent">
-
-								<div class="tile is-child box">
-										<p class="title">Appointments by the Hour</p>
-										<div class="card-content" style="width: 400px;">
-											<canvas id="doughnutchart"></canvas>
-
-											<script type="text/javascript">
-
-												var hours = '. json_encode($showhour) .';
-												var counthour = '. json_encode($hourcount).';
-												console.log(hours)
-												var chart = document.getElementById("doughnutchart");
-
-												var weeklyChart = new Chart(chart, {
-													type: "doughnut",
-													data: {
-																labels: hours,
-																datasets: [
 																		{
-																				label: "No. of Appointment per Hour",
-																				fill: false,
-																				lineTension: 0.1,
-																				backgroundColor: ["#33cc33", "#ff9933", "#6699ff", "#ff3300", "#6699ff", "#ff6699"],
-																				borderColor: "rgba(75,192,192,1)",
-																				borderCapStyle: "butt",
-																				borderDash: [],
-																				borderDashOffset: 0.0,
-																				borderJoinStyle: "miter",
-																				pointBorderColor: "rgba(75,192,192,1)",
-																				pointBackgroundColor: "#fff",
-																				pointBorderWidth: 1,
-																				pointHoverRadius: 5,
-																				pointHoverBackgroundColor: "rgba(75,192,192,1)",
-																				pointHoverBorderColor: "rgba(220,220,220,1)",
-																				pointHoverBorderWidth: 2,
-																				pointRadius: 5,
-																				pointHitRadius: 10,
-																				data: counthour,
+																			label: "Yearly appointments",
+																			fill: false,
+																			lineTension: 0.1,
+																			backgroundColor: "rgba(75,192,192,0.4)",
+																			borderColor: "rgba(75,192,192,1)",
+																			borderCapStyle: "butt",
+																			borderDash: [],
+																			borderDashOffset: 0.0,
+																			borderJoinStyle: "miter",
+																			pointBorderColor: "rgba(75,192,192,1)",
+																			pointBackgroundColor: "#fff",
+																			pointBorderWidth: 1,
+																			pointHoverRadius: 5,
+																			pointHoverBackgroundColor: "rgba(75,192,192,1)",
+																			pointHoverBorderColor: "rgba(220,220,220,1)",
+																			pointHoverBorderWidth: 2,
+																			pointRadius: 5,
+																			pointHitRadius: 10,
+																			data: countyear,
 																		}
-																]
-														},
-												});
+																	]
+																},
+															});
 
-											</script>
+													</script>
 
+												</div>
+											</div>
+			
+										</div>
+										<div class="tile box">
+											<div class="tile is-vertical appointments-by-hour-graph" style="padding: 1.25rem;">
+												<p class="title">Appointments by the Hour</p>
+												<div class="card-content" style="max-width: 400px;">
+													<canvas id="doughnutchart"></canvas>
+
+													<script type="text/javascript">
+
+														var hours = '. json_encode($showhour) .';
+														var counthour = '. json_encode($hourcount).';
+														console.log(hours)
+														var chart = document.getElementById("doughnutchart");
+
+														var weeklyChart = new Chart(chart, {
+															type: "doughnut",
+															data: {
+																		labels: hours,
+																		datasets: [
+																				{
+																						label: "No. of Appointment per Hour",
+																						fill: false,
+																						lineTension: 0.1,
+																						backgroundColor: ["#33cc33", "#ff9933", "#6699ff", "#ff3300", "#6699ff", "#ff6699"],
+																						borderColor: "rgba(75,192,192,1)",
+																						borderCapStyle: "butt",
+																						borderDash: [],
+																						borderDashOffset: 0.0,
+																						borderJoinStyle: "miter",
+																						pointBorderColor: "rgba(75,192,192,1)",
+																						pointBackgroundColor: "#fff",
+																						pointBorderWidth: 1,
+																						pointHoverRadius: 5,
+																						pointHoverBackgroundColor: "rgba(75,192,192,1)",
+																						pointHoverBorderColor: "rgba(220,220,220,1)",
+																						pointHoverBorderWidth: 2,
+																						pointRadius: 5,
+																						pointHitRadius: 10,
+																						data: counthour,
+																				}
+																		]
+																},
+														});
+
+													</script>
+
+												</div>
+											</div>
+											<div class="tile is-vertical graph-accdg-to-appointment" style="padding: 1.25rem;">
+											<p class="title">Graph Accdg to Appointment</p>
+
+												<div class="card-content" style="width:100%;">
+													<canvas id="barchart"></canvas>
+
+													<script type="text/javascript">
+
+														var free = '. $freedata['free'] .';
+														var confirm = '. $confirmdata['confirmed'] .';
+														var waiting = '. $waitingdata['waiting'] .';
+
+														var chart = document.getElementById("barchart");
+														console.log(chart);
+
+														var barChart = new Chart(chart, {
+															type: "bar",
+															data: {
+																		labels: ["Free","Waiting","Confirmed"],
+																		datasets: [{
+																				label: "Appointments",
+																				data: [free, waiting, confirm],
+																				backgroundColor: [
+																					"rgba(0, 128, 0, 0.5)",
+																					"rgba(255, 206, 86, 0.2)",
+															"rgba(255, 99, 132, 0.5)",
+																				],
+																				borderColor: [
+																					"rgba(0, 128, 0, 1)",
+																					"rgba(255, 206, 86, 1)",
+															"rgba(255,99,132,1)",
+																				],
+																				borderWidth: 1
+																		}],
+																},
+																options: {
+																		scales: {
+																				yAxes: [{
+																						ticks: {
+																								beginAtZero:true
+																						}
+																				}]
+																		}
+																}
+														});
+
+													</script>
+												</div>
+											</div>
 										</div>
 									</div>
-
-								</div>
-							</div>
-
-							<div class="tile is-parent">
-							<div class="tile is-child box">
-							<p class="title">Graph Accdg to Appointment</p>
-
-							<div class="card-content" style="width:600px; height:300px;">
-								<canvas id="barchart"></canvas>
-
-								<script type="text/javascript">
-
-									var free = '. $freedata['free'] .';
-									var confirm = '. $confirmdata['confirmed'] .';
-									var waiting = '. $waitingdata['waiting'] .';
-
-									var chart = document.getElementById("barchart");
-									console.log(chart);
-
-									var barChart = new Chart(chart, {
-										type: "bar",
-										data: {
-													labels: ["Free","Waiting","Confirmed"],
-													datasets: [{
-															label: "Appointments",
-															data: [free, waiting, confirm],
-															backgroundColor: [
-																"rgba(0, 128, 0, 0.5)",
-																"rgba(255, 206, 86, 0.2)",
-										"rgba(255, 99, 132, 0.5)",
-															],
-															borderColor: [
-																"rgba(0, 128, 0, 1)",
-																"rgba(255, 206, 86, 1)",
-										"rgba(255,99,132,1)",
-															],
-															borderWidth: 1
-													}],
-											},
-											options: {
-													scales: {
-															yAxes: [{
-																	ticks: {
-																			beginAtZero:true
-																	}
-															}]
-													}
-											}
-									});
-
-								</script>
-							</div>
-
-						</div>
-							</div>
-
-						</div>
-
-					</div>
-				</div>
 			</div>';
 ?>
 	<!-- <div class="columns">

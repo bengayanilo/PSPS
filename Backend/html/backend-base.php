@@ -7,11 +7,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+	<script src="<?php echo $_SESSION['url']; ?>Backend/js/graphs.js"></script>
 
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma-pageloader.min.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/font-awesome/font-awesome.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Backend/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Backend/css/graphs.css" />
 	<link rel="icon" href="<?php echo $_SESSION['url']; ?>Static/images/logo.png" />
 </head>
 <body>
