@@ -1,8 +1,8 @@
 <?php
-	session_start();
-	if(isset($_SESSION['id'])){
-		header("Location:../../index.php");
-	}
+	// session_start();
+	// if(isset($_SESSION['id'])){
+	// 	header("Location:../../index.php");
+	// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,70 +22,112 @@
 
 </head>
 <body>
-<script src="../script.js"></script>
+<script src="<?php echo $_SESSION['url']; ?>Authentication/Register/script.js"></script>
 <div class="container is-fluid">
 
-	<div class="box center">
+	<!-- <div class="box center"> -->
+		<div>
+			<span class="register-header">Register</span>
+		</div>
+		<br>
 
 		<form id="form" action="" method="post">
+			<div class="tile is-vertical">
+				<div class="tile">
+					<div class="tile is-vertical reg-left">
+						<div class="field tile reg-input-container">
+							<label for="" class="label is-small reg-label"><span class="reg-text hero">Username: </span></label>
+							<input class="input is-small reg-input" type="text" name="reg_user" id="reg_user" value="" required>
+						</div>
 
-			<div class="field">
-				<label for="" class="label is-small">Username: </label>
-				<input class="input is-small" type="text" name="reg_user" id="reg_user" value="" required>
-			</div>
+						<div class="field tile reg-input-container">
+							<label for="" class="label is-small reg-label"><span class="reg-text hero">First Name: </span></label>
+							<input class="input is-small reg-input" type="text" name="fname" value="" required>
+						</div>
 
-			<div class="field">
-				<label for="" class="label is-small">First Name: </label>
-				<input class="input is-small" type="text" name="fname"  value="" required>
-			</div>
+						<div class="field tile reg-input-container">
+							<label for="" class="label is-small reg-label"><span class="reg-text hero">Last Name: </span></label>
+							<input class="input is-small reg-input" type="text" name="lname"  value="" required>
+						</div>
 
-			<div class="field">
-				<label for="" class="label is-small">Last Name: </label>
-				<input class="input is-small" type="text" name="lname"  value="" required>
-			</div>
+						<div class="field tile reg-input-container">
+							<label for="" class="label is-small reg-label"><span class="reg-text hero">Email: </span></label>
+							<input class="input is-small reg-input" type="email" name="email" id="email" value="" required>
+						</div>
 
-			<div class="field">
-				<label for="" class="label is-small">Email: </label>
-				<input class="input is-small" type="email" name="email" id="email" value="" required>
-			</div>
+					</div>
 
+					<span class="reg-divider"></span>
 
-			<div class="field">
-				<label for="" class="label is-small">Password: </label>
-				<input class="input is-small" type="password" name="reg_pass" id="reg_pass" value="" required>
-			</div>
+					<div class="tile is-vertical reg-right">
 
-			<div class="field">
-				<label for="" class="label is-small">Confirm Password: </label>
-				<input type="password" class="input is-small" name="confirmpass" id="confirmpass" value="" required>
-			</div>
+						<div class="field tile reg-input-container">
+							<label for="" class="label is-small reg-label"><span class="reg-text hero">Password: </span></label>
+							<input class="input is-small reg-input" type="password" name="reg_pass" id="reg_pass" value="" required>
+						</div>
 
-			<div class="field">
-				<label for="" class="label is-small">Contact No: </label>
-				<input class="input is-small" type="number" name="contact_no" id="contact_no" value="" required>
-			</div>
+						<div class="field tile reg-input-container">
+							<label for="" class="label is-small reg-label"><span class="reg-text hero">Confirm Password: </span></label>
+							<input type="password" class="input is-small reg-input" name="confirmpass" id="confirmpass" value="" required>
+						</div>
 
-			<div class="field">
-				<label for="" class="label is-small">Select user type </label>
-				<div class="control">
-					<div class="select is-info is-small">
-						<select name="type">
-							<option value="pat">Patient</option>
-							<option value="psy">Psychologist</option>
-							<option value="int">Intern</option>
-							<option value="rev">Review Applicant</option>
-						</select>
+						<div class="field tile reg-input-container">
+							<label for="" class="label is-small reg-label"><span class="reg-text hero">Contact No: </span></label>
+							<input class="input is-small reg-input" type="number" name="contact_no" id="contact_no" value="" required>
+						</div>
+
+						<div class="field tile reg-input-container">
+							<label for="" class="label is-small reg-label"><span class="reg-text hero">Select user type </span></label>
+							<div class="control reg-select">
+								<div class="select is-info is-small">
+									<select name="type">
+										<option value="pat">Patient</option>
+										<option value="psy">Psychologist</option>
+										<option value="int">Intern</option>
+										<option value="rev">Review Applicant</option>
+									</select>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+
+				<div class="tile">
+					<div class="tile"><p class="control is-small with-account">Already have an account? Sign in <a class="go-to-login" onClick="showLogin()" href="javascript:;">here </a></p></div>
+				</div>
+
+				<script>
+					function showLogin()
+					{
+						// $(".login-modal-background").fadeIn().delay(200);
+						$(".register-modal").fadeOut();
+						$(".register-modal-container").fadeOut();
+						$(".login-modal-container").delay(400).fadeIn(400);
+						$(".login-modal").delay(420).fadeIn(400);
+						document.getElementById("username").focus();
+					}
+				</script>
+
+				<div class="tile">
+					<!-- <div class="tile">
+						<button class="button is-dark go-to-login reg-back" type="submit" name="submit"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;Back to Login</button>
+					</div> -->
+					<div style="margin: auto;">
+						<div class="tile">
+							<div class="tile reg-button-container">
+								<button class="button is-dark reg-clear" type="reset" name="clear"><i class="fa fa-close" aria-hidden="true"></i>&nbsp;Clear</button>
+							</div>
+							<div class="tile reg-button-container">
+								<button class="button is-success reg-submit" type="submit" name="submit" id="register"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Confirm</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 			</div>
-
-			<br>
-
-			<button class="button is-success" type="submit" name="submit" id="register">Confirm</button>
-
 		</form>
 
-	</div>
+	<!-- </div> -->
 	
 </div>
 

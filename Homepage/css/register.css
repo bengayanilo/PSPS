@@ -1,0 +1,81 @@
+.register-modal-container {
+    display: none;
+    padding-top: 5rem;
+    width: 100%;
+}
+
+.register-modal {
+    display: none;
+    padding: .75rem 1.5rem 2rem 1.5rem;
+    margin: auto;
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+.register-header {
+    font-size: 2rem;
+    font-family: "Century Gothic";
+}
+
+.reg-left {
+    padding: 1.25rem;
+    /* border: 1px solid blue; */
+}
+
+.reg-right {
+    padding: 1.25rem;
+    /* border: 1px solid green; */
+}
+
+.reg-label {
+    display: table !important;
+    /* border: 1px solid violet; */
+    height: 100%;
+    width: 30%;
+    margin: auto;
+}
+
+.reg-text {
+    display: table-cell !important;
+    vertical-align: middle;
+    /* background-color: yellow; */
+}
+
+.reg-input-container {
+    min-height: 3rem !important;
+    max-height: 3.5rem;
+    /* border: 1px solid brown; */
+}
+
+.reg-input {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15) !important;
+    width: 200px !important;
+    margin: auto;
+}
+
+.reg-input::-webkit-inner-spin-button,
+.reg-input::-webkit-outer-spin-button {
+    display: none;
+}
+
+.reg-select {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+    margin: auto;
+}
+
+.reg-select select {
+    width: 200px;
+}
+
+.reg-divider {
+    border: 1px solid #ccc;
+}
+
+.reg-button-container {
+    margin: 1rem;
+}
+
+.with-account {
+    width: 100%;
+    text-align: center !important;
+}

@@ -100,8 +100,7 @@
 						</div>';
 		}
 		else{
-			// echo '<a class="navbar-item navbarLinks navbar-menu" href="'.$_SESSION['url'].'Authentication/Login/index.php">Log In</a>';
-			echo '<a class="navbar-item navbarLinks navbar-menu" href="javascript:;" onclick="showmodal()">Log In</a>
+			echo /*'<a class="navbar-item navbarLinks navbar-menu" href="javascript:;" onclick="showmodal()">Log In</a>
 
 				<script>
 
@@ -115,6 +114,19 @@
 							}
 						});
 						modal.showUrl("'.$_SESSION['url'].'Authentication/Login/index.php");
+					};
+
+				</script>';
+				$(".login-modal-background").removeClass("modal-hidden");*/
+				'<a class="navbar-item navbarLinks navbar-menu" href="javascript:;" onclick="showmodal()">Log In</a>
+
+				<script>
+
+					function showmodal(){
+						$(".login-modal-background").fadeIn().delay(200);
+						$(".login-modal-container").fadeIn();
+						$(".login-modal").fadeIn();
+						document.getElementById("username").focus();
 					};
 
 				</script>';

@@ -4,6 +4,7 @@
 	
 	$updateuser = $_SESSION['id'];
 	$selectuser = "SELECT user_name, user_email FROM tbl_users WHERE user_id=$updateuser";
+	$usertype = mysqli_real_escape_string($db, $_SESSION['type']);
 
 	$userdata = $db->query($selectuser);
 	$data = $userdata->fetch_assoc();
@@ -69,6 +70,18 @@
 							<input type="password" class="input" name="new_passcon">
 						</div>
 					</div>
+					<?php
+						if($usertype == 'psy')
+						{
+							echo '<div class="field">
+								<label> Additional Information </label>
+								<div class="control">
+									<textarea rows="10" class="input" name="new_additional" style="resize: none; height: 8rem;"></textarea>
+								</div>
+							</div>';
+						}
+					?>
+
 					<hr>
 					<div class="level">
 						<div class="file">
