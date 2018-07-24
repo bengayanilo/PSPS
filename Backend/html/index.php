@@ -49,6 +49,8 @@
 							WHERE appointment_status='confirmed'
 							GROUP BY YEAR(appointment_start)";
 	$yearlyresult = $db->query($yearly) or die($db->error);
+	$showyear = array();
+	$yearcount = array();
 	while($yearlycount = $yearlyresult->fetch_assoc()){
 		$showyear[] = $yearlycount['showyear'];
 		$yearcount[] = $yearlycount['yearcount'];
