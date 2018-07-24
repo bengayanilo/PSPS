@@ -1,5 +1,5 @@
 .services-wrapper {
-    padding: 10% 0 10% 0;
+    /* padding: 10% 0 10% 0; */
     height: 100vh;
     width: 100vw;
     /* background-color: #f2f3f5; */
@@ -7,8 +7,9 @@
 }
 
 .columns-wrapper {
-    margin-top: 5%;
-    margin: 0 auto;
+    padding: 1px;
+    /* margin-top: 5%;
+    margin: 0 auto; */
     flex-basis: 80%;
     display: flex;
     height: 100%;
@@ -17,10 +18,12 @@
 
 .divider {
     margin: auto;
+    margin-left: 0.5px;
+    margin-right: 0.5px;
     display: inline-block;
     width: 0;
     height: 10em;
-    border-left: 2px solid #ccc;
+    border-left: 1px solid #ccc;
     /* border-left: 1px solid #ccc;
     border-right: 1px solid #ccc; */
 }

@@ -1,0 +1,52 @@
+iframe::-webkit-scrollbar {
+    display: none !important;
+}
+
+#feedback-section {
+    width: 100%;
+    min-height: 60%;
+    background-color: rgb(255, 255, 255);
+}
+
+.feedback-container {
+    margin: 2rem;
+    /* margin: auto !important; */
+    /* border: 1px solid pink; */
+    display: inline-flex;
+}
+
+/* .smcx-widget, .smcx-embed, .smcx-show, .smcx-widget-dark {
+    margin: auto;
+    display: inline-table;
+    width: 700px !important;
+} */
+
+.smcx-widget {
+    margin: auto;
+    display: inline-table;
+    width: 700px !important;
+}
+
+.smcx-widget::-webkit-scrollbar {
+    display: none !important;
+}
+
+.smcx-iframe-container {
+    overflow: hidden !important;
+}
+
+div.smcx-iframe-container iframe html::-webkit-scrollbar {
+    display: none !important;
+}
+
+.auto-scroll::-webkit-scrollbar {
+    display: none !important;
+}
+
+.smcx-iframe-container .auto-scroll {
+    overflow: hidden !important;
+}
+
+.smcx-iframe-container .auto-scroll::-webkit-scrollbar {
+    display: none !important;
+}

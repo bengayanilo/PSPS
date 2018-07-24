@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Homepage/css/hero.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Homepage/css/login.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Homepage/css/register.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Homepage/css/feedback.css" />
 	<link rel="icon" href="<?php echo $_SESSION['url']; ?>Static/images/logo.png" />
 
 	<script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
@@ -55,6 +56,11 @@
 				</section>
 				<section id="professionals-section">
 					<?php include("../../Professionals/html/professionals.php"); ?>
+				</section>
+				<section id="feedback-section">
+					<center><div class="feedback-container">
+						<?php include("../../Feedback/html/feedback.php"); ?>
+					</div></center>
 				</section>
 				<?php include("../../Footer/html/footer-distributed-with-address-and-phones.php"); ?>
 	<div class="pageloader"><span class="title">Pageloader</span></div>
