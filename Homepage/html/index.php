@@ -24,6 +24,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="<?php echo $_SESSION['url']; ?>Homepage/js/main.js"></script>
 	<script src="<?php echo $_SESSION['url']; ?>Homepage/js/homepage-navbar.js"></script>
+	<script src="<?php echo $_SESSION['url']; ?>Homepage/js/blur.js"></script>
 	<script src="../../Scheduling/js/daypilot/daypilot-all.min.js"></script>
 </head>
 <body>
@@ -47,7 +48,7 @@
 	<main class="wrapper">
 	<section class="section parallax bg1" id="home-section">
 		<div class="greetings hero-top">
-			<h1 style="font-family: Trebuchet; text-shadow: 2px 2px #000000;">One small positive thought in the morning can change your whole day.</hi>
+			<h1 style="font-family: Trebuchet; text-shadow: 4px 4px 6px rgba(0, 0, 0, 1);">One small positive thought in the morning can change your whole day.</hi>
 		</div>
 	</section>
 				<?php include("../../News/html/news.php"); ?>
