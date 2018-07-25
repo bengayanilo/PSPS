@@ -82,7 +82,6 @@
 								<div class="select is-info is-small">
 									<select name="type">
 										<option value="pat">Patient</option>
-										<option value="psy">Psychologist</option>
 										<option value="int">Intern</option>
 										<option value="rev">Review Applicant</option>
 									</select>
@@ -123,12 +122,12 @@
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 		</form>
 
 	<!-- </div> -->
-	
+
 </div>
 
 </body>
