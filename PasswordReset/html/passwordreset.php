@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/font-awesome/font-awesome.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>PasswordReset/css/passwordreset.css" />
     <script src="<?php echo $_SESSION['url']; ?>Static/js/jquery.min.js"></script>
+    <script src="<?php echo $_SESSION['url']; ?>PasswordReset/js/passwordreset.js"></script>
     <link rel="icon" href="<?php echo $_SESSION['url']; ?>Static/images/logo.png" />
 </head>
 <body>
