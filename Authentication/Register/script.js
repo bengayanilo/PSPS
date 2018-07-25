@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	  
+
 	$('#form').submit(function(e) {
 	    e.preventDefault();
 	    $.ajax({
@@ -9,13 +9,13 @@ $(document).ready(function() {
 	       success: function(data)
 	       {
 	       	if (data == 'Registered') {
-	       		alert('Registration Successful');
+	       		alert('Your account has been made, please verify it by clicking the activation link that has been send to your email.');
 	       		window.location.replace("../../index.php");
 	       		DayPilot.Modal.close(data);
 	       	}
 	       	else{
 	       		alert(data);
-	       	}	       	
+	       	}
 	       }
 	   });
 	});
