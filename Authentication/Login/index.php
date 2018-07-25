@@ -37,7 +37,7 @@
 				<input class="input login-input" type="password" name="password" id="password" value="" required>
 			</div>
 			
-			<a target="_blank" href="<?php echo $_SESSION['url']; ?>PasswordReset/html/passwordreset.php"><p class="control is-small">Forgot Password?</p></a>
+			<p class="control is-small"><a target="_blank" href="<?php echo $_SESSION['url']; ?>PasswordReset/html/passwordreset.php">Forgot Password?</a></p>
 			
 			<br>
 			
