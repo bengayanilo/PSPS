@@ -36,7 +36,11 @@
 				<label for="" class="label">Password: </label>
 				<input class="input login-input" type="password" name="password" id="password" value="" required>
 			</div>
-
+			
+			<a target="_blank" href="<?php echo $_SESSION['url']; ?>PasswordReset/html/passwordreset.php"><p class="control is-small">Forgot Password?</p></a>
+			
+			<br>
+			
 			<p class="control is-small">Don't have an account yet? Register <a class="go-to-register" onClick="showRegister()" href="javascript:;">here </a></p>
 
 			<script>
