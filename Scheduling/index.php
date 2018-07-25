@@ -9,7 +9,7 @@
         }
     }
     else{
-        header("Location:../Authentication/Login/index.php");
+        echo "<script> alert('Login First'); window.location.replace('../index.php'); </script>";
     }
 ?>
 <!DOCTYPE html>
