@@ -35,8 +35,10 @@
     }
 
     .company-logo img {
-        max-height: 2rem;
+        max-height: 2.5rem !important;
     }
+
+
 
     #centered-menus {
         margin-left: 0;
