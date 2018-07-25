@@ -1,8 +1,8 @@
 <?php
 	require('../../../Database/config.php');
-	
+
 	$updateuser = $_GET['id'];
-	$selectuser = "SELECT user_name, user_email, joining_date FROM tbl_users WHERE user_id=$updateuser";
+	$selectuser = "SELECT user_name, firstname, surname, user_email, joining_date FROM tbl_users WHERE user_id=$updateuser";
 
 	$userdata = $db->query($selectuser);
 	$data = $userdata->fetch_assoc();
@@ -32,6 +32,14 @@
 										<tr>
 											<th width="100">Username</th>
 											<td><?php echo $data['user_name']; ?></td>
+										</tr>
+										<tr>
+											<th width="100">Firstname</th>
+											<td><?php echo $data['firstname']; ?></td>
+										</tr>
+										<tr>
+											<th width="100">Lastname</th>
+											<td><?php echo $data['surname']; ?></td>
 										</tr>
 										<tr>
 											<th width="100">Email</th>

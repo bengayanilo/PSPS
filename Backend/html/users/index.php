@@ -17,7 +17,7 @@
 										</span>
 										<span>Create</span>
 									</a>
-								</div>	
+								</div>
 							</div>
 						</div>
 						<div class="level-right">
@@ -35,6 +35,7 @@
 							<tr>
 								<th>User ID</th>
 								<th>Username</th>
+								<th>Name</th>
 								<th>Email</th>
 								<th>Actions</th>
 							</tr>

@@ -1,7 +1,7 @@
 <?php
 	require('../../../Database/config.php');
 
-	$getuser = "SELECT user_id, user_name, user_email FROM tbl_users WHERE user_type='psy'";
+	$getuser = "SELECT user_id, user_name, firstname, surname, user_email FROM tbl_users WHERE user_type='psy'";
 	$result = $db->query($getuser);
 
 	if ($result->num_rows > 0) {
@@ -10,6 +10,7 @@
 			echo '<tr>
 					<td> '. $row['user_id'] .' </td>
 					<td> '. $row['user_name'] .' </td>
+					<td> '. $row['firstname']. ' '. $row['surname'] .' </td>
 					<td> '. $row['user_email'] .' </td>
 					<td>
 						<div class="dropdown is-hoverable">
@@ -28,7 +29,7 @@
 									<a class="dropdown-item" href="delete.php?delete_id='. $row['user_id'] .'" onclick="return confirm('."'Are you sure?'".');">Delete</a>
 								</div>
 							</div>
-						</div>										
+						</div>
 					</td>
 				</tr>';
 	}

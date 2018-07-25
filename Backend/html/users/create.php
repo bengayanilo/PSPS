@@ -18,14 +18,26 @@
 		<div class="column">
 			<div class="card box">
 				<div class="card-header">
-					<p class="card-header-title">Register</p>
+					<p class="card-header-title">Create user</p>
 				</div>
 				<div class="card-content">
-					<form action="" method="post">
+					<form action="_usercreate.php" method="post">
 						<div class="field">
 							<label> Username </label>
 							<div class="control">
 								<input type="text" class="input" name="new_username" autofocus>
+							</div>
+						</div>
+						<div class="field">
+							<label> First Name </label>
+							<div class="control">
+								<input type="text" class="input" name="firstname" autofocus>
+							</div>
+						</div>
+						<div class="field">
+							<label> Last Name </label>
+							<div class="control">
+								<input type="text" class="input" name="lastname" autofocus>
 							</div>
 						</div>
 						<div class="field">
@@ -35,7 +47,7 @@
 							</div>
 						</div>
 						<div class="field">
-							<label> New password </label>
+							<label> Password </label>
 							<div class="control">
 								<input type="password" class="input" name="new_pass">
 							</div>
@@ -63,35 +75,3 @@
 
 </body>
 </html>
-<?php
-	if (isset($_POST['submitcreate'])){
-
-		$username = $_POST['new_username'];
-		$email = $_POST['new_email'];
-		$pass = $_POST['new_pass'];
-		$conpass = $_POST['new_passcon'];
-
-		if($pass === $conpass){
-
-			$password = md5($pass);
-			$insertdata = "INSERT INTO tbl_users (user_name,user_email,user_password,user_type,joining_date)
-			VALUES ('$username','$email','$password','psy',NOW())";
-											
-			$insert = $db->query($insertdata);
-
-			if ($insert) {
-
-				echo '<script type="text/javascript">
-						window.location.replace("index.php");
-					</script>';
-			} else {
-				echo "Error updating record: " . $db->error;
-			};
-
-		} else {
-			die ("Passwords do not match");
-		};
-	};
-
-	$db->close();
-?>
