@@ -13,9 +13,6 @@ $(document).ready(function() {
 	       		window.location.replace("../../index.php");
 	       		DayPilot.Modal.close(data);
 	       	}
-	       	else{
-	       		alert(data);
-	       	}
 	       }
 	   });
 	});

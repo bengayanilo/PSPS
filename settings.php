@@ -109,7 +109,7 @@
 <?php
 	if(isset($_POST['submit'])){
 		$target_dir = "Static/images/users/";
-		$target_file = $target_dir . $_SESSION['id'].".".pathinfo($_FILES["fileToUpload"]["name"], PATHINFO_EXTENSION);
+		$target_file = $target_dir . $_SESSION['id']."."."jpg", PATHINFO_EXTENSION);
 		echo $target_file;
 		$uploadOk = 1;
 		$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -159,7 +159,7 @@
 			}else{
 				$passadd = "";
 			}
-			$insertdata = "UPDATE tbl_users SET user_name = '$username', 
+			$insertdata = "UPDATE tbl_users SET user_name = '$username',
 												user_email='$email'"
 												.$passadd
 												.$fileadd."

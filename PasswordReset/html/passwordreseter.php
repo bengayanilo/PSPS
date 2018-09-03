@@ -14,13 +14,13 @@
 			$pass = md5($password);
 			$query = "UPDATE tbl_users SET user_password = '".$pass."' WHERE user_name = '".$row['user_name']."' AND user_email = '".$row['user_email']."'";
 			$stmt = $db->query($query);
-			// $to      = $row['user_email'];
-			// $subject = 'Password Reset';
-			// $message = 'Your password has been reset. Your temporary password is '.$password;
-			// $headers = 'From: noreply@psps.ml' . "\r\n".
-			// 	'X-Mailer: PHP/' . phpversion();
+			$to      = $row['user_email'];
+			$subject = 'Password Reset';
+			$message = 'Your password has been reset. Your temporary password is '.$password;
+			$headers = 'From: noreply@psps.ml' . "\r\n".
+				'X-Mailer: PHP/' . phpversion();
 
-			// mail($to, $subject, $message, $headers);
+			mail($to, $subject, $message, $headers);
 			echo $password;
 		}else{
 			echo 'Wrong email';

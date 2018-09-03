@@ -43,17 +43,18 @@
 				'; // Our message above including the link
 
 				$headers = 'From:noreply@yourwebsite.com' . "\r\n"; // Set from headers
-				mail($to, $subject, $message, $headers); // Send our email
-
- 	 			if ($insert) {
- 	 				$_SESSION['id']=mysqli_insert_id($db);
- 	 				$_SESSION['username']=$username;
- 	 				$_SESSION['type']=$type;
- 	 				$_SESSION['pic']=NULL;
- 	 				echo 'Registered';
- 	 			} else {
- 	 				echo "There is an error in your registration: " . $db->error;
- 	 			};
+				if(mail($to, $subject, $message, $headers)){
+					echo 'Registered';
+				} // Send our email
+ 	 			// if ($insert) {
+ 	 			// 	$_SESSION['id']=mysqli_insert_id($db);
+ 	 			// 	$_SESSION['username']=$username;
+ 	 			// 	$_SESSION['type']=$type;
+ 	 			// 	$_SESSION['pic']=NULL;
+ 	 			// 	echo 'Registered';
+ 	 			// } else {
+ 	 			// 	echo "There is an error in your registration: " . $db->error;
+ 	 			// };
 			}
 		} else {
 			die ("Passwords do not match");
