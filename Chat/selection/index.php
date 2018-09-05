@@ -2,7 +2,6 @@
 	session_start();
 	if(!isset($_SESSION['id'])){
 		echo "<script> alert('Login First'); window.location.replace('../../index.php'); </script>";
-		// header("Location:../../Authentication/Login/index.php");
 	}
 ?>
 <!DOCTYPE html>
