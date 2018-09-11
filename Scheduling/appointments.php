@@ -39,7 +39,7 @@
         </a>
       </div>
 
-      <table class="table is-striped is-hoverable">
+      <table id="myTable" class="table is-striped is-hoverable">
       <thead>
         <tr>                <!--Column Names-->
           <td class="column-name">
@@ -57,66 +57,41 @@
         </tr>               <!--Column Names End-->
         </thead>
 
-        <tr class="populated-column">                <!--Populated Columns-->
-          <td class="appointment-data appointment-patient-name-data">
-            <span>sample name</span>
-          </td>
-          <td class="appointment-data appointment-time-data">
-            <span>sample time</span>
-          </td>
-          <td class="appointment-data appointment-status-data">
-            <span>sample status</span>
-          </td>
-          <td class="appointment-data appointment-actions-data">
-            <div class="tile level">
-              <div class="tile button is-gray">
-                <span>sample action</span>
-              </div>
-            </div>
-          </td>
-        </tr>                                        <!--Populated Columns End-->
-
-        <tr class="populated-column">                <!--Populated Columns-->
-          <td class="appointment-data appointment-patient-name-data">
-            <span>sample name</span>
-          </td>
-          <td class="appointment-data appointment-time-data">
-            <span>sample time</span>
-          </td>
-          <td class="appointment-data appointment-status-data">
-            <span>sample status</span>
-          </td>
-          <td class="appointment-data appointment-actions-data">
-            <div class="tile level">
-              <div class="tile button is-gray">
-                <span>sample action</span>
-              </div>
-            </div>
-          </td>
-        </tr>                                        <!--Populated Columns End-->
-
-        <tr class="populated-column">                <!--Populated Columns-->
-          <td class="appointment-data appointment-patient-name-data">
-            <span>sample name</span>
-          </td>
-          <td class="appointment-data appointment-time-data">
-            <span>sample time</span>
-          </td>
-          <td class="appointment-data appointment-status-data">
-            <span>sample status</span>
-          </td>
-          <td class="appointment-data appointment-actions-data">
-            <div class="tile level">
-              <div class="tile button is-gray">
-                <span>sample action</span>
-              </div>
-            </div>
-          </td>
-        </tr>                                        <!--Populated Columns End-->
         
       </table>
 
 	</div>
   </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $.post("events.php",function(data){
+        var output = "";
+        for(var i in data){
+          output +='<tr class="populated-column">                <!--Populated Columns-->'+
+                      '<td class="appointment-data appointment-patient-name-data">'+
+                        '<span>'+data[i]['text']+'</span>'+
+                      '</td>'+
+                      '<td class="appointment-data appointment-time-data">'+
+                        '<span>'+data[i]['start']+'-'+data[i]['end']+'</span>'+
+                      '</td>'+
+                      '<td class="appointment-data appointment-status-data">'+
+                        '<span>'+data[i]['tags']['status']+'</span>'+
+                      '</td>'+
+                      '<td class="appointment-data appointment-actions-data">'+
+                        '<div class="tile level">'+
+                          '<div class="tile button is-gray">'+
+                            '<span>confirm</span>'+
+                          '</div>'+
+                          '<div class="tile button is-gray">'+
+                            '<span>cancel</span>'+
+                          '</div>'+
+                        '</div>'+
+                      '</td>'+
+                    '</tr>                                        <!--Populated Columns End-->';
+        }
+        $('#myTable tr:last').after(output);
+      });
+    });
+  </script>
 </body>
 </html>
