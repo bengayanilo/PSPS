@@ -1,0 +1,75 @@
+.appointments-container {
+    /* display: none; */
+    padding-top: 5rem;
+    width: 100%;
+}
+
+.appointments {
+    /* display: none; */
+    padding: 1.5rem 3rem 3rem 3rem;
+    margin: auto;
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8);
+    /* max-width: 600px; */
+}
+
+.appointments-header {
+    font-size: 2rem;
+    font-family: "Century Gothic";
+}
+
+.appointments-input-container {
+    min-height: 2rem !important;
+    max-height: 3.5rem;
+    /* border: 1px solid brown; */
+}
+
+.appointments-input {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15) !important;
+    width: 175px !important;
+    margin: auto;
+}
+
+.appointments-button-container {
+    margin: 1rem;
+}
+
+.appointments-buttons {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+.appointments-vertical {
+    padding: 1.25rem;
+}
+
+.appointments-label {
+    display: table !important;
+    /* border: 1px solid violet; */
+    /* margin-right: 5px; */
+    height: 100%;
+    width: 35%;
+    margin-right: 10px;
+    /* margin: 0 5px 0 0 auto; */
+}
+
+.appointments-text {
+    display: table-cell !important;
+    vertical-align: middle;
+    /* background-color: yellow; */
+}
+
+.appointments-sort {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Table styles*/
+.column-name {
+    text-align: center;
+    font-weight: bold;
+}
+
+.appointment-data {
+    vertical-align: middle !important;
+}
