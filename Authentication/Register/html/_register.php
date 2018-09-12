@@ -21,8 +21,8 @@
 			    // Return Success - Valid Email
 				$password = md5($pass);
 				$hash = md5(rand(0,1000));
- 	 			$insertdata = "INSERT INTO tbl_users (user_name, firstname, surname, user_email, hash, contact_no, user_password, user_type, joining_date)
- 	 							VALUES ('$username','$fname','$lname','$email','$hash','$contact','$password','$type',NOW())";
+ 	 			$insertdata = "INSERT INTO tbl_users (user_name, firstname, surname, user_email, contact_no, user_password, user_type, joining_date)
+ 	 							VALUES ('$username','$fname','$lname','$email','$contact','$password','$type',NOW())";
  	 			$insert = $db->query($insertdata);
 
 				$to = $email; // Send email to our user
@@ -38,23 +38,14 @@
 				------------------------
 
 				Please click this link to activate your account:
-				'. $_SESSION['url'] .'Authentication/Register/html/verify.php?email='. $email. '&hash='. $hash .'
-
-				'; // Our message above including the link
+				'. $_SESSION['url'] .'Authentication/Register/html/verify.php?email='. $email. '&hash='. $hash; 
+				// Our message above including the link
 
 				$headers = 'From:noreply@yourwebsite.com' . "\r\n"; // Set from headers
-				if(mail($to, $subject, $message, $headers)){
-					echo 'Registered';
-				} // Send our email
- 	 			// if ($insert) {
- 	 			// 	$_SESSION['id']=mysqli_insert_id($db);
- 	 			// 	$_SESSION['username']=$username;
- 	 			// 	$_SESSION['type']=$type;
- 	 			// 	$_SESSION['pic']=NULL;
- 	 			// 	echo 'Registered';
- 	 			// } else {
- 	 			// 	echo "There is an error in your registration: " . $db->error;
- 	 			// };
+				echo 'Registered';
+				// if(mail($to, $subject, $message, $headers)){
+				// 	echo 'Registered';
+				// }
 			}
 		} else {
 			die ("Passwords do not match");
