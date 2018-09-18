@@ -1,7 +1,16 @@
 <?php
 require_once '_db.php';
 
-$stmt = $db->prepare('SELECT * FROM appointment WHERE doctor_id=21 AND appointment_status="waiting"');
+$json = file_get_contents('php://input');
+$params = json_decode($json);
+
+if ($params->status == "all") {
+	$stmt = $db->prepare('SELECT * FROM appointment WHERE doctor_id=21 ORDER BY appointment_status,appointment_start	');
+}
+else{
+	$stmt = $db->prepare('SELECT * FROM appointment WHERE doctor_id=21 AND appointment_status=:status');
+	$stmt->bindParam(':status', $params->status);
+}
 $stmt->execute();
 $result = $stmt->fetchAll();
 
