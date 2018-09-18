@@ -18,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Homepage/css/login.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Homepage/css/register.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Homepage/css/feedback.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Homepage/css/scheduleAppointment.css" />
 	<link rel="icon" href="<?php echo $_SESSION['url']; ?>Static/images/logo.png" />
 
 	<script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
@@ -26,6 +27,7 @@
 	<script src="<?php echo $_SESSION['url']; ?>Homepage/js/homepage-navbar.js"></script>
 	<script src="<?php echo $_SESSION['url']; ?>Homepage/js/blur.js"></script>
 	<script src="../../Scheduling/js/daypilot/daypilot-all.min.js"></script>
+	<script src="../../Scheduling/js/scheduleAppointment.js"></script>
 </head>
 <body>
 
@@ -33,6 +35,7 @@
 	<div class="navbar-wrapper">
 		<?php include("../../Navbar/html/_navbar.php"); ?>
 	</div>
+
 	<div class="login-modal-background">
 		<div class="tile login-modal-container">
 			<div class="login-modal">
@@ -45,6 +48,11 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="schedule-appointment-modal-background">
+		<?php include("../../Scheduling/shifts_add.php"); ?>
+	</div>
+
 	<main class="wrapper">
 	<section class="section parallax bg1" id="home-section">
 		<div class="greetings hero-top">

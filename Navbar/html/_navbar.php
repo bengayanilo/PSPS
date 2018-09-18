@@ -124,6 +124,7 @@
 
 					function showmodal(){
 						$(".login-modal-background").fadeIn().delay(200);
+						$(".login-modal-background").addClass("blurred");
 						$(".login-modal-container").fadeIn();
 						$(".login-modal").fadeIn();
 						document.getElementById("username").focus();

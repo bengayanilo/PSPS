@@ -39,7 +39,19 @@
 
       <!-- <div class="width-retainer"><span style="font-color: rgba(0, 0, 0, 0);">width-retainer</span></div> -->
       <div class="tile services-tile-container not-applications"><div class="services-tile">
-        <div class="tile is-parent is-vertical is-white notification services-link" id="scheduling"><a class="services-circle-link" href="../../Scheduling/index.php">
+        <div class="tile is-parent is-vertical is-white notification services-link" id="scheduling"><a class="services-circle-link" href="javascript:;" onclick="showappointments()">
+          <!-- <div class="tile is-parent is-vertical is-white notification services-link" id="scheduling"><a class="services-circle-link" href="../../Scheduling/index.php"> -->
+        
+        <script>
+          function showappointments(){
+						$(".schedule-appointment-modal-background").fadeIn().delay(200);
+						$(".schedule-appointment-modal-background").addClass("blurred");
+						$(".shifts-add-container").fadeIn();
+						$(".shifts-add").fadeIn();
+						document.getElementById("username").focus();
+          };
+        </script>
+        
           <div class="tile is-vertical services-info">
             <div class="services-logo">
               <i class="fa fa-5x fa-calendar services-icon" aria-hidden="true"></i>

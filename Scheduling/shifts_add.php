@@ -3,19 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Add Shift</title>
-	<link rel="stylesheet" type="text/css" media="screen" href="../Static/css/bulma/bulma.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../Static/css/bulma/bulma-pageloader.min.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../Static/css/font-awesome/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/shifts_add.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma-pageloader.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/font-awesome/font-awesome.css" />
+		<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/shifts_add.css" /> -->
+		<link rel="stylesheet" type="text/css" media="screen" href="../../Scheduling/css/shifts_add.css" />
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Homepage/css/main.css" /> -->
 </head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="js/scheduleAppointments.js"></script> -->
   <div class="tile shifts-add-container">
 	<div class="shifts-add">
 
 	  <div>
-		<span class="shifts-add-header">Add Shifts</span>
+		<span class="shifts-add-header">Schedule Appointment</span>
 	  </div>
 	  
 	  <br>

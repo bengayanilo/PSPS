@@ -56,6 +56,7 @@ $(document).ready(function(){
 			$('.register-modal').fadeOut();
 			$('.register-modal-container').fadeOut();
 			$(this).fadeOut();
+			$(this).removeClass("blurred");
 		}
 		clickedinside = false;
 	});
