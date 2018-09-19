@@ -64,15 +64,13 @@ function log(){
 		$.ajax({
 			type: "POST",
 			url: 'log.php',
-			// data: "chat_id="+$_GET['chat_id'],
 			data: "chat_id="+$_GET['chat_id'],
-			data2: "chat_id="+$_GET['$user_id'],
 			dataType: "JSON",
-			success: function(data, data2)
+			success: function(data)
 			{
 				var output = '';
 				for(var i in data){
-					output +="<span class='sender'>"+data[i].firstname+' '+data[i].surname+"</span>:<br><div class='text-message-container'><span class='text-message'>"+data[i].message+"</span></div>";	
+					output +="<span class='sender'>"+data[i].user_name+"</span>:<br><div class='text-message-container'><span class='text-message'>"+data[i].message+"</span></div>";	
 				}
 				$('#log').html(output);
 
@@ -81,10 +79,10 @@ function log(){
 				{
     				if ($("#log").css('height') != lastHeight)
     				{
-						if($('#log-outer').scrollTop() < $('#log').attr('height'))
+						if($('#log-outer').scrollTop() < $('#log').css('height'))
 						{
 							alert('scrolled up');
-							// $('#new-message-container').removeClass('hidden-notice');
+							$('#new-message-container').removeClass('hidden-notice');
 						}
 						else
 						{
@@ -92,7 +90,7 @@ function log(){
 								scrollTop:$('#log').css('height')
 								}, 100, function(){
 							});
-							// $('#new-message-container').removeClass('hidden-notice');
+							$('#new-message-container').removeClass('hidden-notice');
 							lastHeight = $('#log').css('height'); 
 						}
     				}
