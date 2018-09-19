@@ -1,0 +1,29 @@
+.schedule-appointment-modal-background {    
+    padding: 0 0.5rem 4rem 0.5rem;
+    display: none;
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    width: 100vw;
+    transition: .3s ease;
+    overflow-y: auto;
+}
+
+.shifts-add-container {    
+    display: none;
+    padding-top: 5rem;
+    width: 100%;
+}
+
+.shifts-add {
+    display: none;
+    padding: 1.5rem 3rem 3rem 3rem;
+    margin: auto;
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8);
+}

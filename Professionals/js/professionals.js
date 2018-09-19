@@ -35,7 +35,7 @@ $(document).ready(function(){
         down = false;
         if(moved1)
         {
-            $('.professionals-card-link').click(false);
+            $('.professionals-card-link').click(function(){return false;});
             // $('.professionals-card-link').off('click');
         }
         else if(moved1 == false)

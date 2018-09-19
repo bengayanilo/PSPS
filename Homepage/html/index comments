@@ -1,0 +1,7 @@
+<link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/bulma/bulma-pageloader.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Static/css/font-awesome/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Homepage/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Navbar/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Homepage/css/hero.css" />
+    <link rel="icon" href="../../Static/images/logo.png" />
