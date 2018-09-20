@@ -44,11 +44,22 @@
         
         <script>
           function showappointments(){
-						$(".schedule-appointment-modal-background").fadeIn().delay(200);
-						$(".schedule-appointment-modal-background").addClass("blurred");
-						$(".shifts-add-container").fadeIn();
-						$(".shifts-add").fadeIn();
-						document.getElementById("username").focus();
+            <?php 
+              if(isset($_SESSION['id'])){
+                ?>
+                $(".schedule-appointment-modal-background").fadeIn().delay(200);
+                $(".schedule-appointment-modal-background").addClass("blurred");
+                $(".shifts-add-container").fadeIn();
+                $(".shifts-add").fadeIn();
+                document.getElementById("username").focus();
+                <?php
+              }
+              else{
+                ?>
+                alert('Log in first');
+                <?php
+              }
+            ?>
           };
         </script>
         
