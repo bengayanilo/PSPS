@@ -34,12 +34,12 @@ $(document).ready(function(){
 		appointmentclickedinside = false;
 	});
 
-	$('.schedule-appointment-modal').mousedown(function(){
+	$('.shifts-add').mousedown(function(){
 		appointmentdontclose = true;
 		appointmentclickedinside = true;
 	});
 
-	$('.schedule-appointment-modal').mouseup(function(){
+	$('.shifts-add').mouseup(function(){
 		appointmentdontclose = true;
 	});
 
