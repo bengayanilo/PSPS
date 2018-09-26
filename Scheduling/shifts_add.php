@@ -49,8 +49,9 @@
 
 			  <div class="field tile shifts-add-input-container">
 				<label for="" class="label shifts-add-label"><span class="shifts-add-text hero">Doctor: </span></label>
-				<select class="shifts-add-input">
-					<option><-doctors-></option>
+				<select name="pick_doctor" class="shifts-add-input">
+					<option>Prefered doctor</option>
+					<?php include '_pickdoctors.php' ?>
 				</select>
 			  </div>
 
