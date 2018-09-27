@@ -39,7 +39,7 @@ foreach($result as $row) {
                 <span>'.$row['appointment_patient_name'].'</span>
               </td>
               <td class="appointment-data appointment-time-data">
-                <span>'.$row['appointment_id'].'</span>
+                <span>'.$row['appointment_start'].'</span>
               </td>
               <td class="appointment-data appointment-time-data">
                 <span>'.$row['appointment_end'].'</span>

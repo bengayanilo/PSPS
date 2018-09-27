@@ -46,7 +46,16 @@
 	<script type="text/javascript">
 
 		function updatestatus(id,indicator){
-
+			var status = {
+				confirm:'confirmed',
+				cancel:'free',
+			}
+			var appointment = {};
+				appointment.id = id;
+				appointment.status = status['indicator'];
+			$.post("<?php echo $_SESSION['url']; ?>Scheduling/updatestatus.php",JSON.stringify(appointment),function(data){
+				load("confirmed");
+			});
 		}
 
 		$(document).ready(function(){
