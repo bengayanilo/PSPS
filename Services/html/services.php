@@ -46,13 +46,24 @@
           function showappointments(){
             <?php 
               if(isset($_SESSION['id'])){
-                ?>
-                $(".schedule-appointment-modal-background").fadeIn().delay(200);
-                $(".schedule-appointment-modal-background").addClass("blurred");
-                $(".shifts-add-container").fadeIn();
-                $(".shifts-add").fadeIn();
-                document.getElementById("username").focus();
-                <?php
+                if ($_SESSION['type'] == "psy"){
+                  ?>
+                  $("#appointments").fadeIn().delay(200);
+                  $("#appointments").addClass("blurred");
+                  $(".shifts-add-container").fadeIn();
+                  $(".shifts-add").fadeIn();
+                  document.getElementById("username").focus();
+                  <?php
+                }
+                else{
+                  ?>
+                  $("#shifts_add").fadeIn().delay(200);
+                  $("#shifts_add").addClass("blurred");
+                  $(".shifts-add-container").fadeIn();
+                  $(".shifts-add").fadeIn();
+                  document.getElementById("username").focus();
+                  <?php
+                }
               }
               else{
                 ?>

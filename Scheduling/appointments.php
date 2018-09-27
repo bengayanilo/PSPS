@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Appointments</title>
-	<link rel="stylesheet" type="text/css" media="screen" href="../Static/css/bulma/bulma.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="../Static/css/bulma/bulma-pageloader.min.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="../Static/css/font-awesome/font-awesome.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="css/appointments.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Static/css/bulma/bulma.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Static/css/bulma/bulma-pageloader.min.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Static/css/font-awesome/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Scheduling/css/appointments.css" />
 		<!-- <link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Homepage/css/main.css" /> -->
 </head>
 <body>
@@ -58,7 +58,7 @@
 			});
 			
 			function load(loader){
-				$.post("events.php",JSON.stringify({status:loader}),function(data){
+				$.post("http://localhost/PSPS/Scheduling/events.php",JSON.stringify({status:loader}),function(data){
 					var output = "<thead>"+
 													"<tr>                <!--Column Names-->"+
 														"<td class='column-name'>"+

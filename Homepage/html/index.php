@@ -49,8 +49,12 @@
 		</div>
 	</div>
 
-	<div class="schedule-appointment-modal-background">
+	<div id="shifts_add" class="schedule-appointment-modal-background">
 		<?php include("../../Scheduling/shifts_add.php"); ?>
+	</div>
+
+	<div id="appointments" class="schedule-appointment-modal-background">
+		<?php include("../../Scheduling/appointments.php"); ?>
 	</div>
 
 	<main class="wrapper">
