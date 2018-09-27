@@ -13,7 +13,7 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- <script src="js/scheduleAppointments.js"></script> -->
-  <div class="tile shifts-add-container">
+  <div class="tile shifts-add-container" style="display:none;">
 	<div class="shifts-add">
 
 	  <div>

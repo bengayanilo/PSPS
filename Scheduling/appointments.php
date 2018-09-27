@@ -16,7 +16,7 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="../js/appointments.js"></script>
-	<div class="tile appointments-container">
+	<div class="tile appointments-container" style="display:none;">
 	<div class="appointments">
 
 		<div>
