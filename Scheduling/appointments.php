@@ -3,15 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Appointments</title>
-	<!-- <link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Static/css/bulma/bulma.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Static/css/bulma/bulma-pageloader.min.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Static/css/font-awesome/font-awesome.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Scheduling/css/appointments.css" /> -->
 		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma-pageloader.min.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/font-awesome/font-awesome.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Scheduling/css/appointments.css" />
-		<!-- <link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Homepage/css/main.css" /> -->
 </head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -62,7 +57,7 @@
 			});
 			
 			function load(loader){
-				$.post("http://localhost/PSPS/Scheduling/events.php",JSON.stringify({status:loader}),function(data){
+				$.post("<?php echo $_SESSION['url']; ?>Scheduling/events.php",JSON.stringify({status:loader}),function(data){
 					var output = "<thead>"+
 													"<tr>                <!--Column Names-->"+
 														"<td class='column-name'>"+
@@ -89,18 +84,24 @@
 												'</td>'+
 												'<td class="appointment-data appointment-status-data">'+
 													'<span>'+data[i]['tags']['status']+'</span>'+
-												'</td>'+
-												'<td class="appointment-data appointment-actions-data">'+
-													'<div class="tile level">'+
-														'<div class="tile button is-gray">'+
-															'<span>confirm</span>'+
-														'</div>'+
-														'<div class="tile button is-gray">'+
-															'<span>cancel</span>'+
-														'</div>'+
-													'</div>'+
-												'</td>'+
-											'</tr>                                        <!--Populated Columns End-->';
+												'</td>';
+
+						if (data[i]['tags']['status'] == 'waiting') {
+							output +=	'<td class="appointment-data appointment-actions-data">'+
+											'<div class="tile level">'+
+												'<div class="tile button is-gray">'+
+													'<span>confirm</span>'+
+												'</div>'+
+												'<div class="tile button is-gray">'+
+													'<span>cancel</span>'+
+												'</div>'+
+											'</div>'+
+										'</td>'+
+									'</tr>                                        <!--Populated Columns End-->';
+						} else {
+							output +='<td class="appointment-data appointment-actions-data"></td></tr>';
+						}
+						
 					}
 					$('#myTable').html(output);
 				});

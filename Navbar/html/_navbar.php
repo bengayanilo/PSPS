@@ -74,6 +74,15 @@
 						</a>';
 			}
 
+			if($_SESSION['type'] == 'psy')
+			{
+				echo 	'<a class="backend-link" href="'.$_SESSION['url'].'">
+							<div class="navbar-item backend-link-container">
+								<span class="hero navbarLinks backend-link-text">Reports</span>
+							</div>
+						</a>';
+			}
+
 			echo '<div class="navbar-item navbarLinks has-dropdown is-hoverable navbar-menu" id="account-menu">
 							<a class="navbar-link  is-active" href="javascript:;">
 											<figure class="image is-32x32" id="user-avatar-div">
