@@ -28,6 +28,7 @@
 	<script src="<?php echo $_SESSION['url']; ?>Homepage/js/blur.js"></script>
 	<script src="../../Scheduling/js/daypilot/daypilot-all.min.js"></script>
 	<script src="../../Scheduling/js/scheduleAppointment.js"></script>
+	<script src="../../Scheduling/js/confirmAppointment.js"></script>
 </head>
 <body>
 
@@ -53,7 +54,7 @@
 		<?php include("../../Scheduling/shifts_add.php"); ?>
 	</div>
 
-	<div id="appointments" class="schedule-appointment-modal-background">
+	<div id="appointments" class="confirm-appointment-modal-background">
 		<?php include("../../Scheduling/appointments.php"); ?>
 	</div>
 

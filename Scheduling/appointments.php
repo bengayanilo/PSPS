@@ -3,15 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Appointments</title>
-	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Static/css/bulma/bulma.css" />
+	<!-- <link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Static/css/bulma/bulma.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Static/css/bulma/bulma-pageloader.min.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Static/css/font-awesome/font-awesome.css" />
-		<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Scheduling/css/appointments.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="http://localhost/PSPS/Scheduling/css/appointments.css" /> -->
+		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma-pageloader.min.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/font-awesome/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Scheduling/css/appointments.css" />
 		<!-- <link rel="stylesheet" type="text/css" media="screen" href="http://localhost/Web/Homepage/css/main.css" /> -->
 </head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/appointments.js"></script>
+<script src="../js/appointments.js"></script>
 	<div class="tile appointments-container">
 	<div class="appointments">
 

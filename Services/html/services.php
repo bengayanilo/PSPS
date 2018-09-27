@@ -50,8 +50,8 @@
                   ?>
                   $("#appointments").fadeIn().delay(200);
                   $("#appointments").addClass("blurred");
-                  $(".shifts-add-container").fadeIn();
-                  $(".shifts-add").fadeIn();
+                  $(".appointments-container").fadeIn();
+                  $(".appointments").fadeIn();
                   document.getElementById("username").focus();
                   <?php
                 }

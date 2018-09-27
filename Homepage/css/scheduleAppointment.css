@@ -1,4 +1,22 @@
+/* Appointments Modal when logged in as Patient */
 .schedule-appointment-modal-background {    
+    padding: 0 0.5rem 4rem 0.5rem;
+    display: none;
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    width: 100vw;
+    transition: .3s ease;
+    overflow-y: auto;
+}
+
+/* Appointments Modal when logged in as Doctor */
+.confirm-appointment-modal-background {    
     padding: 0 0.5rem 4rem 0.5rem;
     display: none;
     z-index: 9999;
