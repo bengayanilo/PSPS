@@ -44,6 +44,11 @@
 	</div>
 	</div>
 	<script type="text/javascript">
+
+		function updatestatus(id,indicator){
+
+		}
+
 		$(document).ready(function(){
 			load("waiting");
 			$('#all').click(function(){
@@ -55,59 +60,10 @@
 			$('#confirmed').click(function(){
 					load("confirmed");
 			});
-			
+
 			function load(loader){
 				$.post("<?php echo $_SESSION['url']; ?>Scheduling/events.php",JSON.stringify({status:loader}),function(data){
-					var output = "<thead>"+
-													"<tr>                <!--Column Names-->"+
-														"<td class='column-name' rowspan=2>"+
-															"<span>Patient Name</span>"+
-														"</td>"+
-														"<td class='column-name' colspan=2>"+
-															"<span>Time</span>"+
-														"</td>"+
-														"<td class='column-name' rowspan=2>"+
-															"<span>Status</span>"+
-														"</td>"+
-														"<td class='column-name' rowspan=2>"+
-															"<span>Actions</span>"+
-														"</td>"+
-													"</tr>               <!--Column Names End-->"+
-													"<tr><td class='column-name'><span>start</span></td><td class='column-name'><span>end</span></td></tr>"+
-												"</thead>";
-					for(var i in data){
-						output +='<tr class="populated-column">                <!--Populated Columns-->'+
-												'<td class="appointment-data appointment-patient-name-data">'+
-													'<span>'+data[i]['text']+'</span>'+
-												'</td>'+
-												'<td class="appointment-data appointment-time-data">'+
-													'<span>'+data[i]['start']+'</span>'+
-												'</td>'+
-												'<td class="appointment-data appointment-time-data">'+
-													'<span>'+data[i]['end']+'</span>'+
-												'</td>'+
-												'<td class="appointment-data appointment-status-data">'+
-													'<span>'+data[i]['tags']['status']+'</span>'+
-												'</td>';
-
-						if (data[i]['tags']['status'] == 'waiting') {
-							output +=	'<td class="appointment-data appointment-actions-data">'+
-											'<div class="tile level">'+
-												'<div class="tile button is-gray">'+
-													'<span>confirm</span>'+
-												'</div>'+
-												'<div class="tile button is-gray">'+
-													'<span>cancel</span>'+
-												'</div>'+
-											'</div>'+
-										'</td>'+
-									'</tr>                                        <!--Populated Columns End-->';
-						} else {
-							output +='<td class="appointment-data appointment-actions-data"></td></tr>';
-						}
-						
-					}
-					$('#myTable').html(output);
+					$('#myTable').html(data);
 				});
 			}
 		});
