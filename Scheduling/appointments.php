@@ -60,19 +60,20 @@
 				$.post("<?php echo $_SESSION['url']; ?>Scheduling/events.php",JSON.stringify({status:loader}),function(data){
 					var output = "<thead>"+
 													"<tr>                <!--Column Names-->"+
-														"<td class='column-name'>"+
+														"<td class='column-name' rowspan=2>"+
 															"<span>Patient Name</span>"+
 														"</td>"+
-														"<td class='column-name'>"+
+														"<td class='column-name' colspan=2>"+
 															"<span>Time</span>"+
 														"</td>"+
-														"<td class='column-name'>"+
+														"<td class='column-name' rowspan=2>"+
 															"<span>Status</span>"+
 														"</td>"+
-														"<td class='column-name'>"+
+														"<td class='column-name' rowspan=2>"+
 															"<span>Actions</span>"+
 														"</td>"+
 													"</tr>               <!--Column Names End-->"+
+													"<tr><td class='column-name'><span>start</span></td><td class='column-name'><span>end</span></td></tr>"+
 												"</thead>";
 					for(var i in data){
 						output +='<tr class="populated-column">                <!--Populated Columns-->'+
@@ -80,7 +81,10 @@
 													'<span>'+data[i]['text']+'</span>'+
 												'</td>'+
 												'<td class="appointment-data appointment-time-data">'+
-													'<span>'+data[i]['start']+'-'+data[i]['end']+'</span>'+
+													'<span>'+data[i]['start']+'</span>'+
+												'</td>'+
+												'<td class="appointment-data appointment-time-data">'+
+													'<span>'+data[i]['end']+'</span>'+
 												'</td>'+
 												'<td class="appointment-data appointment-status-data">'+
 													'<span>'+data[i]['tags']['status']+'</span>'+
