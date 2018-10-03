@@ -10,7 +10,8 @@
 		while($row = $result->fetch_assoc()) {
 			echo '<option>'. $row['firstname'] . ' ' . $row['surname'] .'</option>';
 		}
-		} else {
-			echo "0 results";
+	} 
+	else {
+		echo "0 results";
 	}
 ?>

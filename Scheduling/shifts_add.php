@@ -58,7 +58,7 @@
 			</div>
 		  </div>
 		</div>
-	  </form>
+	  
 	  <div class="tile">
 			<div style="margin: auto;">
 			  <div class="tile">
@@ -71,7 +71,23 @@
 			  </div>
 			</div>
 		  </div>
+		</form>
 	</div>
   </div>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+  		$('#shifts-add-form').submit(function(){
+			$.ajax({
+		        data: $(this).serialize(),
+		        type: $(this).attr('method'),
+		        url: "<?php echo $_SESSION['url']; ?>Scheduling/add_appointment.php",
+		        success: function(response) {
+		        	console.log(response);
+		        }
+		    });
+		    return false;
+  		});
+  	});
+  </script>
 </body>
 </html>
