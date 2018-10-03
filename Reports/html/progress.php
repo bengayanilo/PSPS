@@ -1,47 +1,46 @@
 <?php session_start() ?>
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma-pageloader.min.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/font-awesome/font-awesome.css" />
-	
-	<title>Comprehensive Report</title>
+
+	<title>Progress Report</title>
 </head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<div id="text"></div>
 
-		<form name="loginform" id="loginform" method="post">
+		<form name="progress_report" action="_submitprogress.php" method="post" enctype="multipart/form-data">
 
 			<!-- I. Identifying Data -->
 			<div class="container box">
 				<div class="field">
 
 				<label class="label is-medium"> I. Identifying Data </label>
-				
+
 				<label class="label is-small"> Name: </label> <input class="input" type="text" name="i_name">
 				<label class="label is-small"> Address: </label> <input class="input" type="text" name="i_address">
 				<label class="label is-small"> Gender: </label>
 					<div class="select">
 						<select name="gender">
-							<option>Male</option>
-							<option>Female</option>
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
 						</select>
 					</div>
 				<label class="label is-small"> Age: </label> <input class="input" type="text" name="i_age">
-				<label class="label is-small"> Date of Birth: </label> <input class="input" type="text" name="i_dob">
+				<label class="label is-small"> Date of Birth: </label> <input class="input" type="date" name="i_dob">
 				<label class="label is-small"> School: </label> <input class="input" type="text" name="i_school">
 				<label class="label is-small"> Grade Level: </label> <input class="input" type="text" name="i_grlvl">
-				<label class="label is-small"> Date of Testing: </label> <input class="input" type="text" name="i_tdate">
+				<label class="label is-small"> Date of Testing: </label> <input class="input" type="date" name="i_tdate">
 				<label class="label is-small"> Place of Testing: </label> <input class="input" type="text" name="i_tplace">
 
 				</div>
 			</div>
-			
+
 			<!-- II. Reason/s for Referral -->
 			<div class="container box">
 				<div class="field">
@@ -91,6 +90,8 @@
 
 				</div>
 			</div>
+
+			<input type="submit" class="button is-primary" name="submitreport" value="Done">
 
 		</form>
 
