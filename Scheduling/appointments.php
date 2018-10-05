@@ -52,9 +52,17 @@
 			}
 			var appointment = {};
 				appointment.id = id;
-				appointment.status = status['indicator'];
+				appointment.status = status[indicator];
+				console.log(appointment);
 			$.post("<?php echo $_SESSION['url']; ?>Scheduling/updatestatus.php",JSON.stringify(appointment),function(data){
-				load("confirmed");
+				console.log(data);
+				load("waiting");
+			});
+		}
+
+		function load(loader){
+			$.post("<?php echo $_SESSION['url']; ?>Scheduling/events.php",JSON.stringify({status:loader}),function(data){
+				$('#myTable').html(data);
 			});
 		}
 
@@ -70,11 +78,7 @@
 					load("confirmed");
 			});
 
-			function load(loader){
-				$.post("<?php echo $_SESSION['url']; ?>Scheduling/events.php",JSON.stringify({status:loader}),function(data){
-					$('#myTable').html(data);
-				});
-			}
+			
 		});
 	</script>
 </body>

@@ -109,7 +109,7 @@
 <?php
 	if(isset($_POST['submit'])){
 		$target_dir = "Static/images/users/";
-		$target_file = $target_dir . $_SESSION['id']."."."jpg", PATHINFO_EXTENSION);
+		$target_file = $target_dir . $_SESSION['id']."."."jpg";
 		echo $target_file;
 		$uploadOk = 1;
 		$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
