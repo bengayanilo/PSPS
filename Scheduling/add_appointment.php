@@ -7,7 +7,7 @@ $start = $_POST['date'].' '.$_POST['start_time'];
 $end = $_POST['date'].' '.$_POST['end_time'];
 $doctor = $_POST['pick_doctor'];
 
-$stmt = $db->prepare('INSERT INTO appointment (appointment_start, appointment_end, doctor_id) VALUES (:start, :end, :doctor)');
+$stmt = $db->prepare('INSERT INTO appointment (appointment_start, appointment_end, appointment_status, doctor_id) VALUES (:start, :end, "waiting", :doctor)');
 $stmt->bindParam(':start', $start);
 $stmt->bindParam(':end', $end);
 $stmt->bindParam(':doctor', $doctor);
@@ -17,6 +17,6 @@ $stmt->bindParam(':doctor', $doctor);
 $stmt->execute();
 
 
-echo $start;
+echo "inserted";
 
 ?>

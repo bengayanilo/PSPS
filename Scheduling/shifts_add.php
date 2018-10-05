@@ -82,7 +82,7 @@
 		        type: $(this).attr('method'),
 		        url: "<?php echo $_SESSION['url']; ?>Scheduling/add_appointment.php",
 		        success: function(response) {
-		        	console.log(response);
+		        	alert("appointment requested");
 		        }
 		    });
 		    return false;
