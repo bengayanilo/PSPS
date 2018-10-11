@@ -76,7 +76,7 @@
 
 			if($_SESSION['type'] == 'psy')
 			{
-				echo 	'<a class="backend-link" href="'.$_SESSION['url'].'Reports/html/progress.php" target="_blank">
+				echo 	'<a class="backend-link" href="'.$_SESSION['url'].'Reports/html/report.php" target="_blank">
 							<div class="navbar-item backend-link-container">
 								<span class="hero navbarLinks backend-link-text">Reports</span>
 							</div>
