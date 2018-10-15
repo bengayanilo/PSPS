@@ -1,4 +1,16 @@
-<?php session_start() ?>
+<?php session_start();
+	
+	require('../../../Database/config.php');
+
+	$create = $_GET['create_id'];
+	$selectreport = "SELECT appointment_id, appointment_patient_name, appointment_start 
+					FROM appointment
+					WHERE appointment_id=$create";
+
+	$reportdata = $db->query($selectreport) or die($db->error);
+	$data = $reportdata->fetch_assoc();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +34,7 @@
 
 				<label class="label is-medium"> I. Identifying Data </label>
 
-				<label class="label is-small"> Name: </label> <input class="input" type="text" name="i_name">
+				<label class="label is-small"> Name: </label> <input class="input" type="text" name="i_name" value="<?php echo $data['appointment_patient_name'] ?>">
 				<label class="label is-small"> Address: </label> <input class="input" type="text" name="i_address">
 				<label class="label is-small"> Gender: </label>
 					<div class="select">
@@ -35,7 +47,7 @@
 				<label class="label is-small"> Date of Birth: </label> <input class="input" type="date" name="i_dob">
 				<label class="label is-small"> School: </label> <input class="input" type="text" name="i_school">
 				<label class="label is-small"> Grade Level: </label> <input class="input" type="text" name="i_grlvl">
-				<label class="label is-small"> Date of Testing: </label> <input class="input" type="date" name="i_tdate">
+				<label class="label is-small"> Date of Testing: </label> <input class="input" type="text" name="i_tdate" value="<?php echo $data['appointment_start'] ?>" editable=false>
 				<label class="label is-small"> Place of Testing: </label> <input class="input" type="text" name="i_tplace">
 
 				</div>
