@@ -53,11 +53,15 @@
 									<table class="table is-fullwidth">
 										<thead>
 											<tr>
-												
+												<th>Appointment ID</th>
+												<th>Doctor Name</th>
+												<th>Patient Name</th>
+												<th>Status</th>
+												<th>Actions</th>
 											</tr>
 										</thead>
 										<tbody>
-											
+											 <?php include "_report.php" ?>
 										</tbody>
 									</table>
 								</div>
