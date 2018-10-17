@@ -38,7 +38,7 @@
 				<label class="label is-small"> Address: </label> <input class="input" type="text" name="i_address">
 				<label class="label is-small"> Gender: </label>
 					<div class="select">
-						<select name="gender">
+						<select name="i_gender">
 							<option value="Male">Male</option>
 							<option value="Female">Female</option>
 						</select>
@@ -78,7 +78,7 @@
 				<div class="field">
 
 				<label class="label is-medium"> IV. Results and Interpretations </label>
-				<textarea class="textarea" name="iv_results	"> </textarea>
+				<textarea class="textarea" name="iv_results"> </textarea>
 
 				</div>
 			</div>
@@ -102,6 +102,8 @@
 
 				</div>
 			</div>
+
+			<input class="input" type="text" name="appointment_id" value="<?php echo $data['appointment_id'] ?>" editable=false>
 
 			<input type="submit" class="button is-primary" name="submitreport" value="Done">
 

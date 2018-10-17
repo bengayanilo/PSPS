@@ -1,6 +1,6 @@
 <?php
 
-	require('../../Database/config.php');
+	require('../../../Database/config.php');
 
 	// $getprogress = "SELECT pat_name, pat_address, pat_gender, pat_age, pat_dob, pat_school, pat_grlvl, date_test, place_test, referral_reasons, tests_administered, results, recommendations
 	// 				FROM progress_reports"
@@ -32,17 +32,20 @@
 		// Recommendations
 		$recom = $_POST['vi_recom'];
 
+		// appointment_id
+		$appoint = $_POST['appointment_id'];
+
 		// Insert to database
-		$insertreport = "INSERT INTO progress_report(pat_name, pat_address, pat_gender, pat_age, pat_dob, pat_school, pat_grlvl, date_test, place_test, referral_reasons, 
-														tests_administered, results, remarks, recommendations)
-						VALUES('$name', '$address','$gender','$age','$dateofbirth','$school','$gradelevel','$testdate','$testplace','$referral','$tests_administered','$results','$remarks','$recom')";
+		$insertreport = "INSERT INTO progress_report(pat_name, pat_address, pat_gender, pat_age, pat_dob, pat_school, pat_grlvl, date_test, place_test,
+							referral_reasons,tests_administered, results, remarks, recommendations, fr_appoint_id)
+						VALUES('$name', '$address','$gender','$age','$dateofbirth','$school','$gradelevel','$testdate','$testplace','$referral','$tests_administered','$results','$remarks','$recom', '$appoint')";
 
 		$insert = $db->query($insertreport);
 
 		if($insert){
 		
 			echo '<script type="text/javascript">
-						window.location.replace("progress.php");
+						window.location.replace("../report.php");
 				</script>';
 		} else {
 			echo "Error updating record: " . $db->error;
