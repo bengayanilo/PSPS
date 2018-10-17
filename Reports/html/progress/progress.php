@@ -103,7 +103,7 @@
 				</div>
 			</div>
 
-			<input class="input" type="text" name="appointment_id" value="<?php echo $data['appointment_id'] ?>" editable=false>
+			<input class="input" type="hidden" name="appointment_id" value="<?php echo $data['appointment_id'] ?>" editable=false>
 
 			<input type="submit" class="button is-primary" name="submitreport" value="Done">
 

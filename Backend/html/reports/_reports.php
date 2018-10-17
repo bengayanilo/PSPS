@@ -3,7 +3,7 @@
 
 	$getreport = "SELECT p.appointment_id, p.appointment_status, p.appointment_patient_name, t.surname, t.firstname 
 					FROM appointment AS p, tbl_users as t
-					WHERE p.doctor_id=t.user_id AND p.appointment_status != 'free' ";
+					WHERE p.doctor_id=t.user_id AND p.appointment_status = 'confirmed' ";
 	$result = $db->query($getreport);
 
 	if ($result->num_rows > 0) {
@@ -26,9 +26,7 @@
 							</div>
 							<div class="dropdown-menu">
 								<div class="dropdown-content">
-									<a class="dropdown-item" href="show.php?show_id='. $row['appointment_id'] .'">View</a>
-									<a class="dropdown-item" href="update.php?update_id='. $row['appointment_id'] .'">Edit</a>
-									<a class="dropdown-item" href="delete.php?delete_id='. $row['appointment_id'] .'" onclick="return confirm('."'Are you sure?'".');">Delete</a>
+									<a class="dropdown-item" href="create.php?create_id='. $row['appointment_id'] .'">View/Edit/Create report</a>
 								</div>
 							</div>
 						</div>										
