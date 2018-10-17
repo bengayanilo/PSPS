@@ -30,7 +30,7 @@
 					<p class="card-header-title">Create new report</p>
 				</div>
 				<div class="card-content">
-					<form name="progress_report" action="_submitprogress.php" method="post" enctype="multipart/form-data">
+					<form name="progress_report" action="_submitreport.php" method="post" enctype="multipart/form-data">
 
 			<!-- I. Identifying Data -->
 						<div class="container box">

@@ -10,14 +10,7 @@
 				<nav class="level">
 					<div class="level-left">
 						<div class="level-item">
-							<div class="card-content field has-addons">
-								<a href="create.php" class="button is-primary">
-									<span class="icon is-small">
-										<i class="fa fa-plus"></i>
-									</span>
-									<span>Create</span>
-								</a>
-							</div>	
+							
 						</div>
 					</div>
 					<div class="level-right">
