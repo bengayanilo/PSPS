@@ -4,7 +4,7 @@
 	$updateuser = $_GET['id'];
 	$selectuser = "SELECT user_id,user_name, user_email, joining_date FROM tbl_users WHERE user_id=$updateuser";
 
-	$userdata = $db->query($selectuser);
+	$userdata = $db->query($selectuser) or die($db->error);
 	$data = $userdata->fetch_assoc();
 
 	include('../backend-base.php');

@@ -30,16 +30,7 @@
 								</div>
 								<nav class="level">
 									<div class="level-left">
-										<div class="level-item">
-											<div class="card-content field has-addons">
-												<a href="progress/progress.php" class="button is-primary">
-													<span class="icon is-small">
-														<i class="fa fa-plus"></i>
-													</span>
-													<span>Create</span>
-												</a>
-											</div>	
-										</div>
+										
 									</div>
 									
 									<div class="level-right">
@@ -65,16 +56,10 @@
 									</a>
 								</div>
 
-								<div class="card-content">
+								<div class="card-content" id="show">
 									<table class="table is-fullwidth">
 										<thead>
-											<tr>
-												<th>Appointment ID</th>
-												<th>Doctor Name</th>
-												<th>Patient Name</th>
-												<th>Status</th>
-												<th>Actions</th>
-											</tr>
+											
 										</thead>
 										<tbody>
 											 <?php include "_report.php" ?>
