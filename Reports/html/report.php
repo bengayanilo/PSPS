@@ -9,7 +9,9 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/bulma/bulma-pageloader.min.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Static/css/font-awesome/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $_SESSION['url']; ?>Reports/css/report.css" />
 	<link rel="icon" href="<?php echo $_SESSION['url']; ?>Static/images/logo.png" />
+	<script src="../js/report.js"></script>
 </head>
 <body>
 
@@ -49,6 +51,20 @@
 										</form>
 									</div>
 								</nav>
+
+								<div class="tile reports-sort-buttons">
+									<a id="sort-all" class="reports-sort" href="javascript:;">
+										<div id="all-reports" class="tile button is-dark is-selected">
+											<span>Sessions</span>
+										</div>
+									</a>
+									<a id="sort-patients" class="reports-sort" href="javascript:;">
+										<div id="patients-reports" class="tile button is-gray">
+											<span>Patients</span>
+										</div>
+									</a>
+								</div>
+
 								<div class="card-content">
 									<table class="table is-fullwidth">
 										<thead>

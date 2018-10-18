@@ -1,0 +1,80 @@
+.reports-container {
+    /* display: none; */
+    padding-top: 5rem;
+    width: 100%;
+}
+
+.reports {
+    /* display: none; */
+    padding: 1.5rem 3rem 3rem 3rem;
+    margin: auto;
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8);
+    /* max-width: 600px; */
+}
+
+.reports-header {
+    font-size: 2rem;
+    font-family: "Century Gothic";
+}
+
+.reports-input-container {
+    min-height: 2rem !important;
+    max-height: 3.5rem;
+    /* border: 1px solid brown; */
+}
+
+.reports-input {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15) !important;
+    width: 175px !important;
+    margin: auto;
+}
+
+.reports-button-container {
+    margin: 1rem;
+}
+
+.reports-buttons {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+.reports-vertical {
+    padding: 1.25rem;
+}
+
+.reports-label {
+    display: table !important;
+    /* border: 1px solid violet; */
+    /* margin-right: 5px; */
+    height: 100%;
+    width: 35%;
+    margin-right: 10px;
+    /* margin: 0 5px 0 0 auto; */
+}
+
+.reports-text {
+    display: table-cell !important;
+    vertical-align: middle;
+    /* background-color: yellow; */
+}
+
+.reports-sort {
+    text-decoration: none;
+    color: inherit;
+    margin-right: 0.5%;
+}
+
+.reports-sort-buttons {
+    width: 100%;
+}
+
+/*Table styles*/
+.column-name {
+    text-align: center;
+    font-weight: bold;
+}
+
+.appointment-data {
+    vertical-align: middle !important;
+}
