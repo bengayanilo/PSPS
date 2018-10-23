@@ -82,7 +82,7 @@
 								</div>
 								<div class="card box">
 									<div class="card-header">
-										<p class="card-header-title">Session</p>
+										<p class="card-header-title">Session History</p>
 									</div>
 									<div class="card-content">
 										<?php include "_sessions.php"; ?>
