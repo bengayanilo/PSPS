@@ -4,9 +4,9 @@ $(document).ready(function(){
 		
 		if(this.id == 'sort-all'){
 
-			$('#show').load('http://localhost/Web/Reports/html/_report.php');
+			$('#show').load('http://localhost/psps/Reports/html/_report.php');
 		} else {
-			$('#show').load('http://localhost/Web/Reports/html/patient/_patient.php');
+			$('#show').load('http://localhost/psps/Reports/html/patient/_patient.php');
 		}
 
 		if($(".button",this).hasClass(".is-selected"))

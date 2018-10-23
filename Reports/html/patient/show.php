@@ -3,7 +3,7 @@
 	require('../../../Database/config.php');
 	
 	$updateuser = $_GET['id'];
-	$selectuser = "SELECT user_id,user_name, user_email, joining_date FROM tbl_users WHERE user_id=$updateuser";
+	$selectuser = "SELECT user_id,user_name, user_email, joining_date, picture FROM tbl_users WHERE user_id=$updateuser";
 
 	$userdata = $db->query($selectuser);
 	$data = $userdata->fetch_assoc();
@@ -54,6 +54,13 @@
 										<table class="table is-fullwidth">
 											<tbody>
 												<tr>
+													<td>
+														<?php
+														echo '<img id="user-avatar" src="'.($data['picture'] != NULL?$_SESSION['url'].$data['picture']:$_SESSION['url']."Static/images/profile-placeholder.jpg").'">';
+														?>
+													<td>
+												</tr>
+												<tr>
 													<th width="100">User ID</th>
 													<td><?php echo $data['user_id']; ?></td>
 												</tr>
@@ -71,6 +78,14 @@
 												</tr>
 											</tbody>
 										</table>
+									</div>
+								</div>
+								<div class="card box">
+									<div class="card-header">
+										<p class="card-header-title">Session</p>
+									</div>
+									<div class="card-content">
+										<?php include "_sessions.php"; ?>
 									</div>
 								</div>
 							</div>
