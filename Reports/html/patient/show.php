@@ -76,6 +76,14 @@
 													<th width="100">Date Joined</th>
 													<td><?php echo $data['joining_date']; ?></td>
 												</tr>
+												<tr>
+													<td>
+														
+													</td>
+													<td align="right">
+														<a href="" type="button" class="button">Comrehensive Report</a> 
+													</td>
+												</tr>
 											</tbody>
 										</table>
 									</div>
