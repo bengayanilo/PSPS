@@ -54,34 +54,33 @@
 										<table class="table is-fullwidth">
 											<tbody>
 												<tr>
-													<td>
+													<td rowspan="6">
 														<?php
 														echo '<img id="user-avatar" src="'.($data['picture'] != NULL?$_SESSION['url'].$data['picture']:$_SESSION['url']."Static/images/profile-placeholder.jpg").'">';
 														?>
 													<td>
-												</tr>
-												<tr>
-													<th width="100">User ID</th>
-													<td><?php echo $data['user_id']; ?></td>
-												</tr>
-												<tr>
-													<th width="100">Username</th>
-													<td><?php echo $data['user_name']; ?></td>
-												</tr>
-												<tr>
-													<th width="100">Email</th>
-													<td><?php echo $data['user_email']; ?></td>
-												</tr>
-												<tr>
-													<th width="100">Date Joined</th>
-													<td><?php echo $data['joining_date']; ?></td>
-												</tr>
-												<tr>
 													<td>
-														
-													</td>
-													<td align="right">
-														<a href="" type="button" class="button">Comrehensive Report</a> 
+														<tr>
+															<th width="100">User ID</th>
+															<td><?php echo $data['user_id']; ?></td>
+														</tr>
+														<tr>
+															<th width="100">Username</th>
+															<td><?php echo $data['user_name']; ?></td>
+														</tr>
+														<tr>
+															<th width="100">Email</th>
+															<td><?php echo $data['user_email']; ?></td>
+														</tr>
+														<tr>
+															<th width="100">Date Joined</th>
+															<td><?php echo $data['joining_date']; ?></td>
+														</tr>
+														<tr>
+															<td>
+																<a href="" type="button" class="button">Comrehensive Report</a>
+															</td>
+														</tr>
 													</td>
 												</tr>
 											</tbody>
