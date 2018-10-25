@@ -78,7 +78,22 @@
 														</tr>
 														<tr>
 															<td>
-																<a href="../comprehensive/comprehensive.php?patient_id=<?php echo $data['user_id'] ?>" type="button" class="button">Comprehensive Report</a>
+																<div class="dropdown is-hoverable">
+																	<div class="dropdown-trigger">
+																		<button class="button">
+																			<span>Comprehensive Report</span>
+																			<span class="icon">
+																				<i class="fa fa-angle-down"></i>
+																			</span>
+																		</button>
+																	</div>
+																	<div class="dropdown-menu">
+																		<div class="dropdown-content">
+																			<a class="dropdown-item" href="">View comprehensive report</a>
+																			<a class="dropdown-item" href="../comprehensive/comprehensive.php?patient_id=<?php echo $data['user_id'] ?>">Update comprehensive report</a>
+																		</div>
+																	</div>
+																</div>
 															</td>
 														</tr>
 													</td>
