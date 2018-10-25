@@ -61,7 +61,7 @@
 													<td>
 													<td>
 														<tr>
-															<th width="100">User ID</th>
+															<th width="100">Patient ID</th>
 															<td><?php echo $data['user_id']; ?></td>
 														</tr>
 														<tr>
@@ -78,7 +78,7 @@
 														</tr>
 														<tr>
 															<td>
-																<a href="" type="button" class="button">Comrehensive Report</a>
+																<a href="../comprehensive/comprehensive.php?patient_id=<?php echo $data['user_id'] ?>" type="button" class="button">Comprehensive Report</a>
 															</td>
 														</tr>
 													</td>

@@ -34,6 +34,8 @@
 													<div class="dropdown-menu">
 														<div class="dropdown-content">
 															<a class="dropdown-item" href="patient/show.php?id='. $row['user_id'] .'">View</a>
+															<a class="dropdown-item" href="">View comprehensive report</a>
+															<a class="dropdown-item" href="">Update comprehensive report</a>
 														</div>
 													</div>
 												</div>										
