@@ -17,8 +17,21 @@
 		$con = $_POST['conc'];
 		$rec = $_POST['recom'];
 
-		$compre = "INSERT INTO compre_report(examiner, patient_id, compre_date, start_date, end_date, procedures, history, observations, summaries, tests, test_results, conclusion, recommendations)
-								VALUES('$examiner', '$patient', NOW(), '$start', '$end', '$assess', '$history', '$obs', '$summ', '$tests', '$results', '$con', '$rec')";
+		$compre = "INSERT IGNORE INTO compre_report(examiner, patient_id, compre_date, start_date, end_date, procedures, history, observations, summaries, tests, test_results, conclusion, recommendations)
+						VALUES('$examiner', '$patient', NOW(), '$start', '$end', '$assess', '$history', '$obs', '$summ', '$tests', '$results', '$con', '$rec')
+						ON DUPLICATE KEY UPDATE examiner = '$examiner',
+												patient_id = '$patient',
+												compre_date = NOW(),
+												start_date = '$start',
+												end_date = '$end',
+												procedures = '$assess',
+												history = '$history',
+												observations = '$obs',
+												summaries = '$summ',
+												tests = '$tests',
+												test_results = '$results',
+												conclusion = '$con',
+												recommendations = '$rec'";
 
 		$insert = $db->query($compre);
 

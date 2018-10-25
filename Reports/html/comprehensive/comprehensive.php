@@ -1,7 +1,11 @@
 <?php session_start();
 	
-
+	require('../../../Database/config.php');
 	$patient_id = $_GET['patient_id'];
+
+	$updatecompre = "SELECT * FROM compre_report WHERE patient_id='$patient_id'";
+	$update = $db->query($updatecompre) or die (mysqli_error($db));
+	$data = $update->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +22,17 @@
 
 	<div id="text"></div>
 
+		<div class="columns">
+			<div class="column">
+				<a href="../report.php" class="button">
+					<span class="icon is-small">
+        				<i class="fa fa-long-arrow-left"></i>
+					</span>
+					<span>Back</span>
+				</a>
+			</div>
+		</div>
+
 		<form name="comprehensive_report" action="_submitcompre.php" method="post" enctype="multipart/form-data">
 
 			<div class="container box">
@@ -26,7 +41,7 @@
 					<label class="label is-medium"> Examiner/Doctor </label>
 					<div class="select">
 						<select name="pick_doctor"">
-							<option>Doctors</option>
+							
 							<?php include '_pickexaminer.php' ?>
 						</select>
 					</div>
@@ -37,7 +52,7 @@
 				<div class="field">
 
 				<label class="label is-medium"> Start of Treatment </label>
-				<input class="input" type="date" name="start">
+				<input class="input" type="date" name="start" value="<?php echo $data['start_date']; ?>">
 
 				</div>
 			</div>
@@ -46,7 +61,7 @@
 				<div class="field">
 
 				<label class="label is-medium"> End of Treatment </label>
-				<input class="input" type="date" name="end">
+				<input class="input" type="date" name="end" value="<?php echo $data['end_date']; ?>">
 
 				</div>
 			</div>
@@ -55,7 +70,7 @@
 				<div class="field">
 
 				<label class="label is-medium"> Assessment Procedures </label>
-				<textarea class="textarea" name="assess_proc"> </textarea>
+				<textarea class="textarea" name="assess_proc"> <?php echo $data['procedures']; ?> </textarea>
 
 				</div>
 			</div>
@@ -64,7 +79,7 @@
 				<div class="field">
 
 				<label class="label is-medium"> History </label>
-				<textarea class="textarea" name="history"> </textarea>
+				<textarea class="textarea" name="history"> <?php echo $data['history']; ?> </textarea>
 
 				</div>
 			</div>
@@ -73,7 +88,7 @@
 				<div class="field">
 
 				<label class="label is-medium"> Observations </label>
-				<textarea class="textarea" name="observations"> </textarea>
+				<textarea class="textarea" name="observations"> <?php echo $data['observations']; ?> </textarea>
 
 				</div>
 			</div>
@@ -82,7 +97,7 @@
 				<div class="field">
 
 				<label class="label is-medium"> Session Summaries </label>
-				<textarea class="textarea" name="summ"> </textarea>
+				<textarea class="textarea" name="summ"> <?php echo $data['summaries']; ?> </textarea>
 
 				</div>
 			</div>
@@ -91,7 +106,7 @@
 				<div class="field">
 
 				<label class="label is-medium"> Tests Administered/Treatments Underwent </label>
-				<textarea class="textarea" name="tests"> </textarea>
+				<textarea class="textarea" name="tests"> <?php echo $data['tests']; ?> </textarea>
 
 				</div>
 			</div>
@@ -100,7 +115,7 @@
 				<div class="field">
 
 				<label class="label is-medium"> Tests Results </label>
-				<textarea class="textarea" name="test_results"> </textarea>
+				<textarea class="textarea" name="test_results"> <?php echo $data['test_results']; ?> </textarea>
 
 				</div>
 			</div>
@@ -109,7 +124,7 @@
 				<div class="field">
 
 				<label class="label is-medium"> Conclusion/Interpretation </label>
-				<textarea class="textarea" name="conc"> </textarea>
+				<textarea class="textarea" name="conc"> <?php echo $data['conclusion']; ?> </textarea>
 
 				</div>
 			</div>
@@ -118,7 +133,7 @@
 				<div class="field">
 
 				<label class="label is-medium"> Recommendations </label>
-				<textarea class="textarea" name="recom"> </textarea>
+				<textarea class="textarea" name="recom"> <?php echo $data['recommendations']; ?> </textarea>
 
 				</div>
 			</div>

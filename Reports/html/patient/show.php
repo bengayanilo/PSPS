@@ -89,7 +89,7 @@
 																	</div>
 																	<div class="dropdown-menu">
 																		<div class="dropdown-content">
-																			<a class="dropdown-item" href="">View comprehensive report</a>
+																			<a class="dropdown-item" href="../comprehensive/viewcompre.php?patient_id=<?php echo $data['user_id'] ?>">View comprehensive report</a>
 																			<a class="dropdown-item" href="../comprehensive/comprehensive.php?patient_id=<?php echo $data['user_id'] ?>">Update comprehensive report</a>
 																		</div>
 																	</div>
