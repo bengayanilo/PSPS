@@ -38,7 +38,8 @@
 										</div>
 										<div class="dropdown-menu">
 											<div class="dropdown-content">
-												<a class="dropdown-item" href="progress/progress.php?create_id='. $row['appointment_id'] .'">View/Edit/Create report</a>
+												<a class="dropdown-item" href="progress/view.php?create_id='. $row['appointment_id'] .'">View report</a>
+												<a class="dropdown-item" href="progress/progress.php?create_id='. $row['appointment_id'] .'">Edit/Create report</a>
 											</div>
 										</div>
 									</div>										
